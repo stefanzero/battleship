@@ -1,4 +1,3 @@
-const Ship = require('./ship');
 const constants = require('./constants');
 const { maxRows, maxColumns, shipTypes, orientations } = constants;
 

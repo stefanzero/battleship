@@ -112,43 +112,77 @@ describe('Board.addShip', function() {
 });
 
 describe('Board.attack', function() {
-  it('should correctly register a hit', function() {
+  it('should correctly register a Hit', function() {
     const aircraftCarrier = new Ship({
       shipTypeId: 1,
       orientation: 'horizontal',
       startRow: 3,
       startColumn: 3
     });
-    const battleship = new Ship({
-      shipTypeId: 2,
-      orientation: 'vertical',
-      startRow: 1,
-      startColumn: 8
-    });
     const board = new Board();
     board.addShip(aircraftCarrier);
-    board.addShip(battleship);
     board.setUp();
     expect(board.attack({row: 3, column: 3})).to.equal('Hit');
   });
-  // it('should correctly register a hit', function() {
-  //   const aircraftCarrier = new Ship({
-  //     shipTypeId: 1,
-  //     orientation: 'horizontal',
-  //     startRow: 3,
-  //     startColumn: 3
-  //   });
-  //   const battleship = new Ship({
-  //     shipTypeId: 2,
-  //     orientation: 'vertical',
-  //     startRow: 1,
-  //     startColumn: 8
-  //   });
-  //   const board = new Board();
-  //   board.addShip(aircraftCarrier);
-  //   board.addShip(battleship);
-  //   expect(board.attack({row: 3, column: 3})).to.equal('Hit');
-  // })
+  it('should correctly register a Miss', function() {
+    const board = new Board();
+    const ships = Board.getSampleShipArray();
+    board.setUp(ships);
+    expect(board.attack({row: 0, column: 0})).to.equal('Miss');
+  });
+  it('should correctly register a Already Attacked', function() {
+    const board = new Board();
+    const ships = Board.getSampleShipArray();
+    board.setUp(ships);
+    expect(board.attack({row: 0, column: 0})).to.equal('Miss');
+    expect(board.attack({row: 0, column: 0})).to.equal('Already Attacked');
+  });
+  it('should correctly register a Sunk', function() {
+    const aircraftCarrier = new Ship({
+      shipTypeId: 1,
+      orientation: 'horizontal',
+      startRow: 3,
+      startColumn: 3
+    });
+    const board = new Board();
+    board.addShip(aircraftCarrier);
+    board.setUp();
+    expect(board.attack({row: 3, column: 3})).to.equal('Hit');
+    expect(board.attack({row: 3, column: 4})).to.equal('Hit');
+    expect(board.attack({row: 3, column: 5})).to.equal('Hit');
+    expect(board.attack({row: 3, column: 6})).to.equal('Hit');
+    expect(board.attack({row: 3, column: 7})).to.equal('Sunk');
+  });
+  it('should correctly register a Win', function() {
+    const board = new Board();
+    const ships = Board.getSampleShipArray();
+    board.setUp(ships);
+    // Aircraft Carrier
+    expect(board.attack({row: 1, column: 9})).to.equal('Hit');
+    expect(board.attack({row: 2, column: 9})).to.equal('Hit');
+    expect(board.attack({row: 3, column: 9})).to.equal('Hit');
+    expect(board.attack({row: 4, column: 9})).to.equal('Hit');
+    expect(board.attack({row: 5, column: 9})).to.equal('Sunk');
+    // Battleship
+    expect(board.attack({row: 4, column: 7})).to.equal('Hit');
+    expect(board.attack({row: 5, column: 7})).to.equal('Hit');
+    expect(board.attack({row: 6, column: 7})).to.equal('Hit');
+    expect(board.attack({row: 7, column: 7})).to.equal('Sunk');
+    // Cruiser
+    expect(board.attack({row: 6, column: 2})).to.equal('Hit');
+    expect(board.attack({row: 6, column: 3})).to.equal('Hit');
+    expect(board.attack({row: 6, column: 4})).to.equal('Sunk');
+    // Destroyer 1
+    expect(board.attack({row: 1, column: 1})).to.equal('Hit');
+    expect(board.attack({row: 2, column: 1})).to.equal('Sunk');
+    // Destroyer 2
+    expect(board.attack({row: 4, column: 3})).to.equal('Hit');
+    expect(board.attack({row: 4, column: 4})).to.equal('Sunk');
+    // Submarine 1
+    expect(board.attack({row: 2, column: 3})).to.equal('Sunk');
+    // Submarine 2
+    expect(board.attack({row: 8, column: 1})).to.equal('Win');
+  });
 });
 
 describe('Board.getSampleShipArray', function() {

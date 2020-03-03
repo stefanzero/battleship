@@ -41,8 +41,8 @@ class Board {
         }, []);
       while (shipTypesToAdd.length) {
         /*
-         * start from largest ships
-         * note: addShip will return false if the ship overlaps
+         * start from largest ships (beginning of array) because these will
+         * most likely overlap with previous ships
          */
         const shipTypeId = shipTypesToAdd[0];
         const orientation = Math.random() < 0.5 ? 'horizontal' : 'vertical';
@@ -52,6 +52,9 @@ class Board {
         const ship = new Ship({
           shipTypeId, orientation, startRow, startColumn
         });
+        /*
+         * addShip will return false if the ship overlaps
+         */
         if (this.addShip(ship)) {
           /*
            * if successful, remove from shipTypesToAdd

@@ -39,6 +39,8 @@ console.log(board.toString());
 
 board.attack({row: 0, column: 0});
 board.attack({row: 1, column: 1});
+board.attack({row: 2, column: 1});
+board.attack({row: 4, column: 3});
 console.log(board.toString(true));
 
 /*
