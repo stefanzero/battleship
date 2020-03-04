@@ -24,7 +24,7 @@ class Board {
 
   setUp(ships = []) {
     if (this.isSetUp) {
-      console.log('Board.setUp: board is already set up');
+      Board.log && console.log('Board.setUp: board is already set up');
       return;
     }
     ships.forEach(ship => this.addShip(ship));
@@ -67,7 +67,7 @@ class Board {
 
   addShip(ship) {
     if (this.isSetUp) {
-      console.log('board already has correct number of ships');
+      Board.log && console.log('board already has correct number of ships');
       return;
     }
     /*
@@ -76,7 +76,7 @@ class Board {
     for (let position of Object.values(ship.positions)) {
       const [ row, column ] = position;
       if (this.tiles[row][column].ship) {
-        console.log('board.addShip ship overlaps existing ship');
+        Board.log && console.log('board.addShip ship overlaps existing ship');
         return false;
       }
     }
@@ -87,7 +87,7 @@ class Board {
     const nextShipCount = this.shipTypeCount[shipTypeId] ?
       this.shipTypeCount[shipTypeId] + 1 : 1;
     if (nextShipCount > shipTypes[shipTypeId].count) {
-      console.log(`board.addShip exceeded count for ${shipTypes[shipTypeId].name}`);
+      Board.log && console.log(`board.addShip exceeded count for ${shipTypes[shipTypeId].name}`);
       return false;
     }
     this.shipTypeCount[shipTypeId] = nextShipCount;
@@ -140,6 +140,10 @@ class Board {
     )
   }
 
+  isAttacked({row, column}) {
+    return this.tiles[row][column].attacked;
+  }
+
   toString(playerView) {
     return this.tiles.map(
       row => {
@@ -152,6 +156,8 @@ class Board {
     ).join('');
   }
 }
+
+Board.log = false;
 
 Board.getSampleShipArray = () => {
   const aircraftCarrier = new Ship({
@@ -205,7 +211,7 @@ Board.getSampleShipArray = () => {
     submarine1,
     submarine2
   ]
-}
+};
 
 
 

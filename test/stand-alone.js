@@ -30,6 +30,7 @@ board.attack({row: 1, column: 9});
 console.log(ships[0].hits);
  */
 
+/*
 const Board = require('../src/battleship/board');
 const Ship = require('../src/battleship/ship');
 const ships = Board.getSampleShipArray();
@@ -42,6 +43,7 @@ board.attack({row: 1, column: 1});
 board.attack({row: 2, column: 1});
 board.attack({row: 4, column: 3});
 console.log(board.toString(true));
+ */
 
 /*
 const Tile = require('../src/battleship/tile');
@@ -51,3 +53,7 @@ const ss = [s,s]
 // console.log(s.concat(s));
 console.log(ss);
  */
+
+const Strategy  = require('../src/battleship/strategy');
+const game = new Strategy();
+game.play();
