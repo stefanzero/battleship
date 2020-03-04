@@ -5,7 +5,7 @@ const utils = require('./utils');
 const { maxRows, maxColumns, shipTypes, totalCount } = constants;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
-class Strategy {
+class Game {
 
   constructor() {
     this.board = new Board();
@@ -19,10 +19,10 @@ class Strategy {
   }
 
   nextAvailablePosition() {
-    let { row, column } = Strategy.randomPosition();
+    let { row, column } = Game.randomPosition();
     const { tiles } = this.board;
     while (tiles[row][column].attacked) {
-      ({ row, column } = Strategy.randomPosition());
+      ({ row, column } = Game.randomPosition());
     }
     return { row, column };
   }
@@ -42,6 +42,10 @@ class Strategy {
       }
       return acc;
     }, []);
+    if (Game.logStack) {
+      const s = available.map(a => `(${a.row}, ${a.column})`).join(', ');
+      console.log(`availableNeighbors(${row}, ${column}): ${s}`);
+    }
     return available;
   }
 
@@ -49,18 +53,27 @@ class Strategy {
     console.log('initial board')
     console.log(this.board.toString());
     let stack = [];
+    let lastStack = null;
     let current;
     let numMoves = 0;
     let lastHit;
     while (!this.board.isWon()) {
-      numMoves++;
       if (!stack.length) {
-        console.log('Random attack');
-        stack.push(this.nextAvailablePosition())
+        if (lastStack && lastStack.length) {
+          stack = lastStack;
+        } else {
+          console.log('Random attack');
+          stack.push(this.nextAvailablePosition())
+        }
+      }
+      if (Game.logStack) {
+        const s = stack.map(a => `(${a.row}, ${a.column})`).join(', ');
+        console.log(`stack: ${s}`);
       }
       current = stack.pop();
       const {row, column} = current;
       if (!this.board.isAttacked({row, column})) {
+        numMoves++;
         const attackResult = this.board.attack(current);
         console.log(`move: ${numMoves}  attack (${row}, ${column})`);
         console.log(attackResult.toUpperCase());
@@ -70,13 +83,18 @@ class Strategy {
           if (lastHit) {
             /*
              * remove items from the stack that are not in a line with the last hit
-             * (this may not help if 2 different ships are contiguous on the board)
+             * save the stack in case the filter does not end up in a ship being sunk
              */
+            lastStack = stack;
             if (lastHit.row === row) {
               stack = stack.filter(item => item.row === row);
             } else {
               stack = stack.filter(item => item.column === column);
             }
+          }
+          if (Game.logStack) {
+            const s = stack.map(a => `(${a.row}, ${a.column})`).join(', ');
+            console.log(`filtered stack: ${s}`);
           }
           lastHit = current;
         } else if (attackResult === 'Sunk') {
@@ -89,15 +107,12 @@ class Strategy {
       }
     }
     console.log(`Win in ${numMoves} moves`);
-    /*
-    moves.forEach(move => {
-      console.log(move.row, move.column)
-    })
-     */
   }
 }
 
-module.exports = Strategy;
+Game.logStack = false;
+
+module.exports = Game;
 
 /*
 strategy:

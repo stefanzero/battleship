@@ -54,6 +54,6 @@ const ss = [s,s]
 console.log(ss);
  */
 
-const Strategy  = require('../src/battleship/strategy');
-const game = new Strategy();
+const Game = require('../src/battleship/game');
+const game = new Game();
 game.play();
