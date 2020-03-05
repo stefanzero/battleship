@@ -31,7 +31,7 @@ class Tile {
      *   black:   non-playerView
      *   white:   playerView
      *
-     *   background color:
+     *   background color non-playerView:
      *   white:   non-ship tile
      *   red:     aircraft carrier
      *   orange:  battleship (yellow)
@@ -39,8 +39,9 @@ class Tile {
      *   cyan:    destroyer
      *   magenta: submarine
      *
-     *   green:   ship && playerView
-     *   red:     ship && playerView && ship.sunk
+     *   background color playerView:
+     *   green:   ship
+     *   red:     ship && ship.sunk
      */
     const symbol = this.attacked ? 'x' : 'o';
     let bgColor = 'bgWhite';

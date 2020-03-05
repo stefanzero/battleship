@@ -18,12 +18,13 @@ class Game {
     return { row, column };
   }
 
-  nextAvailablePosition() {
-    let { row, column } = Game.randomPosition();
-    const { tiles } = this.board;
-    while (tiles[row][column].attacked) {
+  randomAvailablePosition() {
+    let row;
+    let column;
+    const { board } = this;
+    do {
       ({ row, column } = Game.randomPosition());
-    }
+    } while (board.isAttacked({ row, column }))
     return { row, column };
   }
 
@@ -50,20 +51,20 @@ class Game {
   }
 
   play() {
-    console.log('initial board')
+    console.log('Initial Board')
     console.log(this.board.toString());
     let stack = [];
-    let lastStack = null;
+    let lastStack = [];
     let current;
     let numMoves = 0;
     let lastHit;
     while (!this.board.isWon()) {
       if (!stack.length) {
-        if (lastStack && lastStack.length) {
+        if (lastStack.length) {
           stack = lastStack;
         } else {
           console.log('Random attack');
-          stack.push(this.nextAvailablePosition())
+          stack.push(this.randomAvailablePosition())
         }
       }
       if (Game.logStack) {
