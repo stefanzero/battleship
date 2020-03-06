@@ -1,3 +1,44 @@
+/**
+ * @typedef {Object} shipTypes
+ * @property {shipType} 1 Aircraft Carrier
+ * @property {shipType} 2 Battleship
+ * @property {shipType} 3 Cruiser
+ * @property {shipType} 4 Destroyer
+ * @property {shipType} 5 Submarine
+ */
+/**
+ * @typedef {Object} shipType
+ * @property {number} shipTypeId
+ *   1 = Aircraft Carrier,
+ *   2 = Battleship,
+ *   3 = Cruiser,
+ *   4 = Destroyer,
+ *   5 = Submarine
+ * @property {string} name Aircraft Carrier | Battleship | Cruiser | Destroyer | Submarine
+ * @property {number} length length of ship
+ * @property {number} count number of this ship type on the board
+ * @property {string} color chalk color used in tile.toString()
+ */
+/**
+ * @typedef {Object} orientation
+ * @property {number} columnFactor 0 for vertical, 1 for horizontal
+ * @property {number} rowFactor 0 for horizontal, 1 for vertical
+ */
+/**
+ * @typedef {Object} orientations
+ * @property {orientation} horizontal
+ * @property {orientation} vertical
+ */
+/**
+ * @typedef {Object} constants
+ * @property {number} maxRows number of rows on the board
+ * @property {number} maxColumns number of columns on the board
+ * @property {shipTypes} shipTypes object of all shiptypes
+ * @property {orientations} orientations object of orientations
+ */
+/**
+ * @type {constants}
+ */
 const constants = {
   maxRows: 10,
   maxColumns: 10,
@@ -53,7 +94,29 @@ const constants = {
 constants.totalCount = Object.values(constants.shipTypes)
   .reduce((acc, next) => {
     return acc + next.count
-  }, 0)
+  }, 0);
+
+const totalShipArea = Object.values(constants.shipTypes)
+  .reduce((acc, next) => {
+    return acc + next.length * next.count
+  }, 0);
+
+/*
+ * require that at least half of board space is empty
+ */
+const { maxRows, maxColumns } = constants;
+if (totalShipArea > (maxRows * maxColumns) / 2) {
+  throw new Error('available board space insufficient for total ship area');
+}
+
+const longestShip = Object.values(constants.shipTypes)
+  .reduce((acc, next) => {
+    return Math.max(acc, next.length)
+  }, 0);
+
+if (longestShip > Math.max(maxRows, maxColumns)) {
+  throw new Error('board is too small to fit largest ship');
+}
 
 /*
  * The traditional Battleship game names tiles using a letter for the row

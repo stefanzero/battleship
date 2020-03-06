@@ -8,8 +8,20 @@ const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
 class Board {
   constructor() {
+    /**
+     * @type {[Ship]}
+     * @desc array of ships on the board
+     */
     this.ships = [];
+    /**
+     * @type {Object}
+     * @desc key = shipTypeId, value = number of ships of that type
+     */
     this.shipTypeCount = {};
+    /**
+     * @type {Tile[][]}
+     * @desc matrix of tiles
+     */
     this.tiles = new Array(maxRows)
       .fill(null)
       .map((r, i) => {
@@ -19,9 +31,19 @@ class Board {
             return new Tile(i, j)
           })
     });
+    /**
+     * @type {boolean}
+     * @desc true if all required ships have been added to the board
+     */
     this.isSetUp = false;
   }
 
+  /**
+   * Add ships to the board.  If not all required ships are supplied, missing ships are
+   * added to the board at random positions until board is set up.
+   *
+   * @param {?Ship[]} ships optional array of ships
+   */
   setUp(ships = []) {
     if (this.isSetUp) {
       Board.log && console.log('Board.setUp: board is already set up');
@@ -65,10 +87,18 @@ class Board {
     }
   }
 
+  /**
+   * Add a ship to the board.  Return true if successful or the board is already full.
+   * Return false if the ship would overlap an existing ship or if enough ships of
+   * that type are already on the board.
+   *
+   * @param {Ship} ship
+   * @returns {boolean}
+   */
   addShip(ship) {
     if (this.isSetUp) {
       Board.log && console.log('board already has correct number of ships');
-      return;
+      return true;
     }
     /*
      * check that this ship does not overlap an existing ship
@@ -103,6 +133,19 @@ class Board {
     return true;
   }
 
+  /**
+   * Attack a given position on the board.  Return a string describing the result:
+   *  * "Miss" if there is no ship at that position
+   *  * "Already Attacked" if there that tile was already attacked
+   *  * "Win" if that attack sinks the final ship
+   *  * "Sunk" if that attack hits the last un-hit position on a ship
+   *  * "Hit" if that attack hits a ship
+   *
+   * @param {Object} obj
+   * @param {number} obj.row
+   * @param {number} obj.column
+   * @returns {string}
+   */
   attack({row, column}) {
     if (!this.isSetUp) {
       throw new Error('Cannot attack until board is set up');
@@ -133,6 +176,10 @@ class Board {
     return result;
   }
 
+  /**
+   * Return true if all ships on the board are sunk
+   * @returns {boolean}
+   */
   isWon() {
     return (
       this.isSetUp &&
@@ -140,10 +187,24 @@ class Board {
     )
   }
 
+  /**
+   * Return true if the tile was attacked.
+   *
+   * @param {Object} obj
+   * @param {number} obj.row
+   * @param {number} obj.column
+   * @returns {boolean}
+   */
   isAttacked({row, column}) {
     return this.tiles[row][column].attacked;
   }
 
+  /**
+   * Return string representation of the board.
+   *
+   * @param {boolean} playerView true if the ships should not be displayed
+   * @returns {string}
+   */
   toString(playerView) {
     return this.tiles.map(
       row => {

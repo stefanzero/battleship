@@ -1,3 +1,4 @@
+const chalk = require('chalk');
 const constants = require('./constants');
 const Board = require('./board');
 const utils = require('./utils');
@@ -5,21 +6,59 @@ const utils = require('./utils');
 const { maxRows, maxColumns, shipTypes, totalCount } = constants;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
+const fontColor = 'white';
+const bgColor = 'bgBlack';
+const bannerFontColor = 'black';
+const bannerBgColor = 'bgWhite';
+const dash = '-';
+const pipe = '|';
+const space = ' ';
+const width = maxColumns * 3;
+
+const square = chalk`{${fontColor}.${bgColor} ${dash}}`;
+const edge = chalk`{${fontColor}.${bgColor} ${pipe}}`;
+const blank = chalk`{${bannerFontColor}.${bannerBgColor} ${space}}`;
+const border = square.repeat(width);
+
 class Game {
 
-  constructor() {
+  /**
+   * If no array of ships is provide, all necessary ships will be added to
+   * the board at random positions that do not overlap.
+   *
+   * @param {?[Ship]} ships optional array of ships
+   */
+  constructor(ships = []) {
+    /**
+     * @type {Board}
+     */
     this.board = new Board();
-    this.board.setUp();
+    this.board.setUp(ships);
   }
 
+  /**
+   * Return random position on the board.
+   * @returns {{column: number, row: number}}
+   */
   static randomPosition() {
     const row = Math.floor(maxRows * Math.random())
     const column = Math.floor(maxColumns * Math.random())
     return { row, column };
   }
 
+  /**
+   * Return random position that has not been attacked.
+   *
+   * @returns {{column: number, row: number}}
+   */
   randomAvailablePosition() {
+    /**
+     * @type {number}
+     */
     let row;
+    /**
+     * @type {number}
+     */
     let column;
     const { board } = this;
     do {
@@ -28,6 +67,15 @@ class Game {
     return { row, column };
   }
 
+  /**
+   * Return array of positions that are neighbors to the given position and
+   * that have not been attacked.
+   *
+   * @param {Object} obj
+   * @param {number} obj.row
+   * @param {number} obj.column
+   * @returns {Array<{column: number, row: number}>}
+   */
   availableNeighbors({row, column}) {
     const neighbors = [
       {row: row - 1, column},
@@ -50,6 +98,16 @@ class Game {
     return available;
   }
 
+  /**
+   * Simulate game play using this strategy:
+   *   * store positions to try next on a stack
+   *   * if the stack is empty, push a random available position onto the stack
+   *   * pop the next position from the stack
+   *   * if the attack was a hit, push the next available neighbors onto the stack
+   *   * store the last hit position
+   *   * if there was a last hit, then filter the stack to keep positions in line with
+   *   the last hit
+   */
   play() {
     console.log('Initial Board')
     console.log(this.board.toString());
@@ -108,6 +166,25 @@ class Game {
       }
     }
     console.log(`Win in ${numMoves} moves`);
+  }
+
+  /**
+   * Return string with banner for a given game number.
+   *
+   * @param {number} gameNumber
+   */
+  static gameBanner(gameNumber) {
+    const heading = `Game #${gameNumber}`;
+    const banner = chalk`{${bannerFontColor}.${bannerBgColor} ${heading}}`;
+    const leadingSpace = Math.floor((width - heading.length - 2) / 2);
+    const trailingSpace = width - heading.length - leadingSpace - 2;
+    return '\n' + border + '\n' +
+      edge +
+      blank.repeat(leadingSpace) +
+      banner +
+      blank.repeat(trailingSpace) +
+      edge + '\n' +
+      border;
   }
 }
 

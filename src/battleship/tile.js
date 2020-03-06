@@ -5,6 +5,12 @@ const utils = require('./utils');
 const { maxRows, maxColumns, shipTypes } = constants;
 const { isRowValid, isColumnValid } = utils;
 
+/**
+ * Grid item storing
+ *   position,
+ *   ship object (if any),
+ *   attacked (has this tile been attacked)
+ */
 class Tile {
   constructor(row, column) {
     if (!isRowValid(row)) {
@@ -13,12 +19,36 @@ class Tile {
     if (!isColumnValid(column)) {
       throw new Error(`invalid tile column ${column}`)
     }
+    /**
+     * @type {number}
+     * @desc zero-based row number
+     */
     this.row = row;
+    /**
+     * @type {number}
+     * @desc zero-based column number
+     */
     this.column = column;
+    /**
+     * @type {?Ship}
+     * @desc ship object if this tile belongs to a ship
+     */
     this.ship = null;
+    /**
+     * @type {boolean}
+     * @desc true if this tile has been attacked
+     */
     this.attacked = false;
   }
 
+  /**
+   * Return string representation of the board, where ships are colored acccording
+   * to the ship type.  The character is "o" for a tile that has not been attacked,
+   * and "x" for a tile that has been attacked.
+   *
+   * @param {boolean} playerView if true, then the color only shows if a tile was
+   * attacked or hit
+   */
   toString(playerView = false) {
     /*
      * code:
