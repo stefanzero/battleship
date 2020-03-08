@@ -28,14 +28,33 @@
   },
   "dependencies": {
     "chalk": "^3.0.0",
-    "esdoc-importpath-plugin": "^1.0.2"
+    "esdoc-importpath-plugin": "^1.0.2",
+    "open": "^7.0.2"
   },
   "esdoc": {
     "source": "./src",
     "destination": "./docs",
     "plugins": [
       {
-        "name": "esdoc-standard-plugin"
+        "name": "esdoc-standard-plugin",
+        "option": {
+          "test": {
+            "source": "./test/",
+            "interfaces": [
+              "describe",
+              "it",
+              "context",
+              "suite",
+              "test"
+            ],
+            "includes": [
+              "(spec|Spec|test|Test)\\.js$"
+            ],
+            "excludes": [
+              "\\.config\\.js$"
+            ]
+          }
+        }
       },
       {
         "name": "esdoc-accessor-plugin",
@@ -69,8 +88,13 @@
         "name": "esdoc-importpath-plugin",
         "option": {
           "stripPackageName": true,
-          "replaces": [
-          ]
+          "replaces": []
+        }
+      },
+      {
+        "name": "esdoc-publish-html-plugin",
+        "option": {
+          "template": "templates/my-template"
         }
       }
     ]

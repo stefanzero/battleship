@@ -216,6 +216,25 @@ class Board {
       }
     ).join('');
   }
+
+  /**
+   * Return html representation of the board.
+   *
+   * @param {boolean} playerView true if the ships should not be displayed
+   * @returns {string}
+   */
+  toHtml(playerView) {
+    const tilesHtml = this.tiles.map(
+      row => {
+        return row.map(
+          tile => {
+            return tile.toHtml(playerView)
+          }
+        ).join('').concat('<br />')
+      }
+    ).join('');
+    return `<div class="tiles">${tilesHtml}</div>`;
+  }
 }
 
 Board.log = false;

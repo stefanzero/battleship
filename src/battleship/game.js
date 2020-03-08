@@ -1,6 +1,7 @@
 const chalk = require('chalk');
 const constants = require('./constants');
 const Board = require('./board');
+const Tile = require('./tile');
 const utils = require('./utils');
 
 const { maxRows, maxColumns, shipTypes, totalCount } = constants;
@@ -34,6 +35,16 @@ class Game {
      */
     this.board = new Board();
     this.board.setUp(ships);
+    /**
+     * @type {string[]}
+     * @desc array of html strings for game output
+     */
+    this.html = [];
+    /**
+     * @type {boolean}
+     * @desc send output to the console
+     */
+    this.toConsole = true;
   }
 
   /**
@@ -107,10 +118,15 @@ class Game {
    *   * store the last hit position
    *   * if there was a last hit, then filter the stack to keep positions in line with
    *   the last hit
+   *
+   * @param {boolean} toConsole
+   * @returns {string[]}
    */
-  play() {
-    console.log('Initial Board')
-    console.log(this.board.toString());
+  play(toConsole = true) {
+    this.toConsole = toConsole;
+    let currentString = '';
+    this.log('Initial Board')
+    this.log(this.board);
     let stack = [];
     let lastStack = [];
     let current;
@@ -121,22 +137,22 @@ class Game {
         if (lastStack.length) {
           stack = lastStack;
         } else {
-          console.log('Random attack');
+          this.log('Random attack');
           stack.push(this.randomAvailablePosition())
         }
       }
       if (Game.logStack) {
         const s = stack.map(a => `(${a.row}, ${a.column})`).join(', ');
-        console.log(`stack: ${s}`);
+        this.log(`stack: ${s}`);
       }
       current = stack.pop();
       const {row, column} = current;
       if (!this.board.isAttacked({row, column})) {
         numMoves++;
         const attackResult = this.board.attack(current);
-        console.log(`move: ${numMoves}  attack (${row}, ${column})`);
-        console.log(attackResult.toUpperCase());
-        console.log(this.board.toString());
+        this.log(`move #${numMoves}:  attack (${row}, ${column})`);
+        this.log(attackResult.toUpperCase());
+        this.log(this.board);
         if (attackResult === 'Hit') {
           stack.push(...this.availableNeighbors(current));
           if (lastHit) {
@@ -153,7 +169,7 @@ class Game {
           }
           if (Game.logStack) {
             const s = stack.map(a => `(${a.row}, ${a.column})`).join(', ');
-            console.log(`filtered stack: ${s}`);
+            this.log(`filtered stack: ${s}`);
           }
           lastHit = current;
         } else if (attackResult === 'Sunk') {
@@ -165,7 +181,28 @@ class Game {
         }
       }
     }
-    console.log(`Win in ${numMoves} moves`);
+    this.log(`Win in ${numMoves} moves`);
+    return this.html;
+  }
+
+  /**
+   * Save string as html to output array and to console.
+   *
+   * @param {string} s
+   */
+  log(s) {
+    let html = `<p>${s}</p>`;
+    if (s instanceof Object) {
+      if (typeof s.toHtml === 'function') {
+        html = s.toHtml();
+      }
+    }
+    this.html.push(html);
+    this.toConsole && console.log(s);
+  }
+
+  static getHtmlStyleType() {
+    return Tile.getHtmlStyleTag();
   }
 
   /**

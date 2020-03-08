@@ -6,10 +6,11 @@ const { maxRows, maxColumns, shipTypes } = constants;
 const { isRowValid, isColumnValid } = utils;
 
 /**
- * Grid item storing
- *   position,
- *   ship object (if any),
- *   attacked (has this tile been attacked)
+ *
+ * A Tile is an object of the board representing
+ *   the position,
+ *   the ship object (if any), and
+ *   if this object has been attacked
  */
 class Tile {
   constructor(row, column) {
@@ -30,7 +31,7 @@ class Tile {
      */
     this.column = column;
     /**
-     * @type {?Ship}
+     * @type {Ship|null}
      * @desc ship object if this tile belongs to a ship
      */
     this.ship = null;
@@ -48,6 +49,7 @@ class Tile {
    *
    * @param {boolean} playerView if true, then the color only shows if a tile was
    * attacked or hit
+   * @returns {string}
    */
   toString(playerView = false) {
     /*
@@ -87,6 +89,84 @@ class Tile {
     }
     return chalk`{${fontColor}.${bgColor}  ${symbol} }`;
   }
+
+  toHtml(playerView = false) {
+    const symbol = this.attacked ? 'x' : 'o';
+    let className = 'empty';
+    if (this.ship) {
+      if (playerView) {
+        if (this.attacked) {
+          className = this.ship.sunk ? 'sunk' : 'attacked';
+        }
+      } else {
+        className = `shipType${this.ship.shipTypeId}`;
+      }
+    }
+    const html =  `<span class="${className}">${symbol}</span>`;
+    return `<span class="${className}">${symbol}</span>`;
+  }
+
+  static getHtmlStyleTag() {
+    return `
+      <style>
+        .demo p {
+          margin: 0 0;
+          color: black;
+        }
+        div.tiles {
+          margin: 0.5em 0 1em 0;
+        }
+        .tiles span {
+          width: 1.5em;
+          height: 1.5em;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .shipType1 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[1].backgroundColor};
+        }
+        .shipType2 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[2].backgroundColor};
+        }
+        .shipType3 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[3].backgroundColor};
+        }
+        .shipType4 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[4].backgroundColor};
+        }
+        .shipType5 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[5].backgroundColor};
+        }
+        .attacked {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: green;
+        }
+        .sunk {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: red;
+        }
+        .empty {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: #eee;
+        }
+      </style>
+    `
+  }
+
 }
 
 module.exports = Tile;

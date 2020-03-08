@@ -48,35 +48,40 @@ const constants = {
       name: 'Aircraft Carrier',
       length: 5,
       count: 1,
-      color: 'bgRed'
+      color: 'bgRed',
+      backgroundColor: 'red'
     },
     2: {
       shipTypeId: 2,
       name: 'Battleship',
       length: 4,
       count: 1,
-      color: 'bgYellow'
+      color: 'bgYellow',
+      backgroundColor: 'yellow'
     },
     3: {
       shipTypeId: 3,
       name: 'Cruiser',
       length: 3,
       count: 1,
-      color: 'bgYellowBright'
+      color: 'bgYellowBright',
+      backgroundColor: 'orange'
     },
     4: {
       shipTypeId: 4,
       name: 'Destroyer',
       length: 2,
       count: 2,
-      color: 'bgCyan'
+      color: 'bgCyan',
+      backgroundColor: 'cyan'
     },
     5: {
       shipTypeId: 5,
       name: 'Submarine',
       length: 1,
       count: 2,
-      color: 'bgMagenta'
+      color: 'bgMagenta',
+      backgroundColor: 'magenta'
     }
   },
   orientations: {
