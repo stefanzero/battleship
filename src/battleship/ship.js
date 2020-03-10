@@ -78,10 +78,12 @@ class Ship {
   /**
    * Mark a ship position as being hit.
    * Check if all the ship position have been hit, and if so, set ship.sunk = true.
+   * This method is called by board.attack, and should not be called independently.
    *
+   * @private
    * @param {Object} obj
-   * @param {number} obj.row
-   * @param {number} obj.column
+   * @param {number} obj.row zero-based index of row on board matrix
+   * @param {number} obj.column zero-based index of column on board matrix
    */
   hit({row, column}) {
     const index = this.positions.findIndex(item =>

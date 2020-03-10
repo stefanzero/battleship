@@ -1,7 +1,10 @@
 const constants = require('./constants');
 const { maxRows, maxColumns, shipTypes, orientations } = constants;
 
-class utils {
+/**
+ * Utility static class (mostly) containing common validation functions
+ */
+class Utils {
   /**
    * Returns true if row is on the board
    * @param {number }row row number
@@ -31,7 +34,7 @@ class utils {
    * @returns {boolean}
    */
   static isValidShipPosition = ({shipTypeId, orientation, startRow, startColumn}) => {
-    const { lastValidStartRow, lastValidStartColumn } = utils.getValidStartPosition(
+    const { lastValidStartRow, lastValidStartColumn } = Utils.getValidStartPosition(
       {shipTypeId, orientation}
     )
     return (
@@ -68,15 +71,16 @@ class utils {
    * @param {number} shipTypeId type of ship
    * @param {string} orientation orientation of ship (horizontal | vertical)
    * @returns {{startRow: number, startColumn: number}}
+   * @throws if shipTypeId or orientation is invalid
    */
   static getRandomShipPosition = ({shipTypeId, orientation}) => {
     if (!(shipTypeId in shipTypes)) {
-      throw new Error(`utils.getRandomShipPosition invalid shipTypeId: ${shipTypeId}`);
+      throw new Error(`Utils.getRandomShipPosition invalid shipTypeId: ${shipTypeId}`);
     };
     if (!(orientation in orientations)) {
-      throw new Error(`utils.getRandomShipPosition invalid orientation: ${orientation}`);
+      throw new Error(`Utils.getRandomShipPosition invalid orientation: ${orientation}`);
     };
-    const {lastValidStartRow, lastValidStartColumn} = utils
+    const {lastValidStartRow, lastValidStartColumn} = Utils
       .getValidStartPosition({shipTypeId, orientation})
     const startRow = Math.floor(Math.random() * lastValidStartRow);
     const startColumn = Math.floor(Math.random() * lastValidStartColumn);
@@ -84,23 +88,4 @@ class utils {
   };
 };
 
-
-
-/*
-getGameTile(rowLetter, column) {
-  if ((column < 0) || (column > maxColumns)) {
-    throw new Error(`getGameTile invalid column ${column}`);
-  }
-  if (!/^[a-zA-Z]$/.test(rowLetter)) {
-    throw new Error(`getGameTile invalid rowLetter ${rowLetter}`);
-  }
-  rowLetter = rowLetter.toUpperCase();
-  if ((rowLetter < minRowLetter) || (rowLetter > maxRowLetter)) {
-    throw new Error(`getGameTile invalid rowLetter ${rowLetter}`);
-  }
-  const row = rowLetter.charCodeAt(0) - minRowLetter.charCodeAt(0);
-  return this.tiles[row][column - 1];
-}
- */
-
-module.exports = utils;
+module.exports = Utils;

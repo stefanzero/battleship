@@ -15,7 +15,7 @@ function createGameTable() {
   const game = new Game();
   const moves = game.play();
   const rows = [];
-  const head = '<th>Desccription</th><th>Game View</th><th>Player View</th>';
+  const head = '<th>Description</th><th>Game View</th><th>Player View</th>';
   for (let i = 0; i < moves.results.length; i++) {
     let desc;
     rows.push(`<tr>
@@ -53,6 +53,6 @@ function createDemo() {
   });
 }
 
-createDemo();
+// createDemo();
 
 module.exports = createDemo;

@@ -113,7 +113,6 @@ class Game {
    *   * if there was a last hit, then filter the stack to keep positions in line with
    *   the last hit
    *
-   * @param {boolean} toConsole
    * @returns {Moves}
    */
   play() {

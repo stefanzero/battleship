@@ -7,7 +7,20 @@ const utils = require('./utils');
 const { maxRows, maxColumns, shipTypes, totalCount } = constants;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
+/**
+ * Main class that controls basic operations of battleship.
+ * * Key properties:
+ *   * array of ships
+ *   * matrix of tiles
+ * * Key methods:
+ *   * setUp
+ *   * addShip
+ *   * attack
+ */
 class Board {
+  /**
+   * @param {?boolean} toConsole controls if attacks are output to the console
+   */
   constructor(toConsole = false) {
     // this.toConsole = toConsole;
     /**
@@ -260,8 +273,12 @@ class Board {
   }
 }
 
-Board.log = false;
+// Board.log = false;
 
+/**
+ * Return array of ships shown on wikipedia for a sample game setup.
+ * @returns {Ship[]}
+ */
 Board.getSampleShipArray = () => {
   const aircraftCarrier = new Ship({
     shipTypeId: 1,
@@ -315,7 +332,5 @@ Board.getSampleShipArray = () => {
     submarine2
   ]
 };
-
-
 
 module.exports = Board;

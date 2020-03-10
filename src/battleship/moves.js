@@ -1,11 +1,13 @@
-// const utils = require('./utils');
-// const { isRowValid } = utils;
-
+/**
+ * Data storage class for each move (attack) in the game.
+ * Sample usage is in scripts/create-demo, where a game is played and
+ * the results displayed as HTML.
+ */
 class Moves {
 
   constructor({board, toConsole}) {
     /**
-     * @type Board
+     * @type {Board}
      * @desc board
      */
     this.board = board;
@@ -30,27 +32,36 @@ class Moves {
      */
     this.boardHtml = [];
     /**
+     * @type {boolean}
+     * @desc display strategy in game.play
+     */
+    this.isRandom = false;
+    /**
      * @type {boolean[]}
      * @desc optional array to display strategy in game.play
      */
     this.random = [];
     /**
-     * @type boolean
+     * @type {boolean}
      * @desc if true, print moves and board game view to the console
      */
     this.toConsole = toConsole;
   }
 
+  /**
+   * Optional property set from game.play
+   * @param {boolean} isRandom
+   */
   setIsRandom(isRandom) {
     this.isRandom = isRandom;
   }
 
   /**
-   *
-   * @param {number} row
-   * @param {number} column
-   * @param {string} result
-   * @param {boolean} isRandom
+   * Called from board.attack
+   * @param {Object} obj
+   * @param {number} obj.row
+   * @param {number} obj.column
+   * @param {string} obj.result
    */
   addMove({row, column, result}) {
     this.moves.push({row, column});
@@ -82,9 +93,14 @@ class Moves {
     this.isRandom = false;
   }
 
+  /**
+   * Create an array of strings describing the move
+   * @param {number} move array index
+   * @returns {string[]}
+   */
   formatDescription(move) {
     if ((move < 0) || (move > this.results.length)) {
-      return ''
+      return [];
     }
     const items = [];
     const position = this.moves[move];
@@ -99,6 +115,11 @@ class Moves {
     return items;
   }
 
+  /**
+   * Create HTML describing the move
+   * @param {number} move array index
+   * @returns {string}
+   */
   descriptionHtml(move) {
     if ((move < 0) || (move > this.results.length)) {
       return ''
