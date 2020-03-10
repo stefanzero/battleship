@@ -49,7 +49,7 @@ const constants = {
       length: 5,
       count: 1,
       color: 'bgRed',
-      backgroundColor: 'red'
+      backgroundColor: 'crimson'
     },
     2: {
       shipTypeId: 2,

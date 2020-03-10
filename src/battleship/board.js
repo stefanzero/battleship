@@ -1,13 +1,15 @@
 const constants = require('./constants');
 const Tile = require('./tile');
 const Ship = require('./ship');
+const Moves = require('./moves');
 const utils = require('./utils');
 
 const { maxRows, maxColumns, shipTypes, totalCount } = constants;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
 class Board {
-  constructor() {
+  constructor(toConsole = false) {
+    // this.toConsole = toConsole;
     /**
      * @type {[Ship]}
      * @desc array of ships on the board
@@ -36,6 +38,16 @@ class Board {
      * @desc true if all required ships have been added to the board
      */
     this.isSetUp = false;
+    /**
+     * @type {boolean}
+     * @desc true if all required ships have been sunk
+     */
+    this.gameOver = false;
+    /**
+     * @type {Moves}
+     * @desc Game attack history is stored in the moves.
+     */
+    this.moves = new Moves({board: this, toConsole});
   }
 
   /**
@@ -130,6 +142,12 @@ class Board {
       this.tiles[row][column].ship = ship;
     }
     this.isSetUp = this.ships.length === totalCount;
+    if (this.isSetUp) {
+      /*
+       * Save the initial board
+       */
+      this.moves.addMove({row: null, column: null, result: 'Initial Board'});
+    }
     return true;
   }
 
@@ -153,6 +171,9 @@ class Board {
     if (!isRowValid(row) || !isColumnValid(column)) {
       throw new Error('Board.attack invalid position: [${row}, ${column}]');
     }
+    if (this.gameOver) {
+      console.error('Cannot attack because the game is over');
+    }
     let result;
     const tile = this.tiles[row][column];
     const { attacked, ship } = tile;
@@ -173,6 +194,7 @@ class Board {
         }
       }
     }
+    this.moves.addMove({row, column, result});
     return result;
   }
 
@@ -181,10 +203,11 @@ class Board {
    * @returns {boolean}
    */
   isWon() {
-    return (
+    this.gameOver = (
       this.isSetUp &&
       this.ships.filter(s => s.sunk).length === totalCount
-    )
+    );
+    return this.gameOver;
   }
 
   /**

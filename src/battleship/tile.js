@@ -93,13 +93,19 @@ class Tile {
   toHtml(playerView = false) {
     const symbol = this.attacked ? 'x' : 'o';
     let className = 'empty';
-    if (this.ship) {
-      if (playerView) {
+    if (playerView) {
+      if (this.ship) {
         if (this.attacked) {
-          className = this.ship.sunk ? 'sunk' : 'attacked';
+          className = this.ship.sunk ? 'sunk' : 'hit';
         }
       } else {
+        className = this.attacked ? 'attacked' : 'empty';
+      }
+    } else {
+      if (this.ship) {
         className = `shipType${this.ship.shipTypeId}`;
+      } else {
+        className = this.attacked ? 'attacked' : 'empty';
       }
     }
     const html =  `<span class="${className}">${symbol}</span>`;
@@ -150,8 +156,13 @@ class Tile {
         }
         .attacked {
           border: 1px solid #ddd;
+          color: white;
+          background-color: #888;
+        }
+        .hit {
+          border: 1px solid #ddd;
           color: black;
-          background-color: green;
+          background-color: yellowgreen;
         }
         .sunk {
           border: 1px solid #ddd;

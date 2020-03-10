@@ -7,6 +7,9 @@ const utils = require('./utils');
 const { maxRows, maxColumns, shipTypes, totalCount } = constants;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
+/*
+ * constants for GameBanner
+ */
 const fontColor = 'white';
 const bgColor = 'bgBlack';
 const bannerFontColor = 'black';
@@ -15,7 +18,6 @@ const dash = '-';
 const pipe = '|';
 const space = ' ';
 const width = maxColumns * 3;
-
 const square = chalk`{${fontColor}.${bgColor} ${dash}}`;
 const edge = chalk`{${fontColor}.${bgColor} ${pipe}}`;
 const blank = chalk`{${bannerFontColor}.${bannerBgColor} ${space}}`;
@@ -27,24 +29,16 @@ class Game {
    * If no array of ships is provide, all necessary ships will be added to
    * the board at random positions that do not overlap.
    *
-   * @param {?[Ship]} ships optional array of ships
+   * @param {Object} obj
+   * @param {?[Ship]} obj.ships optional array of ships
+   * @param {boolean} obj.toConsole print game to console
    */
-  constructor(ships = []) {
+  constructor({ships = [], toConsole = false} = {}) {
     /**
      * @type {Board}
      */
-    this.board = new Board();
+    this.board = new Board(toConsole);
     this.board.setUp(ships);
-    /**
-     * @type {string[]}
-     * @desc array of html strings for game output
-     */
-    this.html = [];
-    /**
-     * @type {boolean}
-     * @desc send output to the console
-     */
-    this.toConsole = true;
   }
 
   /**
@@ -120,13 +114,9 @@ class Game {
    *   the last hit
    *
    * @param {boolean} toConsole
-   * @returns {string[]}
+   * @returns {Moves}
    */
-  play(toConsole = true) {
-    this.toConsole = toConsole;
-    let currentString = '';
-    this.log('Initial Board')
-    this.log(this.board);
+  play() {
     let stack = [];
     let lastStack = [];
     let current;
@@ -137,7 +127,10 @@ class Game {
         if (lastStack.length) {
           stack = lastStack;
         } else {
-          this.log('Random attack');
+          /*
+           * if there is no stack, then get a random available position
+           */
+          this.board.moves.setIsRandom(true);
           stack.push(this.randomAvailablePosition())
         }
       }
@@ -150,9 +143,6 @@ class Game {
       if (!this.board.isAttacked({row, column})) {
         numMoves++;
         const attackResult = this.board.attack(current);
-        this.log(`move #${numMoves}:  attack (${row}, ${column})`);
-        this.log(attackResult.toUpperCase());
-        this.log(this.board);
         if (attackResult === 'Hit') {
           stack.push(...this.availableNeighbors(current));
           if (lastHit) {
@@ -181,24 +171,7 @@ class Game {
         }
       }
     }
-    this.log(`Win in ${numMoves} moves`);
-    return this.html;
-  }
-
-  /**
-   * Save string as html to output array and to console.
-   *
-   * @param {string} s
-   */
-  log(s) {
-    let html = `<p>${s}</p>`;
-    if (s instanceof Object) {
-      if (typeof s.toHtml === 'function') {
-        html = s.toHtml();
-      }
-    }
-    this.html.push(html);
-    this.toConsole && console.log(s);
+    return this.board.moves;
   }
 
   static getHtmlStyleType() {
