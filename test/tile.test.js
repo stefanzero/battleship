@@ -5,8 +5,8 @@ const Board = require('../src/battleship/board');
 
 describe('Tile', function() {
   it('should create valid tiles when rows and columns are in range', function() {
-    for (let i = 0; i < Board.maxRows; i++) {
-      for (let j = 0; j < Board.maxColumns; j++) {
+    for (let i = 0; i < Board.numRows; i++) {
+      for (let j = 0; j < Board.numColumns; j++) {
         const tile = new Tile(i, j)
         expect(tile.row).to.equal(i);
         expect(tile.column).to.equal(j);
@@ -22,10 +22,10 @@ describe('Tile', function() {
       new Tile(1, -1)
     }).to.throw;
     expect(() => {
-      new Tile(1, Board.maxRows)
+      new Tile(1, Board.numRows)
     }).to.throw;
     expect(() => {
-      new Tile(-1, Board.maxColumns)
+      new Tile(-1, Board.numColumns)
     }).to.throw;
   })
 });

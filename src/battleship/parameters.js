@@ -32,8 +32,8 @@
  */
 /**
  * @typedef {Object} parameters
- * @property {number} maxRows number of rows on the board
- * @property {number} maxColumns number of columns on the board
+ * @property {number} numRows number of rows on the board
+ * @property {number} numColumns number of columns on the board
  * @property {shipTypes} shipTypes object of all shiptypes
  * @property {orientations} orientations object of orientations
  */
@@ -41,8 +41,8 @@
  * @type {parameters}
  */
 const parameters = {
-  maxRows: 10,
-  maxColumns: 10,
+  numRows: 10,
+  numColumns: 10,
   shipTypes: {
     1: {
       shipTypeId: 1,
@@ -110,8 +110,8 @@ const totalShipArea = Object.values(parameters.shipTypes)
 /*
  * require that at least half of board space is empty
  */
-const { maxRows, maxColumns } = parameters;
-if (totalShipArea > (maxRows * maxColumns) / 2) {
+const { numRows, numColumns } = parameters;
+if (totalShipArea > (numRows * numColumns) / 2) {
   throw new Error('available board space insufficient for total ship area');
 }
 
@@ -120,7 +120,7 @@ const longestShip = Object.values(parameters.shipTypes)
     return Math.max(acc, next.length)
   }, 0);
 
-if (longestShip > Math.max(maxRows, maxColumns)) {
+if (longestShip > Math.max(numRows, numColumns)) {
   throw new Error('board is too small to fit largest ship');
 }
 
@@ -129,10 +129,10 @@ if (longestShip > Math.max(maxRows, maxColumns)) {
  * and number (starting at 1) for the column.
  *
  * Dynamically compute the maxRowLetter so the board dimensions can be
- * changed by only changing maxRows.
+ * changed by only changing numRows.
  */
 parameters.minRowLetter = 'A';
-const maxCharCode = parameters.minRowLetter.charCodeAt(0) + parameters.maxRows - 1;
+const maxCharCode = parameters.minRowLetter.charCodeAt(0) + parameters.numRows - 1;
 parameters.maxRowLetter = String.fromCharCode(maxCharCode);
 
 module.exports = parameters;

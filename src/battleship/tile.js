@@ -2,7 +2,7 @@ const chalk = require('chalk');
 const parameters = require('./parameters');
 const utils = require('./utils');
 
-const { maxRows, maxColumns, shipTypes } = parameters;
+const { numRows, numColumns, shipTypes } = parameters;
 const { isRowValid, isColumnValid } = utils;
 
 /**

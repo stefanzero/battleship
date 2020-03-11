@@ -3,7 +3,7 @@ const should = require('chai').should();
 const Ship = require('../src/battleship/ship');
 const parameters = require('../src/battleship/parameters');
 
-const { maxRows, maxColumns, shipTypes, orientations, totalCount } = parameters;
+const { numRows, numColumns, shipTypes, orientations, totalCount } = parameters;
 
 describe('Ship', function() {
   it('should contain construct a ship if the position is valid', function() {
@@ -11,8 +11,8 @@ describe('Ship', function() {
       const { length } = shipTypes[shipTypeId];
       for (let orientation of Object.keys(orientations)) {
         const { rowFactor, columnFactor } = orientations[orientation];
-        for (let startRow = 0; startRow < maxRows - rowFactor * length; startRow++) {
-          for (let startColumn = 0; startColumn < maxColumns - columnFactor * length; startColumn++) {
+        for (let startRow = 0; startRow < numRows - rowFactor * length; startRow++) {
+          for (let startColumn = 0; startColumn < numColumns - columnFactor * length; startColumn++) {
             const ship = new Ship({shipTypeId, orientation, startRow, startColumn});
             expect(ship.length).to.equal(length)
           }
@@ -32,10 +32,10 @@ describe('Ship', function() {
   });
   it('should throw an error if the position is invalid', function () {
     expect(() => {
-      new Ship({shipTypeId: 1, orientation: 'middle', startRow: maxRows, startColumn: 0});
+      new Ship({shipTypeId: 1, orientation: 'middle', startRow: numRows, startColumn: 0});
     }).to.throw;
     expect(() => {
-      new Ship({shipTypeId: 1, orientation: 'middle', startRow: 0, startColumn: maxColumns});
+      new Ship({shipTypeId: 1, orientation: 'middle', startRow: 0, startColumn: numColumns});
     }).to.throw;
   });
 });

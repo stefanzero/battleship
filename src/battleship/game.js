@@ -4,7 +4,7 @@ const Board = require('./board');
 const Tile = require('./tile');
 const utils = require('./utils');
 
-const { maxRows, maxColumns, shipTypes, totalCount } = parameters;
+const { numRows, numColumns, shipTypes, totalCount } = parameters;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
 /*
@@ -17,7 +17,7 @@ const bannerBgColor = 'bgWhite';
 const dash = '-';
 const pipe = '|';
 const space = ' ';
-const width = maxColumns * 3;
+const width = numColumns * 3;
 const square = chalk`{${fontColor}.${bgColor} ${dash}}`;
 const edge = chalk`{${fontColor}.${bgColor} ${pipe}}`;
 const blank = chalk`{${bannerFontColor}.${bannerBgColor} ${space}}`;
@@ -49,8 +49,8 @@ class Game {
    * @returns {{column: number, row: number}}
    */
   static randomPosition() {
-    const row = Math.floor(maxRows * Math.random())
-    const column = Math.floor(maxColumns * Math.random())
+    const row = Math.floor(numRows * Math.random())
+    const column = Math.floor(numColumns * Math.random())
     return { row, column };
   }
 

@@ -1,11 +1,25 @@
 const parameters = require('./parameters');
 const utils = require('./utils');
 
-const { maxRows, maxColumns, shipTypes, orientations } = parameters;
+const { numRows, numColumns, shipTypes, orientations } = parameters;
 const { isValidShipPosition } = utils;
 
-/*
- * @class Ship
+/**
+ * The Ship class contains key ship properties:
+ * * shipType
+ * * positions (array of row, column indexes) of tiles that the ship is placed on
+ * * hits (1-D boolean array) indicating if the index in positions has been hit
+ * * sunk (boolean) true if all positions have been hit
+ *
+ * <br />
+ * Ship also includes denomalized (copied) values from the shipType for convenience:
+ * * length
+ * * name (of type of ship)
+ *
+ * <br />
+ * Ship has one private method:
+ * * hit: set the corresponding index in hits to true, and sets sunk to true if all
+ *   ship positions have been hit
  */
 class Ship {
   constructor({shipTypeId, orientation, startRow, startColumn}) {

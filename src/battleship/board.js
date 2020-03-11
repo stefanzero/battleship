@@ -4,7 +4,7 @@ const Ship = require('./ship');
 const Moves = require('./moves');
 const utils = require('./utils');
 
-const { maxRows, maxColumns, shipTypes, totalCount } = parameters;
+const { numRows, numColumns, shipTypes, totalCount } = parameters;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
 /**
@@ -37,10 +37,10 @@ class Board {
      * @type {Tile[][]}
      * @desc matrix of tiles
      */
-    this.tiles = new Array(maxRows)
+    this.tiles = new Array(numRows)
       .fill(null)
       .map((r, i) => {
-        return new Array(maxColumns)
+        return new Array(numColumns)
           .fill(null)
           .map((c, j) => {
             return new Tile(i, j)

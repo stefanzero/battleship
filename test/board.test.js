@@ -5,13 +5,13 @@ const Board = require('../src/battleship/board');
 const Ship = require('../src/battleship/ship');
 const parameters = require('../src/battleship/parameters');
 
-const { maxRows, maxColumns, shipTypes, orientations, totalCount } = parameters;
+const { numRows, numColumns, shipTypes, orientations, totalCount } = parameters;
 
 describe('Board', function() {
   it('should contain a matrix of tiles', function() {
     const board = new Board();
-    for (let i = 0; i < maxRows; i++) {
-      for (let j = 0; j < maxColumns; j++) {
+    for (let i = 0; i < numRows; i++) {
+      for (let j = 0; j < numColumns; j++) {
         const tile = board.tiles[i][j];
         expect(tile).to.be.an.instanceof(Tile);
       }
@@ -34,8 +34,8 @@ describe('Board.addShip', function() {
       const { length } = shipTypes[shipTypeId];
       for (let orientation of Object.keys(orientations)) {
         const { rowFactor, columnFactor } = orientations[orientation];
-        for (let startRow = 0; startRow < maxRows - rowFactor * length; startRow++) {
-          for (let startColumn = 0; startColumn < maxColumns - columnFactor * length; startColumn++) {
+        for (let startRow = 0; startRow < numRows - rowFactor * length; startRow++) {
+          for (let startColumn = 0; startColumn < numColumns - columnFactor * length; startColumn++) {
             const board = new Board();
             const ship = new Ship({shipTypeId, orientation, startRow, startColumn});
             expect(board.addShip(ship)).to.be.true;

@@ -1,5 +1,5 @@
 const parameters = require('./parameters');
-const { maxRows, maxColumns, shipTypes, orientations } = parameters;
+const { numRows, numColumns, shipTypes, orientations } = parameters;
 
 /**
  * Utility static class (mostly) containing common validation functions
@@ -11,7 +11,7 @@ class Utils {
    * @returns {boolean}
    */
   static isRowValid = (row) => {
-    return ((row >= 0) && (row < maxRows));
+    return ((row >= 0) && (row < numRows));
   };
 
   /**
@@ -20,7 +20,7 @@ class Utils {
    * @returns {boolean}
    */
   static isColumnValid = (column) => {
-    return ((column >= 0) && (column < maxColumns));
+    return ((column >= 0) && (column < numColumns));
   };
 
   /**
@@ -59,8 +59,8 @@ class Utils {
     const shipType = shipTypes[shipTypeId];
     const { rowFactor, columnFactor } = orientations[orientation];
     const { length } = shipType;
-    const lastValidStartRow = maxRows - length * rowFactor;
-    const lastValidStartColumn = maxColumns - length * columnFactor;
+    const lastValidStartRow = numRows - length * rowFactor;
+    const lastValidStartColumn = numColumns - length * columnFactor;
     return {lastValidStartRow, lastValidStartColumn};
   };
 
