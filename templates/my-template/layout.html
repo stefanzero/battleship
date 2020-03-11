@@ -8,16 +8,21 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css"/>
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
+  <style>
+    .bold {
+      font-weight: 900;
+    }
+  </style>
 </head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
-  <a href="./index.html">Home</a>
+  <a id="nav-index" href="./index.html">Home</a>
   <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
-  <a href="identifiers.html">Reference</a>
-  <a href="source.html">Source</a>
-  <a href="demo.html">Demo</a>
-  <a href="test.html" data-ice="testLink">Test</a>
+  <a id="nav-identifiers" href="identifiers.html">Reference</a>
+  <a id="nav-source" href="source.html">Source</a>
+  <a id="nav-demo" href="demo.html">Demo</a>
+  <a id="nav-test" href="test.html" data-ice="testLink">Test</a>
   <div class="search-box">
   <span>
     <img src="./image/search.png"/>
@@ -42,5 +47,13 @@
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>
 <script src="script/patch-for-local.js"></script>
+<script>
+  var path = location.pathname.match(/([\w]*)\./)[1];
+  var id = "nav-" + path;
+  var element = document.getElementById(id);
+  if (element) {
+    element.classList.add('bold')
+  }
+</script>
 </body>
 </html>

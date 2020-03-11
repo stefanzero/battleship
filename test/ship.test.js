@@ -1,9 +1,9 @@
 const expect = require('chai').expect;
 const should = require('chai').should();
 const Ship = require('../src/battleship/ship');
-const constants = require('../src/battleship/constants');
+const parameters = require('../src/battleship/parameters');
 
-const { maxRows, maxColumns, shipTypes, orientations, totalCount } = constants;
+const { maxRows, maxColumns, shipTypes, orientations, totalCount } = parameters;
 
 describe('Ship', function() {
   it('should contain construct a ship if the position is valid', function() {

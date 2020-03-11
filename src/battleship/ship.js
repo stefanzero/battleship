@@ -1,7 +1,7 @@
-const constants = require('./constants');
+const parameters = require('./parameters');
 const utils = require('./utils');
 
-const { maxRows, maxColumns, shipTypes, orientations } = constants;
+const { maxRows, maxColumns, shipTypes, orientations } = parameters;
 const { isValidShipPosition } = utils;
 
 /*
@@ -28,7 +28,7 @@ class Ship {
     this.shipType = {...shipTypes[shipTypeId]};
     /**
      * @type {number}
-     * @desc key in constants.shipType
+     * @desc key in parameters.shipType
      */
     this.shipTypeId = shipTypeId;
     /**

@@ -1,5 +1,5 @@
-const constants = require('./constants');
-const { maxRows, maxColumns, shipTypes, orientations } = constants;
+const parameters = require('./parameters');
+const { maxRows, maxColumns, shipTypes, orientations } = parameters;
 
 /**
  * Utility static class (mostly) containing common validation functions

@@ -3,9 +3,9 @@ const should = require('chai').should();
 // const Tile = require('../src/battleship/tile');
 // const Board = require('../src/battleship/board');
 const utils = require('../src/battleship/utils');
-const constants = require('../src/battleship/constants');
+const parameters = require('../src/battleship/parameters');
 
-const {maxRows, maxColumns, totalCount} = constants;
+const {maxRows, maxColumns, totalCount} = parameters;
 
 const {
   isRowValid,

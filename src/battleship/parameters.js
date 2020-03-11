@@ -17,7 +17,8 @@
  * @property {string} name Aircraft Carrier | Battleship | Cruiser | Destroyer | Submarine
  * @property {number} length length of ship
  * @property {number} count number of this ship type on the board
- * @property {string} color chalk color used in tile.toString()
+ * @property {string} color ansi (chalk) color used in tile.toString()
+ * @property {string} backgroundColor HTML color used in tile.toHtml()
  */
 /**
  * @typedef {Object} orientation
@@ -30,16 +31,16 @@
  * @property {orientation} vertical
  */
 /**
- * @typedef {Object} constants
+ * @typedef {Object} parameters
  * @property {number} maxRows number of rows on the board
  * @property {number} maxColumns number of columns on the board
  * @property {shipTypes} shipTypes object of all shiptypes
  * @property {orientations} orientations object of orientations
  */
 /**
- * @type {constants}
+ * @type {parameters}
  */
-const constants = {
+const parameters = {
   maxRows: 10,
   maxColumns: 10,
   shipTypes: {
@@ -96,12 +97,12 @@ const constants = {
   }
 };
 
-constants.totalCount = Object.values(constants.shipTypes)
+parameters.totalCount = Object.values(parameters.shipTypes)
   .reduce((acc, next) => {
     return acc + next.count
   }, 0);
 
-const totalShipArea = Object.values(constants.shipTypes)
+const totalShipArea = Object.values(parameters.shipTypes)
   .reduce((acc, next) => {
     return acc + next.length * next.count
   }, 0);
@@ -109,12 +110,12 @@ const totalShipArea = Object.values(constants.shipTypes)
 /*
  * require that at least half of board space is empty
  */
-const { maxRows, maxColumns } = constants;
+const { maxRows, maxColumns } = parameters;
 if (totalShipArea > (maxRows * maxColumns) / 2) {
   throw new Error('available board space insufficient for total ship area');
 }
 
-const longestShip = Object.values(constants.shipTypes)
+const longestShip = Object.values(parameters.shipTypes)
   .reduce((acc, next) => {
     return Math.max(acc, next.length)
   }, 0);
@@ -130,8 +131,8 @@ if (longestShip > Math.max(maxRows, maxColumns)) {
  * Dynamically compute the maxRowLetter so the board dimensions can be
  * changed by only changing maxRows.
  */
-constants.minRowLetter = 'A';
-const maxCharCode = constants.minRowLetter.charCodeAt(0) + constants.maxRows - 1;
-constants.maxRowLetter = String.fromCharCode(maxCharCode);
+parameters.minRowLetter = 'A';
+const maxCharCode = parameters.minRowLetter.charCodeAt(0) + parameters.maxRows - 1;
+parameters.maxRowLetter = String.fromCharCode(maxCharCode);
 
-module.exports = constants;
+module.exports = parameters;

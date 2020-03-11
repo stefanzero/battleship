@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha",
-    "docs": "esdoc"
+    "docs": "esdoc",
+    "preserve": "scripts/kill-serve-docs.sh",
+    "serve": "node scripts/serve-docs.js"
   },
   "repository": {
     "type": "git",

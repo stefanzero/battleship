@@ -3,9 +3,9 @@ const should = require('chai').should();
 const Tile = require('../src/battleship/tile');
 const Board = require('../src/battleship/board');
 const Ship = require('../src/battleship/ship');
-const constants = require('../src/battleship/constants');
+const parameters = require('../src/battleship/parameters');
 
-const { maxRows, maxColumns, shipTypes, orientations, totalCount } = constants;
+const { maxRows, maxColumns, shipTypes, orientations, totalCount } = parameters;
 
 describe('Board', function() {
   it('should contain a matrix of tiles', function() {

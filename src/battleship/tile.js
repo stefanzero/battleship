@@ -1,8 +1,8 @@
 const chalk = require('chalk');
-const constants = require('./constants');
+const parameters = require('./parameters');
 const utils = require('./utils');
 
-const { maxRows, maxColumns, shipTypes } = constants;
+const { maxRows, maxColumns, shipTypes } = parameters;
 const { isRowValid, isColumnValid } = utils;
 
 /**
@@ -49,7 +49,7 @@ class Tile {
   }
 
   /**
-   * Return string representation of the board, where ships are colored acccording
+   * Return string representation of the tile, where ships are colored acccording
    * to the ship type.  The character is "o" for a tile that has not been attacked,
    * and "x" for a tile that has been attacked.
    *
@@ -97,7 +97,7 @@ class Tile {
   }
 
   /**
-   * Return HTML representation of the board, where ships are colored acccording
+   * Return HTML representation of the tile, where ships are colored acccording
    * to the ship type.  The character is "o" for a tile that has not been attacked,
    * and "x" for a tile that has been attacked.
    *

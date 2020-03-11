@@ -1,10 +1,10 @@
 const chalk = require('chalk');
-const constants = require('./constants');
+const parameters = require('./parameters');
 const Board = require('./board');
 const Tile = require('./tile');
 const utils = require('./utils');
 
-const { maxRows, maxColumns, shipTypes, totalCount } = constants;
+const { maxRows, maxColumns, shipTypes, totalCount } = parameters;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
 /*
@@ -23,6 +23,9 @@ const edge = chalk`{${fontColor}.${bgColor} ${pipe}}`;
 const blank = chalk`{${bannerFontColor}.${bannerBgColor} ${space}}`;
 const border = square.repeat(width);
 
+/**
+ * Controller class for the board to auto-play a game.
+ */
 class Game {
 
   /**
@@ -173,6 +176,12 @@ class Game {
     return this.board.moves;
   }
 
+  /**
+   * Forwards call to Tile class to get the HTML style tag with class rules
+   * to display the board.
+   *
+   * @returns {string}
+   */
   static getHtmlStyleType() {
     return Tile.getHtmlStyleTag();
   }

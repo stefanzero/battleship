@@ -2,6 +2,7 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 const path = require('path');
+const open = require('open');
 const createDemo = require('./create-demo');
 const baseDirectory = path.resolve(__dirname, '../docs');
 
@@ -34,3 +35,7 @@ http.createServer(async function (request, response) {
 }).listen(port);
 
 console.log(`listening on port ${port}`);
+
+setTimeout(() => {
+  open('http://localhost:8081/index.html')
+}, 2000);

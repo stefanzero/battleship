@@ -1,10 +1,10 @@
-const constants = require('./constants');
+const parameters = require('./parameters');
 const Tile = require('./tile');
 const Ship = require('./ship');
 const Moves = require('./moves');
 const utils = require('./utils');
 
-const { maxRows, maxColumns, shipTypes, totalCount } = constants;
+const { maxRows, maxColumns, shipTypes, totalCount } = parameters;
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
 /**
