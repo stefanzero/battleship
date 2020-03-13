@@ -1,8 +1,22 @@
+/**
+ * @type function
+ */
 const chalk = require('chalk');
+/**
+ * @type {parameters}
+ */
 const parameters = require('./parameters');
+/**
+ * @type {Utils}
+ */
 const utils = require('./utils');
-
+/**
+ * @type {Object}
+ */
 const { numRows, numColumns, shipTypes } = parameters;
+/**
+ * @type {Object}
+ */
 const { isRowValid, isColumnValid } = utils;
 
 /**

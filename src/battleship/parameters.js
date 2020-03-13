@@ -102,19 +102,26 @@ parameters.totalCount = Object.values(parameters.shipTypes)
     return acc + next.count
   }, 0);
 
+/**
+ * @type {number}
+ */
 const totalShipArea = Object.values(parameters.shipTypes)
   .reduce((acc, next) => {
     return acc + next.length * next.count
   }, 0);
 
-/*
+/**
  * require that at least half of board space is empty
+ * @type {parameters}
  */
 const { numRows, numColumns } = parameters;
 if (totalShipArea > (numRows * numColumns) / 2) {
   throw new Error('available board space insufficient for total ship area');
 }
 
+/**
+ * @type {number}
+ */
 const longestShip = Object.values(parameters.shipTypes)
   .reduce((acc, next) => {
     return Math.max(acc, next.length)
@@ -132,6 +139,9 @@ if (longestShip > Math.max(numRows, numColumns)) {
  * changed by only changing numRows.
  */
 parameters.minRowLetter = 'A';
+/**
+ * @type {number}
+ */
 const maxCharCode = parameters.minRowLetter.charCodeAt(0) + parameters.numRows - 1;
 parameters.maxRowLetter = String.fromCharCode(maxCharCode);
 

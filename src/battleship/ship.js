@@ -1,7 +1,20 @@
+/**
+ * @type {parameters}
+ */
 const parameters = require('./parameters');
+/**
+ * @type {Utils}
+ */
 const utils = require('./utils');
 
+/**
+ *
+ */
 const { numRows, numColumns, shipTypes, orientations } = parameters;
+/**
+ * @type {Object}
+ * @property {function} utils.isValidShipPosition
+ */
 const { isValidShipPosition } = utils;
 
 /**
@@ -22,6 +35,12 @@ const { isValidShipPosition } = utils;
  *   ship positions have been hit
  */
 class Ship {
+  /**
+   * @param {number} shipTypeId id of ship type
+   * @param {string} orientation "horizontal" or "vertical"
+   * @param {number} startRow row of first tile
+   * @param {number} startColumn column of first tile
+   */
   constructor({shipTypeId, orientation, startRow, startColumn}) {
     if (!(orientation in orientations)) {
       throw new Error(`Ship constructor: invalid ship orientation ${orientation}`);
@@ -29,6 +48,9 @@ class Ship {
     if (!(shipTypeId in shipTypes)) {
       throw new Error(`Ship constructor: invalid shipTypeId ${shipTypeId}`);
     }
+    /**
+     * @type shipType
+     */
     const shipType = shipTypes[shipTypeId];
     const { length, name, color } = shipType;
     if (!isValidShipPosition({shipTypeId, orientation, startRow, startColumn})) {
@@ -95,7 +117,7 @@ class Ship {
    * This method is called by board.attack, and should not be called independently.
    *
    * @private
-   * @param {Object} obj
+   * @param {Object} obj destructured object
    * @param {number} obj.row zero-based index of row on board matrix
    * @param {number} obj.column zero-based index of column on board matrix
    */

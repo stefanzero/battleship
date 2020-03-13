@@ -3,13 +3,15 @@ const should = require('chai').should();
 const Tile = require('../src/battleship/tile');
 const Board = require('../src/battleship/board');
 const Ship = require('../src/battleship/ship');
+const Moves = require('../src/battleship/moves');
 const parameters = require('../src/battleship/parameters');
 
 const { numRows, numColumns, shipTypes, orientations, totalCount } = parameters;
 
-describe('Board', function() {
+describe('Board constructor', function() {
+  const board = new Board();
   it('should contain a matrix of tiles', function() {
-    const board = new Board();
+    // const board = new Board();
     for (let i = 0; i < numRows; i++) {
       for (let j = 0; j < numColumns; j++) {
         const tile = board.tiles[i][j];
@@ -17,8 +19,20 @@ describe('Board', function() {
       }
     }
   });
+  it('should be initialized with an empty array for ships', function() {
+    expect(Array.isArray(board.ships)).to.be.true;
+  });
+  it('should be initialized with isSetUp as false', function() {
+    expect(board.isSetUp).to.be.false;
+  })
+  it('should have an instance of Moves', function() {
+    expect(board.moves).to.be.an.instanceof(Moves);
+  })
 
-  it('Board.setup should add ships at random positions if setup is called with no parameters',
+});
+
+describe('Board.setup', function() {
+  it('it should add ships at random positions if setup is called with no parameters',
     function(){
       const board = new Board();
       board.setUp();
@@ -39,6 +53,7 @@ describe('Board.addShip', function() {
             const board = new Board();
             const ship = new Ship({shipTypeId, orientation, startRow, startColumn});
             expect(board.addShip(ship)).to.be.true;
+            expect(board.ships.includes(ship));
           }
         }
       }
@@ -107,6 +122,26 @@ describe('Board.addShip', function() {
     const board = new Board();
     board.addShip(aircraftCarrier1);
     expect(board.addShip(aircraftCarrier2)).to.be.false;
+  });
+
+  it('should have isSetUp set to true after all required ships are added', function() {
+    const ships = Board.getSampleShipArray();
+    const board = new Board();
+    ships.forEach(ship => {
+      board.addShip(ship);
+    });
+    expect(board.isSetUp).to.be.true;
+  });
+
+  it('should have the intial board saved to Moves after all required ships are added', function() {
+    const ships = Board.getSampleShipArray();
+    const board = new Board();
+    ships.forEach(ship => {
+      board.addShip(ship);
+    });
+    expect(board.moves.moves.length).to.equal(1);
+    expect(board.moves.boardHtml.length).to.equal(1);
+    expect(board.moves.boardString.length).to.equal(1);
   });
 
 });
@@ -183,6 +218,57 @@ describe('Board.attack', function() {
     // Submarine 2
     expect(board.attack({row: 8, column: 1})).to.equal('Win');
   });
+});
+
+describe('Board.addMove', function() {
+  it('should be called from Board.attack', function() {
+    const board = new Board();
+    board.setUp();
+    board.attack({row: 0, column: 0});
+    expect(board.moves.moves.length).to.equal(2);
+  });
+  it('should be reset isRandom to false after it is called', function() {
+    const board = new Board();
+    board.setUp();
+    board.moves.setIsRandom(true);
+    board.attack({row: 0, column: 0});
+    expect(board.moves.isRandom).to.be.false;
+  });
+});
+
+describe('Board.isWon', function() {
+  it('should return true after all the ships are sunk', function() {
+    const board = new Board();
+    const ships = Board.getSampleShipArray();
+    board.setUp(ships);
+    // Aircraft Carrier
+    expect(board.attack({row: 1, column: 9})).to.equal('Hit');
+    expect(board.attack({row: 2, column: 9})).to.equal('Hit');
+    expect(board.attack({row: 3, column: 9})).to.equal('Hit');
+    expect(board.attack({row: 4, column: 9})).to.equal('Hit');
+    expect(board.attack({row: 5, column: 9})).to.equal('Sunk');
+    // Battleship
+    expect(board.attack({row: 4, column: 7})).to.equal('Hit');
+    expect(board.attack({row: 5, column: 7})).to.equal('Hit');
+    expect(board.attack({row: 6, column: 7})).to.equal('Hit');
+    expect(board.attack({row: 7, column: 7})).to.equal('Sunk');
+    // Cruiser
+    expect(board.attack({row: 6, column: 2})).to.equal('Hit');
+    expect(board.attack({row: 6, column: 3})).to.equal('Hit');
+    expect(board.attack({row: 6, column: 4})).to.equal('Sunk');
+    // Destroyer 1
+    expect(board.attack({row: 1, column: 1})).to.equal('Hit');
+    expect(board.attack({row: 2, column: 1})).to.equal('Sunk');
+    // Destroyer 2
+    expect(board.attack({row: 4, column: 3})).to.equal('Hit');
+    expect(board.attack({row: 4, column: 4})).to.equal('Sunk');
+    // Submarine 1
+    expect(board.attack({row: 2, column: 3})).to.equal('Sunk');
+    // Submarine 2
+    expect(board.attack({row: 8, column: 1})).to.equal('Win');
+    // isWon
+    expect(board.isWon()).to.be.true;
+  })
 });
 
 describe('Board.getSampleShipArray', function() {

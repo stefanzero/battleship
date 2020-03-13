@@ -5,6 +5,10 @@
  */
 class Moves {
 
+  /**
+   * @param {Board} board
+   * @param {boolean} toConsole
+   */
   constructor({board, toConsole}) {
     /**
      * @type {Board}
@@ -58,6 +62,7 @@ class Moves {
 
   /**
    * Called from board.attack
+   * @private
    * @param {Object} obj
    * @param {number} obj.row
    * @param {number} obj.column

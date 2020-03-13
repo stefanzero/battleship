@@ -66,9 +66,43 @@ npm install
 npm run serve
 ```
 
+This ReadMe page is duplicated by Esdocs and displayed on the **Home**
+link in the navigation bar.
+
+## Object-oriented Design
+
+All the objects are displayed in the left column of the Esdocs web
+page:
+
+* Board
+* Tile
+* Ship
+* Moves
+* Game
+* Utils
+* parameters
+
+The Board is the main object that contains tiles and ships, 
+and the methods to add ships, automatically set up the board, 
+and conduct attacks.  The Board also has a Moves object, which 
+keeps track of the history of the game, including a string and 
+HTML representation of the board after each move (attack).
+
+The Game class implements a strategy for playing the game, and
+is used to create the Demo page of the Esdocs.  The Game constructor
+creates a new board and then sets up the board with ships at 
+random positions.  The Game has a play method that conducts 
+random attacks until a hit is achieved.  Then the surrounding 
+tiles of the hit are stored on a stack to be  attacked.  This 
+relatively simple strategy greatly improves the rate at which 
+all ships are sunk.
+
+## Unit and Functional Tests
+
+
 ## Game Parameters
 
-
+The game parameters are in the file parameters.js
 
 
 

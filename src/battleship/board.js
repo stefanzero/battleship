@@ -1,10 +1,33 @@
+/**
+ * @type {parameters}
+ */
 const parameters = require('./parameters');
+/**
+ * @type {Tile}
+ */
 const Tile = require('./tile');
+/**
+ *
+ * @type {Ship}
+ */
 const Ship = require('./ship');
+/**
+ *
+ * @type {Moves}
+ */
 const Moves = require('./moves');
+/**
+ * @type {Utils}
+ */
 const utils = require('./utils');
 
+/**
+ * @type {Object}
+ */
 const { numRows, numColumns, shipTypes, totalCount } = parameters;
+/**
+ * @type {Object}
+ */
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
 /**
@@ -22,7 +45,6 @@ class Board {
    * @param {?boolean} toConsole controls if attacks are output to the console
    */
   constructor(toConsole = false) {
-    // this.toConsole = toConsole;
     /**
      * @type {[Ship]}
      * @desc array of ships on the board

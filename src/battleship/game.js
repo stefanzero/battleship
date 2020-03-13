@@ -1,26 +1,83 @@
+/**
+ * @type {function}
+ */
 const chalk = require('chalk');
+/**
+ * @type {parameters}
+ */
 const parameters = require('./parameters');
+/**
+ * @type {Board}
+ */
 const Board = require('./board');
+/**
+ *
+ * @type {Tile}
+ */
 const Tile = require('./tile');
+/**
+ * @type {Utils}
+ */
 const utils = require('./utils');
-
+/**
+ * @type {parameters}
+ */
 const { numRows, numColumns, shipTypes, totalCount } = parameters;
+/**
+ * @type {Utils}
+ */
 const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 
 /*
  * constants for GameBanner
  */
+/**
+ * @type {string}
+ */
 const fontColor = 'white';
+/**
+ * @type {string}
+ */
 const bgColor = 'bgBlack';
+/**
+ * @type {string}
+ */
 const bannerFontColor = 'black';
+/**
+ * @type {string}
+ */
 const bannerBgColor = 'bgWhite';
+/**
+ * @type {string}
+ */
 const dash = '-';
+/**
+ * @type {string}
+ */
 const pipe = '|';
+/**
+ * @type {string}
+ */
 const space = ' ';
+/**
+ * @type {number}
+ */
 const width = numColumns * 3;
+/**
+ * @type {string}
+ */
 const square = chalk`{${fontColor}.${bgColor} ${dash}}`;
+/**
+ * @type {string}
+ */
 const edge = chalk`{${fontColor}.${bgColor} ${pipe}}`;
+/**
+ * @type {string}
+ */
 const blank = chalk`{${bannerFontColor}.${bannerBgColor} ${space}}`;
+/**
+ * @type {string}
+ */
 const border = square.repeat(width);
 
 /**

@@ -1,4 +1,10 @@
+/**
+ * @type {parameters}
+ */
 const parameters = require('./parameters');
+/**
+ * @type {Object}
+ */
 const { numRows, numColumns, shipTypes, orientations } = parameters;
 
 /**
