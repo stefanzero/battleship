@@ -1,7 +1,4 @@
 const expect = require('chai').expect;
-const should = require('chai').should();
-// const Tile = require('../src/battleship/tile');
-// const Board = require('../src/battleship/board');
 const utils = require('../src/battleship/utils');
 const parameters = require('../src/battleship/parameters');
 
@@ -15,7 +12,10 @@ const {
   getRandomShipPosition
 } = utils;
 
-describe('utils', function () {
+/**
+ * @test {Utils}
+ */
+describe('Utils', function () {
   it('isRowValid should return true for valid rows', function () {
     expect(isRowValid(0)).to.be.true;
     expect(isRowValid(numRows - 1)).to.be.true;

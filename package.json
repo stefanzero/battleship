@@ -7,7 +7,8 @@
     "test": "mocha",
     "docs": "esdoc",
     "preserve": "scripts/kill-serve-docs.sh",
-    "serve": "node scripts/serve-docs.js"
+    "serve": "node scripts/serve-docs.js",
+    "play": "node scripts/play.js"
   },
   "repository": {
     "type": "git",

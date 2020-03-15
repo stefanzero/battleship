@@ -36,6 +36,7 @@
  * @property {number} numColumns number of columns on the board
  * @property {shipTypes} shipTypes object of all shiptypes
  * @property {orientations} orientations object of orientations
+ * @property {number} totalCount total number of ships
  */
 /**
  * @type {parameters}
@@ -57,16 +58,16 @@ const parameters = {
       name: 'Battleship',
       length: 4,
       count: 1,
-      color: 'bgYellow',
-      backgroundColor: 'yellow'
+      color: 'bgYellowBright',
+      backgroundColor: 'orange'
     },
     3: {
       shipTypeId: 3,
       name: 'Cruiser',
       length: 3,
       count: 1,
-      color: 'bgYellowBright',
-      backgroundColor: 'orange'
+      color: 'bgYellow',
+      backgroundColor: 'yellow'
     },
     4: {
       shipTypeId: 4,
@@ -97,6 +98,9 @@ const parameters = {
   }
 };
 
+/**
+ * @type {number}
+ */
 parameters.totalCount = Object.values(parameters.shipTypes)
   .reduce((acc, next) => {
     return acc + next.count

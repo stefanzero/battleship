@@ -8,6 +8,9 @@ const parameters = require('../src/battleship/parameters');
 
 const { numRows, numColumns, shipTypes, orientations, totalCount } = parameters;
 
+/**
+ * @test {Board}
+ */
 describe('Board constructor', function() {
   const board = new Board();
   it('should contain a matrix of tiles', function() {
@@ -31,6 +34,9 @@ describe('Board constructor', function() {
 
 });
 
+/**
+ * @test {Board}
+ */
 describe('Board.setup', function() {
   it('it should add ships at random positions if setup is called with no parameters',
     function(){
@@ -42,6 +48,9 @@ describe('Board.setup', function() {
   );
 });
 
+/**
+ * @test {Board}
+ */
 describe('Board.addShip', function() {
   it('should be able to add a ship to the board if the position is valid', function() {
     for (let shipTypeId of Object.keys(shipTypes)) {
@@ -146,6 +155,9 @@ describe('Board.addShip', function() {
 
 });
 
+/**
+ * @test {Board}
+ */
 describe('Board.attack', function() {
   it('should correctly register a Hit', function() {
     const aircraftCarrier = new Ship({
@@ -220,6 +232,9 @@ describe('Board.attack', function() {
   });
 });
 
+/**
+ * @test {Board}
+ */
 describe('Board.addMove', function() {
   it('should be called from Board.attack', function() {
     const board = new Board();
@@ -236,6 +251,9 @@ describe('Board.addMove', function() {
   });
 });
 
+/**
+ * @test {Board}
+ */
 describe('Board.isWon', function() {
   it('should return true after all the ships are sunk', function() {
     const board = new Board();
@@ -271,6 +289,9 @@ describe('Board.isWon', function() {
   })
 });
 
+/**
+ * @test {Board}
+ */
 describe('Board.getSampleShipArray', function() {
   it('should return an array of length = totalCount', function() {
     const ships = Board.getSampleShipArray();

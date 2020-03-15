@@ -6,10 +6,11 @@
 class Moves {
 
   /**
-   * @param {Board} board
-   * @param {boolean} toConsole
+   * @param {Board} board instance of Board
+   * @param {?boolean} toConsole if true, addMove displays result to console
+   * @param {?boolean} playerView if true, the ships are not displayed
    */
-  constructor({board, toConsole}) {
+  constructor({board, toConsole= false, playerView = false}) {
     /**
      * @type {Board}
      * @desc board
@@ -50,6 +51,11 @@ class Moves {
      * @desc if true, print moves and board game view to the console
      */
     this.toConsole = toConsole;
+    /**
+     * @type {boolean}
+     * @desc if true, player view is displayed (no ships)
+     */
+    this.playerView = playerView;
   }
 
   /**
@@ -83,6 +89,7 @@ class Moves {
 
     if (this.toConsole) {
       const move = this.moves.length - 1;
+      const view = this.playerView ? 'player' : 'game';
       if (this.isRandom) {
         console.log('Random attack');
       }
@@ -90,7 +97,7 @@ class Moves {
         console.log(`Move #${move}:  attack(${row}, ${column})`)
       }
       console.log(result.toUpperCase());
-      console.log(this.boardString[move].game);
+      console.log(this.boardString[move][view]);
       if (this.board.gameOver) {
         console.log(`Win in ${move} moves`);
       }

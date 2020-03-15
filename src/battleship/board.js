@@ -43,8 +43,9 @@ const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
 class Board {
   /**
    * @param {?boolean} toConsole controls if attacks are output to the console
+   * @param {?boolean} playerView if true display player view
    */
-  constructor(toConsole = false) {
+  constructor(toConsole = false, playerView = false) {
     /**
      * @type {[Ship]}
      * @desc array of ships on the board
@@ -82,7 +83,7 @@ class Board {
      * @type {Moves}
      * @desc Game attack history is stored in the moves.
      */
-    this.moves = new Moves({board: this, toConsole});
+    this.moves = new Moves({board: this, toConsole, playerView});
   }
 
   /**

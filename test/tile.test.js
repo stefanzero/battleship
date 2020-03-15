@@ -3,6 +3,9 @@ const should = require('chai').should();
 const Tile = require('../src/battleship/tile');
 const Board = require('../src/battleship/board');
 
+/**
+ * @test {Tile}
+ */
 describe('Tile Constructor', function() {
   it('should create valid tiles when rows and columns are in range', function() {
     for (let i = 0; i < Board.numRows; i++) {
@@ -30,6 +33,9 @@ describe('Tile Constructor', function() {
   });
 });
 
+/**
+ * @test {Tile}
+ */
 describe('Tile.toString', function() {
   it('should return an "o" if the tile is not attacked', function() {
     const tile = new Tile(0, 0);
@@ -42,6 +48,9 @@ describe('Tile.toString', function() {
   });
 });
 
+/**
+ * @test {Tile}
+ */
 describe('Tile.toHtml', function() {
   it('should return a span with an "o" if the tile is not attacked', function() {
     const tile = new Tile(0, 0);

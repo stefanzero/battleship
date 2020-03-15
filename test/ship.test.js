@@ -5,6 +5,9 @@ const parameters = require('../src/battleship/parameters');
 
 const { numRows, numColumns, shipTypes, orientations, totalCount } = parameters;
 
+/**
+ * @test {Ship}
+ */
 describe('Ship Constructor', function() {
   it('should contain construct a ship if the position is valid', function() {
     for (let shipTypeId of Object.keys(shipTypes)) {
@@ -63,6 +66,9 @@ describe('Ship Constructor', function() {
   });
 });
 
+/**
+ * @test {Ship}
+ */
 describe('Ship.hit', function() {
   it('should set the proper hit index', function() {
     const ship = new Ship({

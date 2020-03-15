@@ -36,6 +36,7 @@ Esdoc is in the esdoc section of the package.json file.  The documents
 have already been generated (in this zipfile of Battleship) and are 
 located in the docs directory.
 
+<br />
 The documents can be generated again with a command in the scripts 
 section of package.json.  The "Dev dependencies" (esdoc and related
 esdoc plugins) in the package.json must be installed prior to generating 
@@ -53,6 +54,7 @@ content requires a web server to generate the content.  In the Esdocs, a "Demo"
 web page has been created, that "auto-plays" a random arrangement of 
 ships.  Each time the demo page is reloaded, a new game is played and displayed.
 
+<br />
 A Node program has been included in this package that runs a local HTTP 
 server (on port 8081) that will run this Demo web page.  A command in the scripts 
 section of package.json will start this local server and automatically 
@@ -82,31 +84,97 @@ page:
 * Utils
 * parameters
 
+<br />
 The Board is the main object that contains tiles and ships, 
 and the methods to add ships, automatically set up the board, 
 and conduct attacks.  The Board also has a Moves object, which 
 keeps track of the history of the game, including a string and 
 HTML representation of the board after each move (attack).
 
+<br />
+The parameters object contains all the constants for configuring 
+the game:
+* numRows
+* numColumns
+* shipTypes
+* orientations (this should not be changed)
+
+<br />
+The shipTypes is an object containing the essential information for
+a given ship type:
+* shipTypeId (number 1 - 5)
+* name (Aircraft Carrier, Battleship, Cruiser, Destroyer, Submarine)
+* length (5, 4, 3, 2, 1 for ships above)
+* number of each type on the board (1, 1, 1, 2, 2 for ships above)
+* color (for Board.toString)
+* backgroundColor (for Board.toHtml)
+
+<br />
 The Game class implements a strategy for playing the game, and
 is used to create the Demo page of the Esdocs.  The Game constructor
 creates a new board and then sets up the board with ships at 
-random positions.  The Game has a play method that conducts 
+random positions.  The Game has a **play** method that conducts 
 random attacks until a hit is achieved.  Then the surrounding 
-tiles of the hit are stored on a stack to be  attacked.  This 
-relatively simple strategy greatly improves the rate at which 
-all ships are sunk.
+tiles of the hit are stored on a stack to be  attacked.  
+
+<br />
+When a second hit is achieved, the stack is filtered to positions that 
+are in a line with the last hit.  When an attack results in a sunken 
+ship, the stack is emptied.  But if the stack is emptied without a
+sunken ship, the last stack is restored. This is done because if 
+two ships are adjacent, the filtering strategy would remove positions 
+that should still be tried.  This relatively simple strategy greatly 
+improves the rate at which all ships are sunk.  
+
+<br />
+The auto-play game strategy usually results in a ship being sunk if a 
+few moves after any one of its positions are hit.  Since a submarine
+has a length of 1 (only 1 tile), it is the hardest ship to sink.
+Most often, the submarine is the last ship to be sunk in the auto-play 
+simulation.
 
 ## Unit and Functional Tests
 
+The Mocha testing utility and the Chai assertion library are used 
+to write unit tests for every class and class method.  The tests 
+are displayed in the **Test** link in the navigation bar.  
 
-## Game Parameters
+The **Demo** link in the navigation bar is an end-to-end functional 
+test of Battleship.  Each time the **Demo** page is reloaded, a new 
+instance of the Game class is created, which creates a new instance of
+Board which is set up with all required ships at random (valid) 
+positions.  Then the play method of Game is called.  
 
-The game parameters are in the file parameters.js
+The results of the Demo game are displayed as table with 3 columns:
+* Description: Move Number, Position Attacked, Attack Result
+* Game View: Display of the game with the ships (Enemy View)
+* Player View: Display of the game with positions attacked, hit or sunk
 
+<br />
+Scrolling down the demo page shows the effectiveness of the auto-play 
+strategy.  After a random attack results in a hit, the positions surrounding 
+that hit are called and the ship is usually sunk in a few moves later.
 
+## Changing Game Parameters
+
+The game parameters are in the file parameters.js.  The values for numRows 
+and numColumns can be edited to change the size of the board.  The values 
+in shipTypes can be edited to change the type of ships on the board, their 
+length, number of each type, and color displayed.
 
 ## Playing the game
+
+Future extensions to this package could be a hosted Express (Node) web site with
+API routes to start a new game, add ships, and accept moves (attacks) upon the 
+enemy.  This could be accompanied by a front-end web site to allow players to 
+use these APIs and display both the "Home View"  (Game view for the player), and
+"Player View" for tracking the attacks upon the enemies.  These would correspond 
+to the "Game View" and "Player View" columns of the **Demo** page.
+
+The game can be played from the command line in a Node (REPL) session.  Here is a 
+sample of the commands required:
+
+$node
 
 
 
