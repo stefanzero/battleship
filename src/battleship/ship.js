@@ -132,6 +132,17 @@ class Ship {
     this.sunk = this.hits.filter(value => value === true).length === this.length;
   }
 
+  isHit({row, column}) {
+    const index = this.positions.findIndex(item =>
+      (item[0] === row) && (item[1] === column)
+    );
+    if (index < 0) {
+      console.error(`Ship.isHit invalid position [${row}, ${column}]`);
+      return false;
+    }
+    return this.hits[index];
+  }
+
 }
 
 module.exports = Ship;

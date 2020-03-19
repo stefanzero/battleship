@@ -17,10 +17,12 @@ async function getAnswer (prompt) {
 
 let done = false;
 let move = 1;
-const board = new Board(true, true);
+let playerView = true;
+// playerView = false;
+const board = new Board(true, playerView);
 
 const playGame = async () => {
-  let prompt = `Move #${move}, enter "q" to quit, enter 2 numbers (row column) to attack:`
+  let prompt = 'Enter 2 numbers (row and column) separated by a space (or q to quit):';
   while (!done) {
     const answer = await getAnswer(prompt);
     prompt = processAnswer(answer);
@@ -30,7 +32,7 @@ const playGame = async () => {
 
 const processAnswer = (answer) => {
   // this will be set depending on the answer
-  let prompt = 'Enter 2 numbers separated by a space (or q to quit)';
+  let prompt = 'Enter 2 numbers (row and column) separated by a space (or q to quit):';
   // if answer === 'q', then quit
   if (answer === 'q') {
     console.log('User entered q to quit')
@@ -47,14 +49,16 @@ const processAnswer = (answer) => {
   const row = parseInt(matches[1]);
   const column = parseInt(matches[2]);
   if (isNaN(row) || isNaN(column)) {
-    prompt = 'Enter 2 numbers separated by a space (or q to quit)';
     return prompt;
   }
   let result;
   try {
     result = board.attack({row, column});
   } catch (ex) {
-    prompt = 'Enter valid position (2 numbers) or q to quit';
+    /*
+     * Special prompt when row or column were invalid.
+     */
+    prompt = 'Enter valid position (2 numbers) or q to quit:';
     return prompt;
   }
   if (result === 'Win') {

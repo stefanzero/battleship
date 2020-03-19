@@ -79,9 +79,13 @@ class Tile {
      *   o  unattacked
      *   x  attacked
      *
-     *   font color:
+     *   font color not-attacked, hit or sunk:
      *   black:   non-playerView
      *   white:   playerView
+     *
+     *   font color attacked:
+     *   white:   non-playerView
+     *   black:   playerView
      *
      *   background color non-playerView:
      *   white:   non-ship tile
@@ -94,17 +98,26 @@ class Tile {
      *   background color playerView:
      *   green:   ship
      *   red:     ship && ship.sunk
+     *   blackBright:   attacked
      */
-    const symbol = this.attacked ? 'x' : 'o';
+    let fontColor = 'black';
     let bgColor = 'bgWhite';
-    const fontColor = 'black';
-    if (this.ship) {
-      if (playerView) {
+    const symbol = this.attacked ? 'x' : 'o';
+    if (playerView) {
+      if (this.ship) {
         if (this.attacked) {
-          bgColor = this.ship.sunk ? 'bgRed' : 'bgGreen';
+          bgColor = this.ship.sunk ? 'bgRed' : 'bgYellow';
         }
       } else {
+        fontColor = this.attacked ? 'white' : 'black';
+        bgColor = this.attacked ? 'bgBlackBright' : 'bgWhite';
+      }
+    } else {
+      if (this.ship) {
         bgColor = shipTypes[this.ship.shipTypeId].color;
+      } else {
+        fontColor = this.attacked ? 'white' : 'black';
+        bgColor = this.attacked ? 'bgBlackBright' : 'bgWhite';
       }
     }
     return chalk`{${fontColor}.${bgColor}  ${symbol} }`;
