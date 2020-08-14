@@ -132,6 +132,14 @@ class Ship {
     this.sunk = this.hits.filter(value => value === true).length === this.length;
   }
 
+  /**
+   * Return true if the position is covered by this ship and was hit.
+   *
+   * @param {Object} obj destructured object
+   * @param {number} obj.row
+   * @param {number} obj.column
+   * @returns {boolean}
+   */
   isHit({row, column}) {
     const index = this.positions.findIndex(item =>
       (item[0] === row) && (item[1] === column)

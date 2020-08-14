@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">test/ship.test.js | battleship</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+  <style>
+    .bold {
+      font-weight: 900;
+    }
+  </style>
+<meta name="description" content="Battleship game in Node"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="battleship"><meta property="twitter:description" content="Battleship game in Node"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a id="nav-index" href="./index.html">Home</a>
+  
+  <a id="nav-identifiers" href="identifiers.html">Reference</a>
+  <a id="nav-source" href="source.html">Source</a>
+  <a id="nav-demo" href="demo.html">Demo</a>
+  <a id="nav-test" href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#battleship">battleship</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/board.js~Board.html">Board</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/moves.js~Moves.html">Moves</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/ship.js~Ship.html">Ship</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/utils.js~Utils.html">Utils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientation">orientation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientations">orientations</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipType">shipType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipTypes">shipTypes</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">test/ship.test.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const expect = require(&apos;chai&apos;).expect;
+const Ship = require(&apos;../src/battleship/ship&apos;);
+const parameters = require(&apos;../src/battleship/parameters&apos;);
+
+const { numRows, numColumns, shipTypes, orientations, totalCount } = parameters;
+
+/**
+ * @test {Ship}
+ */
+describe(&apos;Ship Constructor&apos;, function() {
+  it(&apos;should contain construct a ship if the position is valid&apos;, function() {
+    for (let shipTypeId of Object.keys(shipTypes)) {
+      const { length } = shipTypes[shipTypeId];
+      for (let orientation of Object.keys(orientations)) {
+        const { rowFactor, columnFactor } = orientations[orientation];
+        for (let startRow = 0; startRow &lt; numRows - rowFactor * length; startRow++) {
+          for (let startColumn = 0; startColumn &lt; numColumns - columnFactor * length; startColumn++) {
+            const ship = new Ship({shipTypeId, orientation, startRow, startColumn});
+            expect(ship.length).to.equal(length)
+          }
+        }
+      }
+    }
+  });
+  it(&apos;should contain the correct shipType&apos;, function() {
+    const ship = new Ship({
+      shipTypeId: 1,
+      orientation: &apos;horizontal&apos;,
+      startRow: 0,
+      startColumn: 0
+    });
+    expect(ship.shipType).to.eql(shipTypes[1]);
+  });
+  it(&apos;should contain a hit array of false values&apos;, function() {
+    const shipTypeId = 2;
+    const ship = new Ship({
+      shipTypeId,
+      orientation: &apos;horizontal&apos;,
+      startRow: 0,
+      startColumn: 0
+    });
+    const length = shipTypes[shipTypeId].length;
+    expect(ship.hits.length).to.equal(length);
+    for (let i = 0; i &lt; length; i++){
+      expect(ship.hits[i]).to.be.false;
+    }
+  });
+  it(&apos;should throw an error if the shipTypeId is invalid&apos;, function() {
+    expect(() =&gt; {
+      new Ship({shipTypeId: 0, orientation: &apos;horizontal&apos;, startRow: 0, startColumn: 0});
+    }).to.throw;
+  });
+  it(&apos;should throw an error if the orientation is invalid&apos;, function() {
+    expect(() =&gt; {
+      new Ship({shipTypeId: 1, orientation: &apos;middle&apos;, startRow: 0, startColumn: 0});
+    }).to.throw;
+  });
+  it(&apos;should throw an error if the position is invalid&apos;, function() {
+    expect(() =&gt; {
+      new Ship({shipTypeId: 1, orientation: &apos;middle&apos;, startRow: numRows, startColumn: 0});
+    }).to.throw;
+    expect(() =&gt; {
+      new Ship({shipTypeId: 1, orientation: &apos;middle&apos;, startRow: 0, startColumn: numColumns});
+    }).to.throw;
+  });
+});
+
+/**
+ * @test {Ship}
+ */
+describe(&apos;Ship.hit&apos;, function() {
+  it(&apos;should set the proper hit index&apos;, function() {
+    const ship = new Ship({
+      shipTypeId: 3,
+      orientation: &apos;horizontal&apos;,
+      startRow: 0,
+      startColumn: 0
+    });
+    ship.hit({row: 0, column: 0});
+    expect(ship.hits[0]).to.be.true;
+    ship.hit({row: 0, column: 1});
+    expect(ship.hits[1]).to.be.true;
+    ship.hit({row: 0, column: 2});
+    expect(ship.hits[2]).to.be.true;
+  });
+});</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+<script>
+  var path = location.pathname.match(/([\w]*)\./)[1];
+  var id = "nav-" + path;
+  var element = document.getElementById(id);
+  if (element) {
+    element.classList.add('bold')
+  }
+</script>
+</body>
+</html>

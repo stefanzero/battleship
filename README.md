@@ -12,7 +12,7 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Battleship_%28game%29):
 >alternate turns calling "shots" at the other player's ships, and the 
 >objective of the game is to destroy the opposing player's fleet.
 
-#### Image of paper version of Battleship
+**Paper version of Battleship**
 ![](https://en.wikipedia.org/wiki/File:Battleships_Paper_Game.svg)
 ![](docs/Battleships_Paper_Game.png)
 ![](http://localhost:8081/Battleships_Paper_Game.png)
@@ -23,6 +23,7 @@ Node version 8 or greater must be installed, as well as npm (Node Package
 Manager). In a terminal window, install the required Node packages:
 
 ```bash
+git clone https://github.com/stefanzero/battleship.git
 npm install
 ```
 
@@ -35,6 +36,10 @@ the source files and generates the output files.  The configuration for
 Esdoc is in the esdoc section of the package.json file.  The documents 
 have already been generated (in this zipfile of Battleship) and are 
 located in the docs directory.
+
+Here is an screen shot of the ESDOCS:
+![](docs/images/Battleship-home.png)
+![](http://localhost:8081/images/Battleship-home.png)
 
 <br />
 The documents can be generated again with a command in the scripts 
@@ -52,13 +57,15 @@ npm run docs
 Static HTML content (files) can be opened with a web browser, but dynamic 
 content requires a web server to generate the content.  In the Esdocs, a "Demo"
 web page has been created, that "auto-plays" a random arrangement of 
-ships.  Each time the demo page is reloaded, a new game is played and displayed.
+ships.  Each time the demo page is reloaded, a new game is played and 
+displayed. This new game is created by a Node program in the scripts 
+directory (scripts/create-demo.js).
 
 <br />
-A Node program has been included in this package that runs a local HTTP 
-server (on port 8081) that will run this Demo web page.  A command in the scripts 
-section of package.json will start this local server and automatically 
-open the default browser to the Home page of the documentation.
+A Node program (scripts/serve-docs.js) has been included in this package that runs 
+a local HTTP server (on port 8081) that will serve these ESDOCS.  A command 
+in the scripts section of package.json ("serve") will start this local server and 
+automatically open the default browser to the Home page of the documentation.
 **Please run the install command first, then the serve command NOW**
 so you can see the documentation for the sections to be described
 below.
@@ -71,10 +78,20 @@ npm run serve
 This ReadMe page is duplicated by Esdocs and displayed on the **Home**
 link in the navigation bar.
 
+If for some reason Node cannot open a local HTTP server on port 8081, please
+open the docs home page directly in your browser:
+
+```bash
+open docs/index.html
+```
+In this case, the Demo page is static and reloading it will just display 
+the same game simulation.
+
 ## Object-oriented Design
 
 All the objects are displayed in the left column of the Esdocs web
-page:
+page.  Please click on each item to display a detailed web page with 
+a description of all its members and methods.
 
 * Board
 * Tile
@@ -140,7 +157,8 @@ to write unit tests for every class and class method.  The tests
 are displayed in the **Test** link in the navigation bar.  
 
 The **Demo** link in the navigation bar is an end-to-end functional 
-test of Battleship.  Each time the **Demo** page is reloaded, a new 
+test of Battleship.  Each time the **Demo** page is reloaded (while the
+"npm run server" command is executing), a new 
 instance of the Game class is created, which creates a new instance of
 Board which is set up with all required ships at random (valid) 
 positions.  Then the play method of Game is called.  
@@ -164,6 +182,47 @@ length, number of each type, and color displayed.
 
 ## Playing the game
 
+A Node program is included in the package to allow a single player to attack a
+board with a random arrangment of ships.  In a terminal window this command
+starts the game:
+
+```bash
+npm run play
+```
+
+This starts the program scripts/play.js, which displays the board after each
+attack and a prompt to enter the next attack.
+![](docs/images/Move0.png)
+![](http://localhost:8081/images/Move0.png)
+
+Let's attack 2, 2.
+It is a Miss, so the tile is shown with an "x" in a dark gray:
+![](docs/images/Move1.png)
+![](http://localhost:8081/images/Move1.png)
+
+Let's attack 6, 2.
+It is a Hit, so the tile is shown with an "x" in orange:
+![](docs/images/Move2.png)
+![](http://localhost:8081/images/Move2.png)
+
+Here are a few  more attacks:
+![](docs/images/Move3.png)
+![](http://localhost:8081/images/Move3.png)
+
+![](docs/images/Move4.png)
+![](http://localhost:8081/images/Move4.png)
+
+Now we get a Hit on the last position of a ship, so it is 
+sunk and marked with all x's in red.
+![](docs/images/Move5.png)
+![](http://localhost:8081/images/Move5.png)
+
+After many moves, we finally sink the last ship:
+![](docs/images/Move31.png)
+![](http://localhost:8081/images/Move31.png)
+
+## Future extensions
+
 Future extensions to this package could be a hosted Express (Node) web site with
 API routes to start a new game, add ships, and accept moves (attacks) upon the 
 enemy.  This could be accompanied by a front-end web site to allow players to 
@@ -171,10 +230,6 @@ use these APIs and display both the "Home View"  (Game view for the player), and
 "Player View" for tracking the attacks upon the enemies.  These would correspond 
 to the "Game View" and "Player View" columns of the **Demo** page.
 
-The game can be played from the command line in a Node (REPL) session.  Here is a 
-sample of the commands required:
-
-$node
 
 
 

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/battleship/tile.js | battleship</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+  <style>
+    .bold {
+      font-weight: 900;
+    }
+  </style>
+<meta name="description" content="Battleship game in Node"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="battleship"><meta property="twitter:description" content="Battleship game in Node"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a id="nav-index" href="./index.html">Home</a>
+  
+  <a id="nav-identifiers" href="identifiers.html">Reference</a>
+  <a id="nav-source" href="source.html">Source</a>
+  <a id="nav-demo" href="demo.html">Demo</a>
+  <a id="nav-test" href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#battleship">battleship</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/board.js~Board.html">Board</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/moves.js~Moves.html">Moves</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/ship.js~Ship.html">Ship</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/utils.js~Utils.html">Utils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientation">orientation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientations">orientations</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipType">shipType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipTypes">shipTypes</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/battleship/tile.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @type function
+ */
+const chalk = require(&apos;chalk&apos;);
+/**
+ * @type {parameters}
+ */
+const parameters = require(&apos;./parameters&apos;);
+/**
+ * @type {Utils}
+ */
+const utils = require(&apos;./utils&apos;);
+/**
+ * @type {Object}
+ */
+const { numRows, numColumns, shipTypes } = parameters;
+/**
+ * @type {Object}
+ */
+const { isRowValid, isColumnValid } = utils;
+
+/**
+ *
+ * A Tile is an object of the board representing:
+ *   * the position,
+ *   * the ship object (if any), and
+ *   * if this object has been attacked
+ */
+class Tile {
+
+  /**
+   * @param {number} row zero-based index of row on board matrix
+   * @param {number} column zero-based index of column on board matrix
+   * @throws if row or column is invalid
+   */
+  constructor(row, column) {
+    if (!isRowValid(row)) {
+      throw new Error(`invalid tile row ${row}`)
+    }
+    if (!isColumnValid(column)) {
+      throw new Error(`invalid tile column ${column}`)
+    }
+    /**
+     * @type {number}
+     * @desc zero-based row number
+     */
+    this.row = row;
+    /**
+     * @type {number}
+     * @desc zero-based column number
+     */
+    this.column = column;
+    /**
+     * @type {Ship|null}
+     * @desc ship object if this tile belongs to a ship
+     */
+    this.ship = null;
+    /**
+     * @type {boolean}
+     * @desc true if this tile has been attacked
+     */
+    this.attacked = false;
+  }
+
+  /**
+   * Return string representation of the tile, where ships are colored acccording
+   * to the ship type.  The character is &quot;o&quot; for a tile that has not been attacked,
+   * and &quot;x&quot; for a tile that has been attacked.
+   *
+   * @param {boolean} playerView if true, then the color only shows if a tile was
+   * attacked or hit
+   * @returns {string}
+   */
+  toString(playerView = false) {
+    /*
+     * code:
+     *
+     *   symbol:
+     *   o  unattacked
+     *   x  attacked
+     *
+     *   font color not-attacked, hit or sunk:
+     *   black:   non-playerView
+     *   white:   playerView
+     *
+     *   font color attacked:
+     *   white:   non-playerView
+     *   black:   playerView
+     *
+     *   background color non-playerView:
+     *   white:   non-ship tile
+     *   red:     aircraft carrier
+     *   orange:  battleship (yellow)
+     *   yellow:  cruiser (yellowBright)
+     *   cyan:    destroyer
+     *   magenta: submarine
+     *
+     *   background color playerView:
+     *   green:   ship
+     *   red:     ship &amp;&amp; ship.sunk
+     *   blackBright:   attacked
+     */
+    let fontColor = &apos;black&apos;;
+    let bgColor = &apos;bgWhite&apos;;
+    const symbol = this.attacked ? &apos;x&apos; : &apos;o&apos;;
+    if (playerView) {
+      if (this.ship) {
+        if (this.attacked) {
+          bgColor = this.ship.sunk ? &apos;bgRed&apos; : &apos;bgYellow&apos;;
+        }
+      } else {
+        fontColor = this.attacked ? &apos;white&apos; : &apos;black&apos;;
+        bgColor = this.attacked ? &apos;bgBlackBright&apos; : &apos;bgWhite&apos;;
+      }
+    } else {
+      if (this.ship) {
+        bgColor = shipTypes[this.ship.shipTypeId].color;
+      } else {
+        fontColor = this.attacked ? &apos;white&apos; : &apos;black&apos;;
+        bgColor = this.attacked ? &apos;bgBlackBright&apos; : &apos;bgWhite&apos;;
+      }
+    }
+    return chalk`{${fontColor}.${bgColor}  ${symbol} }`;
+  }
+
+  /**
+   * Return HTML representation of the tile, where ships are colored acccording
+   * to the ship type.  The character is &quot;o&quot; for a tile that has not been attacked,
+   * and &quot;x&quot; for a tile that has been attacked.
+   *
+   * @param {boolean} playerView if true, then the color only shows if a tile was
+   * attacked or hit
+   * @returns {string}
+   */
+  toHtml(playerView = false) {
+    const symbol = this.attacked ? &apos;x&apos; : &apos;o&apos;;
+    let className = &apos;empty&apos;;
+    if (playerView) {
+      if (this.ship) {
+        if (this.attacked) {
+          className = this.ship.sunk ? &apos;sunk&apos; : &apos;hit&apos;;
+        }
+      } else {
+        className = this.attacked ? &apos;attacked&apos; : &apos;empty&apos;;
+      }
+    } else {
+      if (this.ship) {
+        className = `shipType${this.ship.shipTypeId}`;
+      } else {
+        className = this.attacked ? &apos;attacked&apos; : &apos;empty&apos;;
+      }
+    }
+    const html =  `&lt;span class=&quot;${className}&quot;&gt;${symbol}&lt;/span&gt;`;
+    return `&lt;span class=&quot;${className}&quot;&gt;${symbol}&lt;/span&gt;`;
+  }
+
+  /**
+   * Returns HTML Style tag with class rules for tile display.
+   * @returns {string}
+   */
+  static getHtmlStyleTag() {
+    return `
+      &lt;style&gt;
+        .demo p {
+          margin: 0 0;
+          color: black;
+        }
+        .demo table {
+          width: 750px;
+        }
+        div.tiles {
+          margin: 0.5em 0 1em 0;
+        }
+        .tiles span {
+          width: 1.5em;
+          height: 1.5em;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .shipType1 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[1].backgroundColor};
+        }
+        .shipType2 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[2].backgroundColor};
+        }
+        .shipType3 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[3].backgroundColor};
+        }
+        .shipType4 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[4].backgroundColor};
+        }
+        .shipType5 {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: ${shipTypes[5].backgroundColor};
+        }
+        .attacked {
+          border: 1px solid #ddd;
+          color: white;
+          background-color: #888;
+        }
+        .hit {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: yellowgreen;
+        }
+        .sunk {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: red;
+        }
+        .empty {
+          border: 1px solid #ddd;
+          color: black;
+          background-color: #eee;
+        }
+      &lt;/style&gt;
+    `
+  }
+
+}
+
+module.exports = Tile;</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+<script>
+  var path = location.pathname.match(/([\w]*)\./)[1];
+  var id = "nav-" + path;
+  var element = document.getElementById(id);
+  if (element) {
+    element.classList.add('bold')
+  }
+</script>
+</body>
+</html>

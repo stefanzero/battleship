@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/battleship/game.js | battleship</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+  <style>
+    .bold {
+      font-weight: 900;
+    }
+  </style>
+<meta name="description" content="Battleship game in Node"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="battleship"><meta property="twitter:description" content="Battleship game in Node"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a id="nav-index" href="./index.html">Home</a>
+  
+  <a id="nav-identifiers" href="identifiers.html">Reference</a>
+  <a id="nav-source" href="source.html">Source</a>
+  <a id="nav-demo" href="demo.html">Demo</a>
+  <a id="nav-test" href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#battleship">battleship</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/board.js~Board.html">Board</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/moves.js~Moves.html">Moves</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/ship.js~Ship.html">Ship</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/utils.js~Utils.html">Utils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientation">orientation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientations">orientations</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipType">shipType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipTypes">shipTypes</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/battleship/game.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @type {function}
+ */
+const chalk = require(&apos;chalk&apos;);
+/**
+ * @type {parameters}
+ */
+const parameters = require(&apos;./parameters&apos;);
+/**
+ * @type {Board}
+ */
+const Board = require(&apos;./board&apos;);
+/**
+ *
+ * @type {Tile}
+ */
+const Tile = require(&apos;./tile&apos;);
+/**
+ * @type {Utils}
+ */
+const utils = require(&apos;./utils&apos;);
+/**
+ * @type {parameters}
+ */
+const { numRows, numColumns, shipTypes, totalCount } = parameters;
+/**
+ * @type {Utils}
+ */
+const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
+
+/*
+ * constants for GameBanner
+ */
+/**
+ * @type {string}
+ */
+const fontColor = &apos;white&apos;;
+/**
+ * @type {string}
+ */
+const bgColor = &apos;bgBlack&apos;;
+/**
+ * @type {string}
+ */
+const bannerFontColor = &apos;black&apos;;
+/**
+ * @type {string}
+ */
+const bannerBgColor = &apos;bgWhite&apos;;
+/**
+ * @type {string}
+ */
+const dash = &apos;-&apos;;
+/**
+ * @type {string}
+ */
+const pipe = &apos;|&apos;;
+/**
+ * @type {string}
+ */
+const space = &apos; &apos;;
+/**
+ * @type {number}
+ */
+const width = numColumns * 3;
+/**
+ * @type {string}
+ */
+const square = chalk`{${fontColor}.${bgColor} ${dash}}`;
+/**
+ * @type {string}
+ */
+const edge = chalk`{${fontColor}.${bgColor} ${pipe}}`;
+/**
+ * @type {string}
+ */
+const blank = chalk`{${bannerFontColor}.${bannerBgColor} ${space}}`;
+/**
+ * @type {string}
+ */
+const border = square.repeat(width);
+
+/**
+ * Controller class for the board to auto-play a game.
+ */
+class Game {
+
+  /**
+   * If no array of ships is provide, all necessary ships will be added to
+   * the board at random positions that do not overlap.
+   *
+   * @param {Object} obj
+   * @param {?[Ship]} obj.ships optional array of ships
+   * @param {?boolean} obj.toConsole print game to console
+   */
+  constructor({ships = [], toConsole = false} = {}) {
+    /**
+     * @type {Board}
+     */
+    this.board = new Board(toConsole);
+    this.board.setUp(ships);
+  }
+
+  /**
+   * Return random position on the board.
+   * @returns {{column: number, row: number}}
+   */
+  static randomPosition() {
+    const row = Math.floor(numRows * Math.random())
+    const column = Math.floor(numColumns * Math.random())
+    return { row, column };
+  }
+
+  /**
+   * Return random position that has not been attacked.
+   *
+   * @returns {{column: number, row: number}}
+   */
+  randomAvailablePosition() {
+    /**
+     * @type {number}
+     */
+    let row;
+    /**
+     * @type {number}
+     */
+    let column;
+    const { board } = this;
+    do {
+      ({ row, column } = Game.randomPosition());
+    } while (board.isAttacked({ row, column }))
+    return { row, column };
+  }
+
+  /**
+   * Return array of positions that are neighbors to the given position and
+   * that have not been attacked.
+   *
+   * @param {Object} obj
+   * @param {number} obj.row
+   * @param {number} obj.column
+   * @returns {Array&lt;{column: number, row: number}&gt;}
+   */
+  availableNeighbors({row, column}) {
+    const neighbors = [
+      {row: row - 1, column},
+      {row: row + 1, column},
+      {row, column: column - 1},
+      {row, column: column + 1}
+    ];
+    const { board } = this;
+    const available = neighbors.reduce((acc, next) =&gt; {
+      const { row, column } = next;
+      if (isRowValid(row) &amp;&amp; isColumnValid(column) &amp;&amp; !board.isAttacked({ row, column })) {
+        acc.push({ row, column })
+      }
+      return acc;
+    }, []);
+    if (Game.logStack) {
+      const s = available.map(a =&gt; `(${a.row}, ${a.column})`).join(&apos;, &apos;);
+      console.log(`availableNeighbors(${row}, ${column}): ${s}`);
+    }
+    return available;
+  }
+
+  /**
+   * Simulate game play using this strategy:
+   *   * store positions to try next on a stack
+   *   * if the stack is empty, push a random available position onto the stack
+   *   * pop the next position from the stack
+   *   * if the attack was a hit, push the next available neighbors onto the stack
+   *   * store the last hit position
+   *   * if there was a last hit, then filter the stack to keep positions in line with
+   *   the last hit
+   *
+   * @returns {Moves}
+   */
+  play() {
+    let stack = [];
+    let lastStack = [];
+    let current;
+    let numMoves = 0;
+    let lastHit;
+    while (!this.board.isWon()) {
+      if (!stack.length) {
+        if (lastStack.length) {
+          stack = lastStack;
+        } else {
+          /*
+           * if there is no stack, then get a random available position
+           */
+          this.board.moves.setIsRandom(true);
+          stack.push(this.randomAvailablePosition())
+        }
+      }
+      if (Game.logStack) {
+        const s = stack.map(a =&gt; `(${a.row}, ${a.column})`).join(&apos;, &apos;);
+        this.log(`stack: ${s}`);
+      }
+      current = stack.pop();
+      const {row, column} = current;
+      if (!this.board.isAttacked({row, column})) {
+        numMoves++;
+        const attackResult = this.board.attack(current);
+        if (attackResult === &apos;Hit&apos;) {
+          stack.push(...this.availableNeighbors(current));
+          if (lastHit) {
+            /*
+             * remove items from the stack that are not in a line with the last hit
+             * save the stack in case the filter does not end up in a ship being sunk
+             */
+            lastStack = stack;
+            if (lastHit.row === row) {
+              stack = stack.filter(item =&gt; item.row === row);
+            } else {
+              stack = stack.filter(item =&gt; item.column === column);
+            }
+          }
+          if (Game.logStack) {
+            const s = stack.map(a =&gt; `(${a.row}, ${a.column})`).join(&apos;, &apos;);
+            this.log(`filtered stack: ${s}`);
+          }
+          lastHit = current;
+        } else if (attackResult === &apos;Sunk&apos;) {
+          /*
+           * empty the stack if we just sunk a ship
+           */
+          stack = [];
+          lastHit = null;
+        }
+      }
+    }
+    return this.board.moves;
+  }
+
+  /**
+   * Forwards call to Tile class to get the HTML style tag with class rules
+   * to display the board.
+   *
+   * @returns {string}
+   */
+  static getHtmlStyleType() {
+    return Tile.getHtmlStyleTag();
+  }
+
+  /**
+   * Return string with banner for a given game number.
+   *
+   * @param {number} gameNumber
+   */
+  static gameBanner(gameNumber) {
+    const heading = `Game #${gameNumber}`;
+    const banner = chalk`{${bannerFontColor}.${bannerBgColor} ${heading}}`;
+    const leadingSpace = Math.floor((width - heading.length - 2) / 2);
+    const trailingSpace = width - heading.length - leadingSpace - 2;
+    return &apos;\n&apos; + border + &apos;\n&apos; +
+      edge +
+      blank.repeat(leadingSpace) +
+      banner +
+      blank.repeat(trailingSpace) +
+      edge + &apos;\n&apos; +
+      border;
+  }
+}
+
+Game.logStack = false;
+
+module.exports = Game;
+
+/*
+strategy:
+
+
+stack of tiles to pick next
+
+list of tiles with hits
+
+      n
+     nxn
+      n
+
+if x is a hit, then put neighbors on stack
+pop until stack is empty
+attack if not was attacked
+when stack is empty, push random pick on stack
+
+ */
+
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+<script>
+  var path = location.pathname.match(/([\w]*)\./)[1];
+  var id = "nav-" + path;
+  var element = document.getElementById(id);
+  if (element) {
+    element.classList.add('bold')
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/battleship/parameters.js | battleship</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+  <style>
+    .bold {
+      font-weight: 900;
+    }
+  </style>
+<meta name="description" content="Battleship game in Node"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="battleship"><meta property="twitter:description" content="Battleship game in Node"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a id="nav-index" href="./index.html">Home</a>
+  
+  <a id="nav-identifiers" href="identifiers.html">Reference</a>
+  <a id="nav-source" href="source.html">Source</a>
+  <a id="nav-demo" href="demo.html">Demo</a>
+  <a id="nav-test" href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#battleship">battleship</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/board.js~Board.html">Board</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/moves.js~Moves.html">Moves</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/ship.js~Ship.html">Ship</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/utils.js~Utils.html">Utils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientation">orientation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientations">orientations</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipType">shipType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipTypes">shipTypes</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/battleship/parameters.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @typedef {Object} shipTypes
+ * @property {shipType} 1 Aircraft Carrier
+ * @property {shipType} 2 Battleship
+ * @property {shipType} 3 Cruiser
+ * @property {shipType} 4 Destroyer
+ * @property {shipType} 5 Submarine
+ */
+/**
+ * @typedef {Object} shipType
+ * @property {number} shipTypeId
+ *   1 = Aircraft Carrier,
+ *   2 = Battleship,
+ *   3 = Cruiser,
+ *   4 = Destroyer,
+ *   5 = Submarine
+ * @property {string} name Aircraft Carrier | Battleship | Cruiser | Destroyer | Submarine
+ * @property {number} length length of ship
+ * @property {number} count number of this ship type on the board
+ * @property {string} color ansi (chalk) color used in tile.toString()
+ * @property {string} backgroundColor HTML color used in tile.toHtml()
+ */
+/**
+ * @typedef {Object} orientation
+ * @property {number} columnFactor 0 for vertical, 1 for horizontal
+ * @property {number} rowFactor 0 for horizontal, 1 for vertical
+ */
+/**
+ * @typedef {Object} orientations
+ * @property {orientation} horizontal
+ * @property {orientation} vertical
+ */
+/**
+ * @typedef {Object} parameters
+ * @property {number} numRows number of rows on the board
+ * @property {number} numColumns number of columns on the board
+ * @property {shipTypes} shipTypes object of all shiptypes
+ * @property {orientations} orientations object of orientations
+ * @property {number} totalCount total number of ships
+ */
+/**
+ * @type {parameters}
+ */
+const parameters = {
+  numRows: 10,
+  numColumns: 10,
+  shipTypes: {
+    1: {
+      shipTypeId: 1,
+      name: &apos;Aircraft Carrier&apos;,
+      length: 5,
+      count: 1,
+      color: &apos;bgRed&apos;,
+      backgroundColor: &apos;crimson&apos;
+    },
+    2: {
+      shipTypeId: 2,
+      name: &apos;Battleship&apos;,
+      length: 4,
+      count: 1,
+      color: &apos;bgYellowBright&apos;,
+      backgroundColor: &apos;orange&apos;
+    },
+    3: {
+      shipTypeId: 3,
+      name: &apos;Cruiser&apos;,
+      length: 3,
+      count: 1,
+      color: &apos;bgYellow&apos;,
+      backgroundColor: &apos;yellow&apos;
+    },
+    4: {
+      shipTypeId: 4,
+      name: &apos;Destroyer&apos;,
+      length: 2,
+      count: 2,
+      color: &apos;bgCyan&apos;,
+      backgroundColor: &apos;cyan&apos;
+    },
+    5: {
+      shipTypeId: 5,
+      name: &apos;Submarine&apos;,
+      length: 1,
+      count: 2,
+      color: &apos;bgMagenta&apos;,
+      backgroundColor: &apos;magenta&apos;
+    }
+  },
+  orientations: {
+    horizontal: {
+      columnFactor: 1,
+      rowFactor: 0
+    },
+    vertical: {
+      columnFactor: 0,
+      rowFactor: 1
+    }
+  }
+};
+
+/**
+ * @type {number}
+ */
+parameters.totalCount = Object.values(parameters.shipTypes)
+  .reduce((acc, next) =&gt; {
+    return acc + next.count
+  }, 0);
+
+/**
+ * @type {number}
+ */
+const totalShipArea = Object.values(parameters.shipTypes)
+  .reduce((acc, next) =&gt; {
+    return acc + next.length * next.count
+  }, 0);
+
+/**
+ * require that at least half of board space is empty
+ * @type {parameters}
+ */
+const { numRows, numColumns } = parameters;
+if (totalShipArea &gt; (numRows * numColumns) / 2) {
+  throw new Error(&apos;available board space insufficient for total ship area&apos;);
+}
+
+/**
+ * @type {number}
+ */
+const longestShip = Object.values(parameters.shipTypes)
+  .reduce((acc, next) =&gt; {
+    return Math.max(acc, next.length)
+  }, 0);
+
+if (longestShip &gt; Math.max(numRows, numColumns)) {
+  throw new Error(&apos;board is too small to fit largest ship&apos;);
+}
+
+/*
+ * The traditional Battleship game names tiles using a letter for the row
+ * and number (starting at 1) for the column.
+ *
+ * Dynamically compute the maxRowLetter so the board dimensions can be
+ * changed by only changing numRows.
+ */
+parameters.minRowLetter = &apos;A&apos;;
+/**
+ * @type {number}
+ */
+const maxCharCode = parameters.minRowLetter.charCodeAt(0) + parameters.numRows - 1;
+parameters.maxRowLetter = String.fromCharCode(maxCharCode);
+
+module.exports = parameters;</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+<script>
+  var path = location.pathname.match(/([\w]*)\./)[1];
+  var id = "nav-" + path;
+  var element = document.getElementById(id);
+  if (element) {
+    element.classList.add('bold')
+  }
+</script>
+</body>
+</html>

@@ -11,6 +11,9 @@ class Moves {
    * @param {?boolean} playerView if true, the ships are not displayed
    */
   constructor({board, toConsole= false, playerView = false}) {
+    if (!(board instanceof require('./board'))) {
+      throw new Error('Moves constructor requires an instance of Board');
+    }
     /**
      * @type {Board}
      * @desc board

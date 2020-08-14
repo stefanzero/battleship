@@ -224,9 +224,9 @@ class Board {
         if (this.isWon()) {
           result = 'Win';
         } else if (ship.sunk) {
-          result = 'Sunk'
+          result = 'Sunk';
         } else {
-          result = 'Hit'
+          result = 'Hit';
         }
       }
     }

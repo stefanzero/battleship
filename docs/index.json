@@ -1,0 +1,4965 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/battleship/board.js",
+    "content": "/**\n * @type {parameters}\n */\nconst parameters = require('./parameters');\n/**\n * @type {Tile}\n */\nconst Tile = require('./tile');\n/**\n *\n * @type {Ship}\n */\nconst Ship = require('./ship');\n/**\n *\n * @type {Moves}\n */\nconst Moves = require('./moves');\n/**\n * @type {Utils}\n */\nconst utils = require('./utils');\n\n/**\n * @type {Object}\n */\nconst { numRows, numColumns, shipTypes, totalCount } = parameters;\n/**\n * @type {Object}\n */\nconst { isRowValid, isColumnValid, getRandomShipPosition } = utils;\n\n/**\n * Main class that controls basic operations of battleship.\n * * Key properties:\n *   * array of ships\n *   * matrix of tiles\n * * Key methods:\n *   * setUp\n *   * addShip\n *   * attack\n */\nclass Board {\n  /**\n   * @param {?boolean} toConsole controls if attacks are output to the console\n   * @param {?boolean} playerView if true display player view\n   */\n  constructor(toConsole = false, playerView = false) {\n    /**\n     * @type {[Ship]}\n     * @desc array of ships on the board\n     */\n    this.ships = [];\n    /**\n     * @type {Object}\n     * @desc key = shipTypeId, value = number of ships of that type\n     */\n    this.shipTypeCount = {};\n    /**\n     * @type {Tile[][]}\n     * @desc matrix of tiles\n     */\n    this.tiles = new Array(numRows)\n      .fill(null)\n      .map((r, i) => {\n        return new Array(numColumns)\n          .fill(null)\n          .map((c, j) => {\n            return new Tile(i, j)\n          })\n    });\n    /**\n     * @type {boolean}\n     * @desc true if all required ships have been added to the board\n     */\n    this.isSetUp = false;\n    /**\n     * @type {boolean}\n     * @desc true if all required ships have been sunk\n     */\n    this.gameOver = false;\n    /**\n     * @type {Moves}\n     * @desc Game attack history is stored in the moves.\n     */\n    this.moves = new Moves({board: this, toConsole, playerView});\n  }\n\n  /**\n   * Add ships to the board.  If not all required ships are supplied, missing ships are\n   * added to the board at random positions until board is set up.\n   *\n   * @param {?Ship[]} ships optional array of ships\n   */\n  setUp(ships = []) {\n    if (this.isSetUp) {\n      Board.log && console.log('Board.setUp: board is already set up');\n      return;\n    }\n    ships.forEach(ship => this.addShip(ship));\n    /*\n     * if more ships are needed, add ships at random positions\n     */\n    if (this.ships.length < totalCount) {\n      const shipTypesToAdd = Object.values(shipTypes)\n        .reduce((acc, next) => {\n          const existingShips = this.shipTypeCount[next.shipTypeId] ?\n            this.shipTypeCount[next.shipTypeId] : 0;\n          return acc.concat(new Array(next.count - existingShips)\n            .fill(next.shipTypeId));\n        }, []);\n      while (shipTypesToAdd.length) {\n        /*\n         * start from largest ships (beginning of array) because these will\n         * most likely overlap with previous ships\n         */\n        const shipTypeId = shipTypesToAdd[0];\n        const orientation = Math.random() < 0.5 ? 'horizontal' : 'vertical';\n        const {startRow, startColumn} = getRandomShipPosition(\n          {shipTypeId, orientation}\n        );\n        const ship = new Ship({\n          shipTypeId, orientation, startRow, startColumn\n        });\n        /*\n         * addShip will return false if the ship overlaps\n         */\n        if (this.addShip(ship)) {\n          /*\n           * if successful, remove from shipTypesToAdd\n           */\n          shipTypesToAdd.shift();\n        }\n      }\n    }\n  }\n\n  /**\n   * Add a ship to the board.  Return true if successful or the board is already full.\n   * Return false if the ship would overlap an existing ship or if enough ships of\n   * that type are already on the board.\n   *\n   * @param {Ship} ship\n   * @returns {boolean}\n   */\n  addShip(ship) {\n    if (this.isSetUp) {\n      Board.log && console.log('board already has correct number of ships');\n      return true;\n    }\n    /*\n     * check that this ship does not overlap an existing ship\n     */\n    for (let position of Object.values(ship.positions)) {\n      const [ row, column ] = position;\n      if (this.tiles[row][column].ship) {\n        Board.log && console.log('board.addShip ship overlaps existing ship');\n        return false;\n      }\n    }\n    /*\n     * check that this ship type can still be added to the board\n     */\n    const { shipTypeId } = ship;\n    const nextShipCount = this.shipTypeCount[shipTypeId] ?\n      this.shipTypeCount[shipTypeId] + 1 : 1;\n    if (nextShipCount > shipTypes[shipTypeId].count) {\n      Board.log && console.log(`board.addShip exceeded count for ${shipTypes[shipTypeId].name}`);\n      return false;\n    }\n    this.shipTypeCount[shipTypeId] = nextShipCount;\n    this.ships.push(ship);\n    /*\n     * mark the appropriate tiles for this ship\n     */\n    for (let index of Object.values(ship.positions)) {\n      const [ row, column ] = index;\n      this.tiles[row][column].ship = ship;\n    }\n    this.isSetUp = this.ships.length === totalCount;\n    if (this.isSetUp) {\n      /*\n       * Save the initial board\n       */\n      this.moves.addMove({row: null, column: null, result: 'Initial Board'});\n    }\n    return true;\n  }\n\n  /**\n   * Attack a given position on the board.  Return a string describing the result:\n   *  * \"Miss\" if there is no ship at that position\n   *  * \"Already Attacked\" if there that tile was already attacked\n   *  * \"Win\" if that attack sinks the final ship\n   *  * \"Sunk\" if that attack hits the last un-hit position on a ship\n   *  * \"Hit\" if that attack hits a ship\n   *\n   * @param {Object} obj\n   * @param {number} obj.row\n   * @param {number} obj.column\n   * @returns {string}\n   */\n  attack({row, column}) {\n    if (!this.isSetUp) {\n      throw new Error('Cannot attack until board is set up');\n    }\n    if (!isRowValid(row) || !isColumnValid(column)) {\n      throw new Error('Board.attack invalid position: [${row}, ${column}]');\n    }\n    if (this.gameOver) {\n      console.error('Cannot attack because the game is over');\n    }\n    let result;\n    const tile = this.tiles[row][column];\n    const { attacked, ship } = tile;\n    if (attacked) {\n      result = 'Already Attacked'\n    } else {\n      tile.attacked = true;\n      if (!ship) {\n        result = 'Miss';\n      } else {\n        ship.hit({row, column});\n        if (this.isWon()) {\n          result = 'Win';\n        } else if (ship.sunk) {\n          result = 'Sunk';\n        } else {\n          result = 'Hit';\n        }\n      }\n    }\n    this.moves.addMove({row, column, result});\n    return result;\n  }\n\n  /**\n   * Return true if all ships on the board are sunk\n   * @returns {boolean}\n   */\n  isWon() {\n    this.gameOver = (\n      this.isSetUp &&\n      this.ships.filter(s => s.sunk).length === totalCount\n    );\n    return this.gameOver;\n  }\n\n  /**\n   * Return true if the tile was attacked.\n   *\n   * @param {Object} obj\n   * @param {number} obj.row\n   * @param {number} obj.column\n   * @returns {boolean}\n   */\n  isAttacked({row, column}) {\n    return this.tiles[row][column].attacked;\n  }\n\n  /**\n   * Return string representation of the board.\n   *\n   * @param {boolean} playerView true if the ships should not be displayed\n   * @returns {string}\n   */\n  toString(playerView) {\n    return this.tiles.map(\n      row => {\n        return row.map(\n          tile => {\n            return tile.toString(playerView)\n          }\n        ).join('').concat('\\n')\n      }\n    ).join('');\n  }\n\n  /**\n   * Return html representation of the board.\n   *\n   * @param {boolean} playerView true if the ships should not be displayed\n   * @returns {string}\n   */\n  toHtml(playerView) {\n    const tilesHtml = this.tiles.map(\n      row => {\n        return row.map(\n          tile => {\n            return tile.toHtml(playerView)\n          }\n        ).join('').concat('<br />')\n      }\n    ).join('');\n    return `<div class=\"tiles\">${tilesHtml}</div>`;\n  }\n}\n\n// Board.log = false;\n\n/**\n * Return array of ships shown on wikipedia for a sample game setup.\n * @returns {Ship[]}\n */\nBoard.getSampleShipArray = () => {\n  const aircraftCarrier = new Ship({\n    shipTypeId: 1,\n    orientation: 'vertical',\n    startRow: 1,\n    startColumn: 9\n  });\n  const battleShip = new Ship({\n    shipTypeId: 2,\n    orientation: 'vertical',\n    startRow: 4,\n    startColumn: 7\n  });\n  const cruiser = new Ship({\n    shipTypeId: 3,\n    orientation: 'horizontal',\n    startRow: 6,\n    startColumn: 2\n  });\n  const destroyer1 = new Ship({\n    shipTypeId: 4,\n    orientation: 'vertical',\n    startRow: 1,\n    startColumn: 1\n  });\n  const destroyer2 = new Ship({\n    shipTypeId: 4,\n    orientation: 'horizontal',\n    startRow: 4,\n    startColumn: 3\n  });\n  const submarine1 = new Ship({\n    shipTypeId: 5,\n    orientation: 'horizontal',\n    startRow: 2,\n    startColumn: 3\n  });\n  const submarine2 = new Ship({\n    shipTypeId: 5,\n    orientation: 'horizontal',\n    startRow: 8,\n    startColumn: 1\n  });\n  return [\n    aircraftCarrier,\n    battleShip,\n    cruiser,\n    destroyer1,\n    destroyer2,\n    submarine1,\n    submarine2\n  ]\n};\n\nmodule.exports = Board;",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/src/battleship/board.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "parameters",
+    "memberof": "src/battleship/board.js",
+    "static": true,
+    "longname": "src/battleship/board.js~parameters",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/board.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 4,
+    "type": {
+      "nullable": null,
+      "types": [
+        "parameters"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "Tile",
+    "memberof": "src/battleship/board.js",
+    "static": true,
+    "longname": "src/battleship/board.js~Tile",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/board.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Tile"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "Ship",
+    "memberof": "src/battleship/board.js",
+    "static": true,
+    "longname": "src/battleship/board.js~Ship",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/board.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 13,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Ship"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "variable",
+    "name": "Moves",
+    "memberof": "src/battleship/board.js",
+    "static": true,
+    "longname": "src/battleship/board.js~Moves",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/board.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 18,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Moves"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "variable",
+    "name": "utils",
+    "memberof": "src/battleship/board.js",
+    "static": true,
+    "longname": "src/battleship/board.js~utils",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/board.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 22,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Utils"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "variable",
+    "name": "numRows",
+    "memberof": "src/battleship/board.js",
+    "static": true,
+    "longname": "src/battleship/board.js~numRows",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/board.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 27,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "variable",
+    "name": "isRowValid",
+    "memberof": "src/battleship/board.js",
+    "static": true,
+    "longname": "src/battleship/board.js~isRowValid",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/board.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 31,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "class",
+    "name": "Board",
+    "memberof": "src/battleship/board.js",
+    "static": true,
+    "longname": "src/battleship/board.js~Board",
+    "access": "public",
+    "export": true,
+    "importPath": "src/battleship/board.js",
+    "importStyle": "Board",
+    "description": "Main class that controls basic operations of battleship.\n* Key properties:\n  * array of ships\n  * matrix of tiles\n* Key methods:\n  * setUp\n  * addShip\n  * attack",
+    "lineNumber": 43,
+    "interface": false
+  },
+  {
+    "__docId__": 57,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/battleship/board.js~Board",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/board.js~Board#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 48,
+    "params": [
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "toConsole",
+        "description": "controls if attacks are output to the console"
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "playerView",
+        "description": "if true display player view"
+      }
+    ]
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "name": "ships",
+    "memberof": "src/battleship/board.js~Board",
+    "static": false,
+    "longname": "src/battleship/board.js~Board#ships",
+    "access": "public",
+    "description": "array of ships on the board",
+    "lineNumber": 53,
+    "type": {
+      "nullable": null,
+      "types": [
+        "[Ship]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "member",
+    "name": "shipTypeCount",
+    "memberof": "src/battleship/board.js~Board",
+    "static": false,
+    "longname": "src/battleship/board.js~Board#shipTypeCount",
+    "access": "public",
+    "description": "key = shipTypeId, value = number of ships of that type",
+    "lineNumber": 58,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "member",
+    "name": "tiles",
+    "memberof": "src/battleship/board.js~Board",
+    "static": false,
+    "longname": "src/battleship/board.js~Board#tiles",
+    "access": "public",
+    "description": "matrix of tiles",
+    "lineNumber": 63,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Tile[][]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "isSetUp",
+    "memberof": "src/battleship/board.js~Board",
+    "static": false,
+    "longname": "src/battleship/board.js~Board#isSetUp",
+    "access": "public",
+    "description": "true if all required ships have been added to the board",
+    "lineNumber": 76,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "member",
+    "name": "gameOver",
+    "memberof": "src/battleship/board.js~Board",
+    "static": false,
+    "longname": "src/battleship/board.js~Board#gameOver",
+    "access": "public",
+    "description": "true if all required ships have been sunk",
+    "lineNumber": 81,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "member",
+    "name": "moves",
+    "memberof": "src/battleship/board.js~Board",
+    "static": false,
+    "longname": "src/battleship/board.js~Board#moves",
+    "access": "public",
+    "description": "Game attack history is stored in the moves.",
+    "lineNumber": 86,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Moves"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "setUp",
+    "memberof": "src/battleship/board.js~Board",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/board.js~Board#setUp",
+    "access": "public",
+    "description": "Add ships to the board.  If not all required ships are supplied, missing ships are\nadded to the board at random positions until board is set up.",
+    "lineNumber": 95,
+    "params": [
+      {
+        "nullable": true,
+        "types": [
+          "Ship[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ships",
+        "description": "optional array of ships"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "addShip",
+    "memberof": "src/battleship/board.js~Board",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/board.js~Board#addShip",
+    "access": "public",
+    "description": "Add a ship to the board.  Return true if successful or the board is already full.\nReturn false if the ship would overlap an existing ship or if enough ships of\nthat type are already on the board.",
+    "lineNumber": 146,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Ship"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ship",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "attack",
+    "memberof": "src/battleship/board.js~Board",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/board.js~Board#attack",
+    "access": "public",
+    "description": "Attack a given position on the board.  Return a string describing the result:\n * \"Miss\" if there is no ship at that position\n * \"Already Attacked\" if there that tile was already attacked\n * \"Win\" if that attack sinks the final ship\n * \"Sunk\" if that attack hits the last un-hit position on a ship\n * \"Hit\" if that attack hits a ship",
+    "lineNumber": 203,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.row",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.column",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "isWon",
+    "memberof": "src/battleship/board.js~Board",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/board.js~Board#isWon",
+    "access": "public",
+    "description": "Return true if all ships on the board are sunk",
+    "lineNumber": 241,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "isAttacked",
+    "memberof": "src/battleship/board.js~Board",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/board.js~Board#isAttacked",
+    "access": "public",
+    "description": "Return true if the tile was attacked.",
+    "lineNumber": 257,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.row",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.column",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "toString",
+    "memberof": "src/battleship/board.js~Board",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/board.js~Board#toString",
+    "access": "public",
+    "description": "Return string representation of the board.",
+    "lineNumber": 267,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "playerView",
+        "description": "true if the ships should not be displayed"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
+    "name": "toHtml",
+    "memberof": "src/battleship/board.js~Board",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/board.js~Board#toHtml",
+    "access": "public",
+    "description": "Return html representation of the board.",
+    "lineNumber": 285,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "playerView",
+        "description": "true if the ships should not be displayed"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "file",
+    "name": "src/battleship/game.js",
+    "content": "/**\n * @type {function}\n */\nconst chalk = require('chalk');\n/**\n * @type {parameters}\n */\nconst parameters = require('./parameters');\n/**\n * @type {Board}\n */\nconst Board = require('./board');\n/**\n *\n * @type {Tile}\n */\nconst Tile = require('./tile');\n/**\n * @type {Utils}\n */\nconst utils = require('./utils');\n/**\n * @type {parameters}\n */\nconst { numRows, numColumns, shipTypes, totalCount } = parameters;\n/**\n * @type {Utils}\n */\nconst { isRowValid, isColumnValid, getRandomShipPosition } = utils;\n\n/*\n * constants for GameBanner\n */\n/**\n * @type {string}\n */\nconst fontColor = 'white';\n/**\n * @type {string}\n */\nconst bgColor = 'bgBlack';\n/**\n * @type {string}\n */\nconst bannerFontColor = 'black';\n/**\n * @type {string}\n */\nconst bannerBgColor = 'bgWhite';\n/**\n * @type {string}\n */\nconst dash = '-';\n/**\n * @type {string}\n */\nconst pipe = '|';\n/**\n * @type {string}\n */\nconst space = ' ';\n/**\n * @type {number}\n */\nconst width = numColumns * 3;\n/**\n * @type {string}\n */\nconst square = chalk`{${fontColor}.${bgColor} ${dash}}`;\n/**\n * @type {string}\n */\nconst edge = chalk`{${fontColor}.${bgColor} ${pipe}}`;\n/**\n * @type {string}\n */\nconst blank = chalk`{${bannerFontColor}.${bannerBgColor} ${space}}`;\n/**\n * @type {string}\n */\nconst border = square.repeat(width);\n\n/**\n * Controller class for the board to auto-play a game.\n */\nclass Game {\n\n  /**\n   * If no array of ships is provide, all necessary ships will be added to\n   * the board at random positions that do not overlap.\n   *\n   * @param {Object} obj\n   * @param {?[Ship]} obj.ships optional array of ships\n   * @param {?boolean} obj.toConsole print game to console\n   */\n  constructor({ships = [], toConsole = false} = {}) {\n    /**\n     * @type {Board}\n     */\n    this.board = new Board(toConsole);\n    this.board.setUp(ships);\n  }\n\n  /**\n   * Return random position on the board.\n   * @returns {{column: number, row: number}}\n   */\n  static randomPosition() {\n    const row = Math.floor(numRows * Math.random())\n    const column = Math.floor(numColumns * Math.random())\n    return { row, column };\n  }\n\n  /**\n   * Return random position that has not been attacked.\n   *\n   * @returns {{column: number, row: number}}\n   */\n  randomAvailablePosition() {\n    /**\n     * @type {number}\n     */\n    let row;\n    /**\n     * @type {number}\n     */\n    let column;\n    const { board } = this;\n    do {\n      ({ row, column } = Game.randomPosition());\n    } while (board.isAttacked({ row, column }))\n    return { row, column };\n  }\n\n  /**\n   * Return array of positions that are neighbors to the given position and\n   * that have not been attacked.\n   *\n   * @param {Object} obj\n   * @param {number} obj.row\n   * @param {number} obj.column\n   * @returns {Array<{column: number, row: number}>}\n   */\n  availableNeighbors({row, column}) {\n    const neighbors = [\n      {row: row - 1, column},\n      {row: row + 1, column},\n      {row, column: column - 1},\n      {row, column: column + 1}\n    ];\n    const { board } = this;\n    const available = neighbors.reduce((acc, next) => {\n      const { row, column } = next;\n      if (isRowValid(row) && isColumnValid(column) && !board.isAttacked({ row, column })) {\n        acc.push({ row, column })\n      }\n      return acc;\n    }, []);\n    if (Game.logStack) {\n      const s = available.map(a => `(${a.row}, ${a.column})`).join(', ');\n      console.log(`availableNeighbors(${row}, ${column}): ${s}`);\n    }\n    return available;\n  }\n\n  /**\n   * Simulate game play using this strategy:\n   *   * store positions to try next on a stack\n   *   * if the stack is empty, push a random available position onto the stack\n   *   * pop the next position from the stack\n   *   * if the attack was a hit, push the next available neighbors onto the stack\n   *   * store the last hit position\n   *   * if there was a last hit, then filter the stack to keep positions in line with\n   *   the last hit\n   *\n   * @returns {Moves}\n   */\n  play() {\n    let stack = [];\n    let lastStack = [];\n    let current;\n    let numMoves = 0;\n    let lastHit;\n    while (!this.board.isWon()) {\n      if (!stack.length) {\n        if (lastStack.length) {\n          stack = lastStack;\n        } else {\n          /*\n           * if there is no stack, then get a random available position\n           */\n          this.board.moves.setIsRandom(true);\n          stack.push(this.randomAvailablePosition())\n        }\n      }\n      if (Game.logStack) {\n        const s = stack.map(a => `(${a.row}, ${a.column})`).join(', ');\n        this.log(`stack: ${s}`);\n      }\n      current = stack.pop();\n      const {row, column} = current;\n      if (!this.board.isAttacked({row, column})) {\n        numMoves++;\n        const attackResult = this.board.attack(current);\n        if (attackResult === 'Hit') {\n          stack.push(...this.availableNeighbors(current));\n          if (lastHit) {\n            /*\n             * remove items from the stack that are not in a line with the last hit\n             * save the stack in case the filter does not end up in a ship being sunk\n             */\n            lastStack = stack;\n            if (lastHit.row === row) {\n              stack = stack.filter(item => item.row === row);\n            } else {\n              stack = stack.filter(item => item.column === column);\n            }\n          }\n          if (Game.logStack) {\n            const s = stack.map(a => `(${a.row}, ${a.column})`).join(', ');\n            this.log(`filtered stack: ${s}`);\n          }\n          lastHit = current;\n        } else if (attackResult === 'Sunk') {\n          /*\n           * empty the stack if we just sunk a ship\n           */\n          stack = [];\n          lastHit = null;\n        }\n      }\n    }\n    return this.board.moves;\n  }\n\n  /**\n   * Forwards call to Tile class to get the HTML style tag with class rules\n   * to display the board.\n   *\n   * @returns {string}\n   */\n  static getHtmlStyleType() {\n    return Tile.getHtmlStyleTag();\n  }\n\n  /**\n   * Return string with banner for a given game number.\n   *\n   * @param {number} gameNumber\n   */\n  static gameBanner(gameNumber) {\n    const heading = `Game #${gameNumber}`;\n    const banner = chalk`{${bannerFontColor}.${bannerBgColor} ${heading}}`;\n    const leadingSpace = Math.floor((width - heading.length - 2) / 2);\n    const trailingSpace = width - heading.length - leadingSpace - 2;\n    return '\\n' + border + '\\n' +\n      edge +\n      blank.repeat(leadingSpace) +\n      banner +\n      blank.repeat(trailingSpace) +\n      edge + '\\n' +\n      border;\n  }\n}\n\nGame.logStack = false;\n\nmodule.exports = Game;\n\n/*\nstrategy:\n\n\nstack of tiles to pick next\n\nlist of tiles with hits\n\n      n\n     nxn\n      n\n\nif x is a hit, then put neighbors on stack\npop until stack is empty\nattack if not was attacked\nwhen stack is empty, push random pick on stack\n\n */\n\n",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/src/battleship/game.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 74,
+    "kind": "variable",
+    "name": "chalk",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~chalk",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 4,
+    "type": {
+      "nullable": null,
+      "types": [
+        "function"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 75,
+    "kind": "variable",
+    "name": "parameters",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~parameters",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "parameters"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 76,
+    "kind": "variable",
+    "name": "Board",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~Board",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 12,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Board"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 77,
+    "kind": "variable",
+    "name": "Tile",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~Tile",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 17,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Tile"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "variable",
+    "name": "utils",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~utils",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 21,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Utils"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "variable",
+    "name": "numRows",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~numRows",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 25,
+    "type": {
+      "nullable": null,
+      "types": [
+        "parameters"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 80,
+    "kind": "variable",
+    "name": "isRowValid",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~isRowValid",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 29,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Utils"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "variable",
+    "name": "fontColor",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~fontColor",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 37,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "variable",
+    "name": "bgColor",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~bgColor",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 41,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "variable",
+    "name": "bannerFontColor",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~bannerFontColor",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 45,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "variable",
+    "name": "bannerBgColor",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~bannerBgColor",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 49,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 85,
+    "kind": "variable",
+    "name": "dash",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~dash",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 53,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "variable",
+    "name": "pipe",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~pipe",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 57,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "variable",
+    "name": "space",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~space",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 61,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "variable",
+    "name": "width",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~width",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 65,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 89,
+    "kind": "variable",
+    "name": "square",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~square",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 69,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 90,
+    "kind": "variable",
+    "name": "edge",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~edge",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 73,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 91,
+    "kind": "variable",
+    "name": "blank",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~blank",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 77,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 92,
+    "kind": "variable",
+    "name": "border",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~border",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/game.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 81,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "class",
+    "name": "Game",
+    "memberof": "src/battleship/game.js",
+    "static": true,
+    "longname": "src/battleship/game.js~Game",
+    "access": "public",
+    "export": true,
+    "importPath": "src/battleship/game.js",
+    "importStyle": "Game",
+    "description": "Controller class for the board to auto-play a game.",
+    "lineNumber": 86,
+    "interface": false
+  },
+  {
+    "__docId__": 94,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/battleship/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/game.js~Game#constructor",
+    "access": "public",
+    "description": "If no array of ships is provide, all necessary ships will be added to\nthe board at random positions that do not overlap.",
+    "lineNumber": 96,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": ""
+      },
+      {
+        "nullable": true,
+        "types": [
+          "[Ship]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.ships",
+        "description": "optional array of ships"
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.toConsole",
+        "description": "print game to console"
+      }
+    ]
+  },
+  {
+    "__docId__": 95,
+    "kind": "member",
+    "name": "board",
+    "memberof": "src/battleship/game.js~Game",
+    "static": false,
+    "longname": "src/battleship/game.js~Game#board",
+    "access": "public",
+    "description": "",
+    "lineNumber": 100,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Board"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "method",
+    "name": "randomPosition",
+    "memberof": "src/battleship/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/battleship/game.js~Game.randomPosition",
+    "access": "public",
+    "description": "Return random position on the board.",
+    "lineNumber": 108,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{column: number, row: number}}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "{column: number, row: number}"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 97,
+    "kind": "method",
+    "name": "randomAvailablePosition",
+    "memberof": "src/battleship/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/game.js~Game#randomAvailablePosition",
+    "access": "public",
+    "description": "Return random position that has not been attacked.",
+    "lineNumber": 119,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{column: number, row: number}}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "{column: number, row: number}"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "availableNeighbors",
+    "memberof": "src/battleship/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/game.js~Game#availableNeighbors",
+    "access": "public",
+    "description": "Return array of positions that are neighbors to the given position and\nthat have not been attacked.",
+    "lineNumber": 144,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Array<{column: number, row: number}>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.row",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.column",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array<{column: number, row: number}>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "play",
+    "memberof": "src/battleship/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/game.js~Game#play",
+    "access": "public",
+    "description": "Simulate game play using this strategy:\n  * store positions to try next on a stack\n  * if the stack is empty, push a random available position onto the stack\n  * pop the next position from the stack\n  * if the attack was a hit, push the next available neighbors onto the stack\n  * store the last hit position\n  * if there was a last hit, then filter the stack to keep positions in line with\n  the last hit",
+    "lineNumber": 178,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Moves}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Moves"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "name": "getHtmlStyleType",
+    "memberof": "src/battleship/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/battleship/game.js~Game.getHtmlStyleType",
+    "access": "public",
+    "description": "Forwards call to Tile class to get the HTML style tag with class rules\nto display the board.",
+    "lineNumber": 242,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 101,
+    "kind": "method",
+    "name": "gameBanner",
+    "memberof": "src/battleship/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/battleship/game.js~Game.gameBanner",
+    "access": "public",
+    "description": "Return string with banner for a given game number.",
+    "lineNumber": 251,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "gameNumber",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "file",
+    "name": "src/battleship/moves.js",
+    "content": "/**\n * Data storage class for each move (attack) in the game.\n * Sample usage is in scripts/create-demo, where a game is played and\n * the results displayed as HTML.\n */\nclass Moves {\n\n  /**\n   * @param {Board} board instance of Board\n   * @param {?boolean} toConsole if true, addMove displays result to console\n   * @param {?boolean} playerView if true, the ships are not displayed\n   */\n  constructor({board, toConsole= false, playerView = false}) {\n    if (!(board instanceof require('./board'))) {\n      throw new Error('Moves constructor requires an instance of Board');\n    }\n    /**\n     * @type {Board}\n     * @desc board\n     */\n    this.board = board;\n    /**\n     * @type {{row: number, column: number}[]}\n     * @desc tiles attacked\n     */\n    this.moves = [];\n    /**\n     * @type {string[]}\n     * @desc result of attack\n     */\n    this.results = [];\n    /**\n     * @type {{game: string, player: string}[]}\n     * @desc string representation board for game view and player view\n     */\n    this.boardString = [];\n    /**\n     * @type {{game: string, player: string}[]}\n     * @desc HTML representation board for game view and player view\n     */\n    this.boardHtml = [];\n    /**\n     * @type {boolean}\n     * @desc display strategy in game.play\n     */\n    this.isRandom = false;\n    /**\n     * @type {boolean[]}\n     * @desc optional array to display strategy in game.play\n     */\n    this.random = [];\n    /**\n     * @type {boolean}\n     * @desc if true, print moves and board game view to the console\n     */\n    this.toConsole = toConsole;\n    /**\n     * @type {boolean}\n     * @desc if true, player view is displayed (no ships)\n     */\n    this.playerView = playerView;\n  }\n\n  /**\n   * Optional property set from game.play\n   * @param {boolean} isRandom\n   */\n  setIsRandom(isRandom) {\n    this.isRandom = isRandom;\n  }\n\n  /**\n   * Called from board.attack\n   * @private\n   * @param {Object} obj\n   * @param {number} obj.row\n   * @param {number} obj.column\n   * @param {string} obj.result\n   */\n  addMove({row, column, result}) {\n    this.moves.push({row, column});\n    this.results.push(result);\n    this.boardString.push({\n      game: this.board.toString(),\n      player: this.board.toString(true)\n    });\n    this.boardHtml.push({\n      game: this.board.toHtml(),\n      player: this.board.toHtml(true)\n    });\n    this.random.push(this.isRandom);\n\n    if (this.toConsole) {\n      const move = this.moves.length - 1;\n      const view = this.playerView ? 'player' : 'game';\n      if (this.isRandom) {\n        console.log('Random attack');\n      }\n      if (move > 0) {\n        console.log(`Move #${move}:  attack(${row}, ${column})`)\n      }\n      console.log(result.toUpperCase());\n      console.log(this.boardString[move][view]);\n      if (this.board.gameOver) {\n        console.log(`Win in ${move} moves`);\n      }\n    }\n    this.isRandom = false;\n  }\n\n  /**\n   * Create an array of strings describing the move\n   * @param {number} move array index\n   * @returns {string[]}\n   */\n  formatDescription(move) {\n    if ((move < 0) || (move > this.results.length)) {\n      return [];\n    }\n    const items = [];\n    const position = this.moves[move];\n    if (position.row !== null) {\n      items.push(`Move #${move}`);\n      if (this.random[move]) {\n        items.push('Random attack');\n      }\n      items.push(`Attack(${position.row}, ${position.column})`);\n    }\n    items.push(this.results[move].toUpperCase());\n    return items;\n  }\n\n  /**\n   * Create HTML describing the move\n   * @param {number} move array index\n   * @returns {string}\n   */\n  descriptionHtml(move) {\n    if ((move < 0) || (move > this.results.length)) {\n      return ''\n    }\n    return this.formatDescription(move)\n      .map(item => {\n        return `<p>${item}</p>`\n      })\n      .join('')\n  }\n\n}\n\nmodule.exports = Moves;",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/src/battleship/moves.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 103,
+    "kind": "class",
+    "name": "Moves",
+    "memberof": "src/battleship/moves.js",
+    "static": true,
+    "longname": "src/battleship/moves.js~Moves",
+    "access": "public",
+    "export": true,
+    "importPath": "src/battleship/moves.js",
+    "importStyle": "Moves",
+    "description": "Data storage class for each move (attack) in the game.\nSample usage is in scripts/create-demo, where a game is played and\nthe results displayed as HTML.",
+    "lineNumber": 6,
+    "interface": false
+  },
+  {
+    "__docId__": 104,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/battleship/moves.js~Moves",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 13,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Board"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "board",
+        "description": "instance of Board"
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "toConsole",
+        "description": "if true, addMove displays result to console"
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "playerView",
+        "description": "if true, the ships are not displayed"
+      }
+    ]
+  },
+  {
+    "__docId__": 105,
+    "kind": "member",
+    "name": "board",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#board",
+    "access": "public",
+    "description": "board",
+    "lineNumber": 21,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Board"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 106,
+    "kind": "member",
+    "name": "moves",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#moves",
+    "access": "public",
+    "description": "tiles attacked",
+    "lineNumber": 26,
+    "type": {
+      "nullable": null,
+      "types": [
+        "{row: number, column: number}[]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 107,
+    "kind": "member",
+    "name": "results",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#results",
+    "access": "public",
+    "description": "result of attack",
+    "lineNumber": 31,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string[]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "member",
+    "name": "boardString",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#boardString",
+    "access": "public",
+    "description": "string representation board for game view and player view",
+    "lineNumber": 36,
+    "type": {
+      "nullable": null,
+      "types": [
+        "{game: string, player: string}[]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "member",
+    "name": "boardHtml",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#boardHtml",
+    "access": "public",
+    "description": "HTML representation board for game view and player view",
+    "lineNumber": 41,
+    "type": {
+      "nullable": null,
+      "types": [
+        "{game: string, player: string}[]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "member",
+    "name": "isRandom",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#isRandom",
+    "access": "public",
+    "description": "display strategy in game.play",
+    "lineNumber": 46,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "member",
+    "name": "random",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#random",
+    "access": "public",
+    "description": "optional array to display strategy in game.play",
+    "lineNumber": 51,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean[]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "member",
+    "name": "toConsole",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#toConsole",
+    "access": "public",
+    "description": "if true, print moves and board game view to the console",
+    "lineNumber": 56,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 113,
+    "kind": "member",
+    "name": "playerView",
+    "memberof": "src/battleship/moves.js~Moves",
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#playerView",
+    "access": "public",
+    "description": "if true, player view is displayed (no ships)",
+    "lineNumber": 61,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 114,
+    "kind": "method",
+    "name": "setIsRandom",
+    "memberof": "src/battleship/moves.js~Moves",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#setIsRandom",
+    "access": "public",
+    "description": "Optional property set from game.play",
+    "lineNumber": 68,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "isRandom",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "addMove",
+    "memberof": "src/battleship/moves.js~Moves",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#addMove",
+    "access": "private",
+    "description": "Called from board.attack",
+    "lineNumber": 80,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.row",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.column",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.result",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 118,
+    "kind": "method",
+    "name": "formatDescription",
+    "memberof": "src/battleship/moves.js~Moves",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#formatDescription",
+    "access": "public",
+    "description": "Create an array of strings describing the move",
+    "lineNumber": 116,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string[]}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "move",
+        "description": "array index"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string[]"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 119,
+    "kind": "method",
+    "name": "descriptionHtml",
+    "memberof": "src/battleship/moves.js~Moves",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/moves.js~Moves#descriptionHtml",
+    "access": "public",
+    "description": "Create HTML describing the move",
+    "lineNumber": 138,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "move",
+        "description": "array index"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "file",
+    "name": "src/battleship/parameters.js",
+    "content": "/**\n * @typedef {Object} shipTypes\n * @property {shipType} 1 Aircraft Carrier\n * @property {shipType} 2 Battleship\n * @property {shipType} 3 Cruiser\n * @property {shipType} 4 Destroyer\n * @property {shipType} 5 Submarine\n */\n/**\n * @typedef {Object} shipType\n * @property {number} shipTypeId\n *   1 = Aircraft Carrier,\n *   2 = Battleship,\n *   3 = Cruiser,\n *   4 = Destroyer,\n *   5 = Submarine\n * @property {string} name Aircraft Carrier | Battleship | Cruiser | Destroyer | Submarine\n * @property {number} length length of ship\n * @property {number} count number of this ship type on the board\n * @property {string} color ansi (chalk) color used in tile.toString()\n * @property {string} backgroundColor HTML color used in tile.toHtml()\n */\n/**\n * @typedef {Object} orientation\n * @property {number} columnFactor 0 for vertical, 1 for horizontal\n * @property {number} rowFactor 0 for horizontal, 1 for vertical\n */\n/**\n * @typedef {Object} orientations\n * @property {orientation} horizontal\n * @property {orientation} vertical\n */\n/**\n * @typedef {Object} parameters\n * @property {number} numRows number of rows on the board\n * @property {number} numColumns number of columns on the board\n * @property {shipTypes} shipTypes object of all shiptypes\n * @property {orientations} orientations object of orientations\n * @property {number} totalCount total number of ships\n */\n/**\n * @type {parameters}\n */\nconst parameters = {\n  numRows: 10,\n  numColumns: 10,\n  shipTypes: {\n    1: {\n      shipTypeId: 1,\n      name: 'Aircraft Carrier',\n      length: 5,\n      count: 1,\n      color: 'bgRed',\n      backgroundColor: 'crimson'\n    },\n    2: {\n      shipTypeId: 2,\n      name: 'Battleship',\n      length: 4,\n      count: 1,\n      color: 'bgYellowBright',\n      backgroundColor: 'orange'\n    },\n    3: {\n      shipTypeId: 3,\n      name: 'Cruiser',\n      length: 3,\n      count: 1,\n      color: 'bgYellow',\n      backgroundColor: 'yellow'\n    },\n    4: {\n      shipTypeId: 4,\n      name: 'Destroyer',\n      length: 2,\n      count: 2,\n      color: 'bgCyan',\n      backgroundColor: 'cyan'\n    },\n    5: {\n      shipTypeId: 5,\n      name: 'Submarine',\n      length: 1,\n      count: 2,\n      color: 'bgMagenta',\n      backgroundColor: 'magenta'\n    }\n  },\n  orientations: {\n    horizontal: {\n      columnFactor: 1,\n      rowFactor: 0\n    },\n    vertical: {\n      columnFactor: 0,\n      rowFactor: 1\n    }\n  }\n};\n\n/**\n * @type {number}\n */\nparameters.totalCount = Object.values(parameters.shipTypes)\n  .reduce((acc, next) => {\n    return acc + next.count\n  }, 0);\n\n/**\n * @type {number}\n */\nconst totalShipArea = Object.values(parameters.shipTypes)\n  .reduce((acc, next) => {\n    return acc + next.length * next.count\n  }, 0);\n\n/**\n * require that at least half of board space is empty\n * @type {parameters}\n */\nconst { numRows, numColumns } = parameters;\nif (totalShipArea > (numRows * numColumns) / 2) {\n  throw new Error('available board space insufficient for total ship area');\n}\n\n/**\n * @type {number}\n */\nconst longestShip = Object.values(parameters.shipTypes)\n  .reduce((acc, next) => {\n    return Math.max(acc, next.length)\n  }, 0);\n\nif (longestShip > Math.max(numRows, numColumns)) {\n  throw new Error('board is too small to fit largest ship');\n}\n\n/*\n * The traditional Battleship game names tiles using a letter for the row\n * and number (starting at 1) for the column.\n *\n * Dynamically compute the maxRowLetter so the board dimensions can be\n * changed by only changing numRows.\n */\nparameters.minRowLetter = 'A';\n/**\n * @type {number}\n */\nconst maxCharCode = parameters.minRowLetter.charCodeAt(0) + parameters.numRows - 1;\nparameters.maxRowLetter = String.fromCharCode(maxCharCode);\n\nmodule.exports = parameters;",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/src/battleship/parameters.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 121,
+    "kind": "variable",
+    "name": "totalShipArea",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~totalShipArea",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/parameters.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 112,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 122,
+    "kind": "variable",
+    "name": "numRows",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~numRows",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/parameters.js",
+    "importStyle": null,
+    "description": "require that at least half of board space is empty",
+    "lineNumber": 121,
+    "type": {
+      "nullable": null,
+      "types": [
+        "parameters"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 123,
+    "kind": "variable",
+    "name": "longestShip",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~longestShip",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/parameters.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 129,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 124,
+    "kind": "variable",
+    "name": "maxCharCode",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~maxCharCode",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/parameters.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 149,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 125,
+    "kind": "typedef",
+    "name": "shipTypes",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~shipTypes",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "shipType"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "1",
+        "description": "Aircraft Carrier"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "shipType"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "2",
+        "description": "Battleship"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "shipType"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "3",
+        "description": "Cruiser"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "shipType"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "4",
+        "description": "Destroyer"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "shipType"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "5",
+        "description": "Submarine"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "shipTypes"
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "typedef",
+    "name": "shipType",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~shipType",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "shipTypeId",
+        "description": "1 = Aircraft Carrier,\n  2 = Battleship,\n  3 = Cruiser,\n  4 = Destroyer,\n  5 = Submarine"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "Aircraft Carrier | Battleship | Cruiser | Destroyer | Submarine"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "length",
+        "description": "length of ship"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "count",
+        "description": "number of this ship type on the board"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "color",
+        "description": "ansi (chalk) color used in tile.toString()"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "backgroundColor",
+        "description": "HTML color used in tile.toHtml()"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "shipType"
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "typedef",
+    "name": "orientation",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~orientation",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "columnFactor",
+        "description": "0 for vertical, 1 for horizontal"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rowFactor",
+        "description": "0 for horizontal, 1 for vertical"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "orientation"
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "typedef",
+    "name": "orientations",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~orientations",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "orientation"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "horizontal",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "orientation"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "vertical",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "orientations"
+    }
+  },
+  {
+    "__docId__": 129,
+    "kind": "typedef",
+    "name": "parameters",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~parameters",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "numRows",
+        "description": "number of rows on the board"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "numColumns",
+        "description": "number of columns on the board"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "shipTypes"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "shipTypes",
+        "description": "object of all shiptypes"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "orientations"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "orientations",
+        "description": "object of orientations"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "totalCount",
+        "description": "total number of ships"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "parameters"
+    }
+  },
+  {
+    "__docId__": 130,
+    "kind": "variable",
+    "name": "parameters",
+    "memberof": "src/battleship/parameters.js",
+    "static": true,
+    "longname": "src/battleship/parameters.js~parameters",
+    "access": "public",
+    "export": true,
+    "importPath": "src/battleship/parameters.js",
+    "importStyle": "parameters",
+    "description": "",
+    "lineNumber": 44,
+    "type": {
+      "nullable": null,
+      "types": [
+        "parameters"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "file",
+    "name": "src/battleship/ship.js",
+    "content": "/**\n * @type {parameters}\n */\nconst parameters = require('./parameters');\n/**\n * @type {Utils}\n */\nconst utils = require('./utils');\n\n/**\n *\n */\nconst { numRows, numColumns, shipTypes, orientations } = parameters;\n/**\n * @type {Object}\n * @property {function} utils.isValidShipPosition\n */\nconst { isValidShipPosition } = utils;\n\n/**\n * The Ship class contains key ship properties:\n * * shipType\n * * positions (array of row, column indexes) of tiles that the ship is placed on\n * * hits (1-D boolean array) indicating if the index in positions has been hit\n * * sunk (boolean) true if all positions have been hit\n *\n * <br />\n * Ship also includes denomalized (copied) values from the shipType for convenience:\n * * length\n * * name (of type of ship)\n *\n * <br />\n * Ship has one private method:\n * * hit: set the corresponding index in hits to true, and sets sunk to true if all\n *   ship positions have been hit\n */\nclass Ship {\n  /**\n   * @param {number} shipTypeId id of ship type\n   * @param {string} orientation \"horizontal\" or \"vertical\"\n   * @param {number} startRow row of first tile\n   * @param {number} startColumn column of first tile\n   */\n  constructor({shipTypeId, orientation, startRow, startColumn}) {\n    if (!(orientation in orientations)) {\n      throw new Error(`Ship constructor: invalid ship orientation ${orientation}`);\n    }\n    if (!(shipTypeId in shipTypes)) {\n      throw new Error(`Ship constructor: invalid shipTypeId ${shipTypeId}`);\n    }\n    /**\n     * @type shipType\n     */\n    const shipType = shipTypes[shipTypeId];\n    const { length, name, color } = shipType;\n    if (!isValidShipPosition({shipTypeId, orientation, startRow, startColumn})) {\n      const msg = `length: ${length}, ${orientation}, [${startRow}, ${startColumn}]`;\n      throw new Error(`Ship constructor: invalid position for ${msg}`);\n    };\n    /**\n     * @type {object}\n     * @desc object containing shipTypeId, name (of shipType), length (of ship)\n     */\n    this.shipType = {...shipTypes[shipTypeId]};\n    /**\n     * @type {number}\n     * @desc key in parameters.shipType\n     */\n    this.shipTypeId = shipTypeId;\n    /**\n     * @type {number}\n     * @desc length of the ship\n     */\n    this.length = length;\n    /**\n     * @type {string}\n     * @desc name of the ship type\n     */\n    this.name = name;\n    /**\n     * @type {string}\n     * @desc color of the ship tile.toString\n     */\n    this.color = color;\n    /**\n     * @type {boolean}\n     * @desc true if the ship has been sunk\n     */\n    this.sunk = false;\n    /*\n     * for horizontal orientation, only the column is incremented (columnFactor = 1)\n     * for vertical orientation, only the row is incremented (rowFactor = 1)\n     */\n    const { rowFactor, columnFactor } = orientations[orientation];\n    /**\n     * @type {[number, number][]}\n     * @desc array of positions of the ship\n     */\n    this.positions = new Array(length)\n      .fill(null)\n      .map((v, k) => {\n        const row = startRow + rowFactor * k;\n        const column = startColumn + columnFactor * k;\n        return [row, column]\n      });\n    /**\n     * @type {[boolean]}\n     * @desc true if the ship has been hit at that index\n     */\n    this.hits = new Array(length).fill(false);\n\n  }\n\n  /**\n   * Mark a ship position as being hit.\n   * Check if all the ship position have been hit, and if so, set ship.sunk = true.\n   * This method is called by board.attack, and should not be called independently.\n   *\n   * @private\n   * @param {Object} obj destructured object\n   * @param {number} obj.row zero-based index of row on board matrix\n   * @param {number} obj.column zero-based index of column on board matrix\n   */\n  hit({row, column}) {\n    const index = this.positions.findIndex(item =>\n      (item[0] === row) && (item[1] === column)\n    );\n    if (index < 0) {\n      throw new Error(`Ship.hit invalid position [${row}, ${column}]`);\n    }\n    this.hits[index] = true;\n    this.sunk = this.hits.filter(value => value === true).length === this.length;\n  }\n\n  /**\n   * Return true if the position is covered by this ship and was hit.\n   *\n   * @param {Object} obj destructured object\n   * @param {number} obj.row\n   * @param {number} obj.column\n   * @returns {boolean}\n   */\n  isHit({row, column}) {\n    const index = this.positions.findIndex(item =>\n      (item[0] === row) && (item[1] === column)\n    );\n    if (index < 0) {\n      console.error(`Ship.isHit invalid position [${row}, ${column}]`);\n      return false;\n    }\n    return this.hits[index];\n  }\n\n}\n\nmodule.exports = Ship;",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/src/battleship/ship.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 132,
+    "kind": "variable",
+    "name": "parameters",
+    "memberof": "src/battleship/ship.js",
+    "static": true,
+    "longname": "src/battleship/ship.js~parameters",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/ship.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 4,
+    "type": {
+      "nullable": null,
+      "types": [
+        "parameters"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 133,
+    "kind": "variable",
+    "name": "utils",
+    "memberof": "src/battleship/ship.js",
+    "static": true,
+    "longname": "src/battleship/ship.js~utils",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/ship.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Utils"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 134,
+    "kind": "variable",
+    "name": "numRows",
+    "memberof": "src/battleship/ship.js",
+    "static": true,
+    "longname": "src/battleship/ship.js~numRows",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/ship.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 13,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 135,
+    "kind": "variable",
+    "name": "isValidShipPosition",
+    "memberof": "src/battleship/ship.js",
+    "static": true,
+    "longname": "src/battleship/ship.js~isValidShipPosition",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/ship.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 18,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "utils.isValidShipPosition",
+        "description": ""
+      }
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 136,
+    "kind": "class",
+    "name": "Ship",
+    "memberof": "src/battleship/ship.js",
+    "static": true,
+    "longname": "src/battleship/ship.js~Ship",
+    "access": "public",
+    "export": true,
+    "importPath": "src/battleship/ship.js",
+    "importStyle": "Ship",
+    "description": "The Ship class contains key ship properties:\n* shipType\n* positions (array of row, column indexes) of tiles that the ship is placed on\n* hits (1-D boolean array) indicating if the index in positions has been hit\n* sunk (boolean) true if all positions have been hit\n\n<br />\nShip also includes denomalized (copied) values from the shipType for convenience:\n* length\n* name (of type of ship)\n\n<br />\nShip has one private method:\n* hit: set the corresponding index in hits to true, and sets sunk to true if all\n  ship positions have been hit",
+    "lineNumber": 37,
+    "interface": false
+  },
+  {
+    "__docId__": 137,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/battleship/ship.js~Ship",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 44,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "shipTypeId",
+        "description": "id of ship type"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "orientation",
+        "description": "\"horizontal\" or \"vertical\""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startRow",
+        "description": "row of first tile"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startColumn",
+        "description": "column of first tile"
+      }
+    ]
+  },
+  {
+    "__docId__": 138,
+    "kind": "member",
+    "name": "shipType",
+    "memberof": "src/battleship/ship.js~Ship",
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#shipType",
+    "access": "public",
+    "description": "object containing shipTypeId, name (of shipType), length (of ship)",
+    "lineNumber": 64,
+    "type": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 139,
+    "kind": "member",
+    "name": "shipTypeId",
+    "memberof": "src/battleship/ship.js~Ship",
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#shipTypeId",
+    "access": "public",
+    "description": "key in parameters.shipType",
+    "lineNumber": 69,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 140,
+    "kind": "member",
+    "name": "length",
+    "memberof": "src/battleship/ship.js~Ship",
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#length",
+    "access": "public",
+    "description": "length of the ship",
+    "lineNumber": 74,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "member",
+    "name": "name",
+    "memberof": "src/battleship/ship.js~Ship",
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#name",
+    "access": "public",
+    "description": "name of the ship type",
+    "lineNumber": 79,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "member",
+    "name": "color",
+    "memberof": "src/battleship/ship.js~Ship",
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#color",
+    "access": "public",
+    "description": "color of the ship tile.toString",
+    "lineNumber": 84,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 143,
+    "kind": "member",
+    "name": "sunk",
+    "memberof": "src/battleship/ship.js~Ship",
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#sunk",
+    "access": "public",
+    "description": "true if the ship has been sunk",
+    "lineNumber": 89,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 144,
+    "kind": "member",
+    "name": "positions",
+    "memberof": "src/battleship/ship.js~Ship",
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#positions",
+    "access": "public",
+    "description": "array of positions of the ship",
+    "lineNumber": 99,
+    "type": {
+      "nullable": null,
+      "types": [
+        "[number, number][]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 145,
+    "kind": "member",
+    "name": "hits",
+    "memberof": "src/battleship/ship.js~Ship",
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#hits",
+    "access": "public",
+    "description": "true if the ship has been hit at that index",
+    "lineNumber": 110,
+    "type": {
+      "nullable": null,
+      "types": [
+        "[boolean]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 146,
+    "kind": "method",
+    "name": "hit",
+    "memberof": "src/battleship/ship.js~Ship",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#hit",
+    "access": "private",
+    "description": "Mark a ship position as being hit.\nCheck if all the ship position have been hit, and if so, set ship.sunk = true.\nThis method is called by board.attack, and should not be called independently.",
+    "lineNumber": 124,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "destructured object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.row",
+        "description": "zero-based index of row on board matrix"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.column",
+        "description": "zero-based index of column on board matrix"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 148,
+    "kind": "method",
+    "name": "isHit",
+    "memberof": "src/battleship/ship.js~Ship",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/ship.js~Ship#isHit",
+    "access": "public",
+    "description": "Return true if the position is covered by this ship and was hit.",
+    "lineNumber": 143,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "destructured object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.row",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj.column",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 149,
+    "kind": "file",
+    "name": "src/battleship/tile.js",
+    "content": "/**\n * @type function\n */\nconst chalk = require('chalk');\n/**\n * @type {parameters}\n */\nconst parameters = require('./parameters');\n/**\n * @type {Utils}\n */\nconst utils = require('./utils');\n/**\n * @type {Object}\n */\nconst { numRows, numColumns, shipTypes } = parameters;\n/**\n * @type {Object}\n */\nconst { isRowValid, isColumnValid } = utils;\n\n/**\n *\n * A Tile is an object of the board representing:\n *   * the position,\n *   * the ship object (if any), and\n *   * if this object has been attacked\n */\nclass Tile {\n\n  /**\n   * @param {number} row zero-based index of row on board matrix\n   * @param {number} column zero-based index of column on board matrix\n   * @throws if row or column is invalid\n   */\n  constructor(row, column) {\n    if (!isRowValid(row)) {\n      throw new Error(`invalid tile row ${row}`)\n    }\n    if (!isColumnValid(column)) {\n      throw new Error(`invalid tile column ${column}`)\n    }\n    /**\n     * @type {number}\n     * @desc zero-based row number\n     */\n    this.row = row;\n    /**\n     * @type {number}\n     * @desc zero-based column number\n     */\n    this.column = column;\n    /**\n     * @type {Ship|null}\n     * @desc ship object if this tile belongs to a ship\n     */\n    this.ship = null;\n    /**\n     * @type {boolean}\n     * @desc true if this tile has been attacked\n     */\n    this.attacked = false;\n  }\n\n  /**\n   * Return string representation of the tile, where ships are colored acccording\n   * to the ship type.  The character is \"o\" for a tile that has not been attacked,\n   * and \"x\" for a tile that has been attacked.\n   *\n   * @param {boolean} playerView if true, then the color only shows if a tile was\n   * attacked or hit\n   * @returns {string}\n   */\n  toString(playerView = false) {\n    /*\n     * code:\n     *\n     *   symbol:\n     *   o  unattacked\n     *   x  attacked\n     *\n     *   font color not-attacked, hit or sunk:\n     *   black:   non-playerView\n     *   white:   playerView\n     *\n     *   font color attacked:\n     *   white:   non-playerView\n     *   black:   playerView\n     *\n     *   background color non-playerView:\n     *   white:   non-ship tile\n     *   red:     aircraft carrier\n     *   orange:  battleship (yellow)\n     *   yellow:  cruiser (yellowBright)\n     *   cyan:    destroyer\n     *   magenta: submarine\n     *\n     *   background color playerView:\n     *   green:   ship\n     *   red:     ship && ship.sunk\n     *   blackBright:   attacked\n     */\n    let fontColor = 'black';\n    let bgColor = 'bgWhite';\n    const symbol = this.attacked ? 'x' : 'o';\n    if (playerView) {\n      if (this.ship) {\n        if (this.attacked) {\n          bgColor = this.ship.sunk ? 'bgRed' : 'bgYellow';\n        }\n      } else {\n        fontColor = this.attacked ? 'white' : 'black';\n        bgColor = this.attacked ? 'bgBlackBright' : 'bgWhite';\n      }\n    } else {\n      if (this.ship) {\n        bgColor = shipTypes[this.ship.shipTypeId].color;\n      } else {\n        fontColor = this.attacked ? 'white' : 'black';\n        bgColor = this.attacked ? 'bgBlackBright' : 'bgWhite';\n      }\n    }\n    return chalk`{${fontColor}.${bgColor}  ${symbol} }`;\n  }\n\n  /**\n   * Return HTML representation of the tile, where ships are colored acccording\n   * to the ship type.  The character is \"o\" for a tile that has not been attacked,\n   * and \"x\" for a tile that has been attacked.\n   *\n   * @param {boolean} playerView if true, then the color only shows if a tile was\n   * attacked or hit\n   * @returns {string}\n   */\n  toHtml(playerView = false) {\n    const symbol = this.attacked ? 'x' : 'o';\n    let className = 'empty';\n    if (playerView) {\n      if (this.ship) {\n        if (this.attacked) {\n          className = this.ship.sunk ? 'sunk' : 'hit';\n        }\n      } else {\n        className = this.attacked ? 'attacked' : 'empty';\n      }\n    } else {\n      if (this.ship) {\n        className = `shipType${this.ship.shipTypeId}`;\n      } else {\n        className = this.attacked ? 'attacked' : 'empty';\n      }\n    }\n    const html =  `<span class=\"${className}\">${symbol}</span>`;\n    return `<span class=\"${className}\">${symbol}</span>`;\n  }\n\n  /**\n   * Returns HTML Style tag with class rules for tile display.\n   * @returns {string}\n   */\n  static getHtmlStyleTag() {\n    return `\n      <style>\n        .demo p {\n          margin: 0 0;\n          color: black;\n        }\n        .demo table {\n          width: 750px;\n        }\n        div.tiles {\n          margin: 0.5em 0 1em 0;\n        }\n        .tiles span {\n          width: 1.5em;\n          height: 1.5em;\n          display: inline-flex;\n          align-items: center;\n          justify-content: center;\n        }\n        .shipType1 {\n          border: 1px solid #ddd;\n          color: black;\n          background-color: ${shipTypes[1].backgroundColor};\n        }\n        .shipType2 {\n          border: 1px solid #ddd;\n          color: black;\n          background-color: ${shipTypes[2].backgroundColor};\n        }\n        .shipType3 {\n          border: 1px solid #ddd;\n          color: black;\n          background-color: ${shipTypes[3].backgroundColor};\n        }\n        .shipType4 {\n          border: 1px solid #ddd;\n          color: black;\n          background-color: ${shipTypes[4].backgroundColor};\n        }\n        .shipType5 {\n          border: 1px solid #ddd;\n          color: black;\n          background-color: ${shipTypes[5].backgroundColor};\n        }\n        .attacked {\n          border: 1px solid #ddd;\n          color: white;\n          background-color: #888;\n        }\n        .hit {\n          border: 1px solid #ddd;\n          color: black;\n          background-color: yellowgreen;\n        }\n        .sunk {\n          border: 1px solid #ddd;\n          color: black;\n          background-color: red;\n        }\n        .empty {\n          border: 1px solid #ddd;\n          color: black;\n          background-color: #eee;\n        }\n      </style>\n    `\n  }\n\n}\n\nmodule.exports = Tile;",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/src/battleship/tile.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 150,
+    "kind": "variable",
+    "name": "chalk",
+    "memberof": "src/battleship/tile.js",
+    "static": true,
+    "longname": "src/battleship/tile.js~chalk",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/tile.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 4,
+    "type": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 151,
+    "kind": "variable",
+    "name": "parameters",
+    "memberof": "src/battleship/tile.js",
+    "static": true,
+    "longname": "src/battleship/tile.js~parameters",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/tile.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "parameters"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 152,
+    "kind": "variable",
+    "name": "utils",
+    "memberof": "src/battleship/tile.js",
+    "static": true,
+    "longname": "src/battleship/tile.js~utils",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/tile.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 12,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Utils"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 153,
+    "kind": "variable",
+    "name": "numRows",
+    "memberof": "src/battleship/tile.js",
+    "static": true,
+    "longname": "src/battleship/tile.js~numRows",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/tile.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 16,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 154,
+    "kind": "variable",
+    "name": "isRowValid",
+    "memberof": "src/battleship/tile.js",
+    "static": true,
+    "longname": "src/battleship/tile.js~isRowValid",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/tile.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 20,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 155,
+    "kind": "class",
+    "name": "Tile",
+    "memberof": "src/battleship/tile.js",
+    "static": true,
+    "longname": "src/battleship/tile.js~Tile",
+    "access": "public",
+    "export": true,
+    "importPath": "src/battleship/tile.js",
+    "importStyle": "Tile",
+    "description": "\nA Tile is an object of the board representing:\n  * the position,\n  * the ship object (if any), and\n  * if this object has been attacked",
+    "lineNumber": 29,
+    "interface": false
+  },
+  {
+    "__docId__": 156,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/battleship/tile.js~Tile",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/tile.js~Tile#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 36,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "row",
+        "description": "zero-based index of row on board matrix"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "column",
+        "description": "zero-based index of column on board matrix"
+      }
+    ],
+    "throws": [
+      {
+        "types": [
+          "*"
+        ],
+        "description": "if row or column is invalid"
+      }
+    ]
+  },
+  {
+    "__docId__": 157,
+    "kind": "member",
+    "name": "row",
+    "memberof": "src/battleship/tile.js~Tile",
+    "static": false,
+    "longname": "src/battleship/tile.js~Tile#row",
+    "access": "public",
+    "description": "zero-based row number",
+    "lineNumber": 47,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 158,
+    "kind": "member",
+    "name": "column",
+    "memberof": "src/battleship/tile.js~Tile",
+    "static": false,
+    "longname": "src/battleship/tile.js~Tile#column",
+    "access": "public",
+    "description": "zero-based column number",
+    "lineNumber": 52,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "member",
+    "name": "ship",
+    "memberof": "src/battleship/tile.js~Tile",
+    "static": false,
+    "longname": "src/battleship/tile.js~Tile#ship",
+    "access": "public",
+    "description": "ship object if this tile belongs to a ship",
+    "lineNumber": 57,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Ship",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "member",
+    "name": "attacked",
+    "memberof": "src/battleship/tile.js~Tile",
+    "static": false,
+    "longname": "src/battleship/tile.js~Tile#attacked",
+    "access": "public",
+    "description": "true if this tile has been attacked",
+    "lineNumber": 62,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 161,
+    "kind": "method",
+    "name": "toString",
+    "memberof": "src/battleship/tile.js~Tile",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/tile.js~Tile#toString",
+    "access": "public",
+    "description": "Return string representation of the tile, where ships are colored acccording\nto the ship type.  The character is \"o\" for a tile that has not been attacked,\nand \"x\" for a tile that has been attacked.",
+    "lineNumber": 74,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "playerView",
+        "description": "if true, then the color only shows if a tile was\nattacked or hit"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "method",
+    "name": "toHtml",
+    "memberof": "src/battleship/tile.js~Tile",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/battleship/tile.js~Tile#toHtml",
+    "access": "public",
+    "description": "Return HTML representation of the tile, where ships are colored acccording\nto the ship type.  The character is \"o\" for a tile that has not been attacked,\nand \"x\" for a tile that has been attacked.",
+    "lineNumber": 135,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "playerView",
+        "description": "if true, then the color only shows if a tile was\nattacked or hit"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "method",
+    "name": "getHtmlStyleTag",
+    "memberof": "src/battleship/tile.js~Tile",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/battleship/tile.js~Tile.getHtmlStyleTag",
+    "access": "public",
+    "description": "Returns HTML Style tag with class rules for tile display.",
+    "lineNumber": 161,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 164,
+    "kind": "file",
+    "name": "src/battleship/utils.js",
+    "content": "/**\n * @type {parameters}\n */\nconst parameters = require('./parameters');\n/**\n * @type {Object}\n */\nconst { numRows, numColumns, shipTypes, orientations } = parameters;\n\n/**\n * Utility static class (mostly) containing common validation functions\n */\nclass Utils {\n  /**\n   * Returns true if row is on the board\n   * @param {number }row row number\n   * @returns {boolean}\n   */\n  static isRowValid = (row) => {\n    return ((row >= 0) && (row < numRows));\n  };\n\n  /**\n   * Returns true if column is on the board\n   * @param {number }column column number\n   * @returns {boolean}\n   */\n  static isColumnValid = (column) => {\n    return ((column >= 0) && (column < numColumns));\n  };\n\n  /**\n   * Returns true if ship fits on the board at given position and orientation\n   * the logic for checking if ships overlap is in board.addShip\n   *\n   * @param {number} shipTypeId type of ship\n   * @param {string} orientation orientation of ship (horizontal | vertical)\n   * @param {number} startRow row number at start of ship\n   * @param {number} startColumn column number at start of ship\n   * @returns {boolean}\n   */\n  static isValidShipPosition = ({shipTypeId, orientation, startRow, startColumn}) => {\n    const { lastValidStartRow, lastValidStartColumn } = Utils.getValidStartPosition(\n      {shipTypeId, orientation}\n    )\n    return (\n      (startRow >= 0) &&\n      (startRow <= lastValidStartRow) &&\n      (startColumn >=0) &&\n      (startColumn <= lastValidStartColumn)\n    )\n  };\n\n  /*\n   */\n  /**\n   * Calculate the last valid start position that a ship of a given shipType and\n   * orientation can fit on the board.\n   *\n   * @param {number} shipTypeId type of ship\n   * @param {string} orientation orientation of ship (horizontal | vertical)\n   * @returns {{lastValidStartRow: number, lastValidStartColumn: number}}\n   */\n  static getValidStartPosition = ({shipTypeId, orientation}) => {\n    const shipType = shipTypes[shipTypeId];\n    const { rowFactor, columnFactor } = orientations[orientation];\n    const { length } = shipType;\n    const lastValidStartRow = numRows - length * rowFactor;\n    const lastValidStartColumn = numColumns - length * columnFactor;\n    return {lastValidStartRow, lastValidStartColumn};\n  };\n\n  /**\n   * Return a random start position that a ship of a given shipType and\n   * orientation can fit on the board.\n   *\n   * @param {number} shipTypeId type of ship\n   * @param {string} orientation orientation of ship (horizontal | vertical)\n   * @returns {{startRow: number, startColumn: number}}\n   * @throws if shipTypeId or orientation is invalid\n   */\n  static getRandomShipPosition = ({shipTypeId, orientation}) => {\n    if (!(shipTypeId in shipTypes)) {\n      throw new Error(`Utils.getRandomShipPosition invalid shipTypeId: ${shipTypeId}`);\n    };\n    if (!(orientation in orientations)) {\n      throw new Error(`Utils.getRandomShipPosition invalid orientation: ${orientation}`);\n    };\n    const {lastValidStartRow, lastValidStartColumn} = Utils\n      .getValidStartPosition({shipTypeId, orientation})\n    const startRow = Math.floor(Math.random() * lastValidStartRow);\n    const startColumn = Math.floor(Math.random() * lastValidStartColumn);\n    return {startRow, startColumn}\n  };\n};\n\nmodule.exports = Utils;",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/src/battleship/utils.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 165,
+    "kind": "variable",
+    "name": "parameters",
+    "memberof": "src/battleship/utils.js",
+    "static": true,
+    "longname": "src/battleship/utils.js~parameters",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/utils.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 4,
+    "type": {
+      "nullable": null,
+      "types": [
+        "parameters"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 166,
+    "kind": "variable",
+    "name": "numRows",
+    "memberof": "src/battleship/utils.js",
+    "static": true,
+    "longname": "src/battleship/utils.js~numRows",
+    "access": "public",
+    "export": false,
+    "importPath": "src/battleship/utils.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 167,
+    "kind": "class",
+    "name": "Utils",
+    "memberof": "src/battleship/utils.js",
+    "static": true,
+    "longname": "src/battleship/utils.js~Utils",
+    "access": "public",
+    "export": true,
+    "importPath": "src/battleship/utils.js",
+    "importStyle": "Utils",
+    "description": "Utility static class (mostly) containing common validation functions",
+    "lineNumber": 13,
+    "interface": false
+  },
+  {
+    "__docId__": 168,
+    "kind": "member",
+    "name": "isRowValid",
+    "memberof": "src/battleship/utils.js~Utils",
+    "static": true,
+    "longname": "src/battleship/utils.js~Utils.isRowValid",
+    "access": "public",
+    "description": "Returns true if row is on the board",
+    "lineNumber": 19,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "{number",
+        "description": "}row row number"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 169,
+    "kind": "member",
+    "name": "isColumnValid",
+    "memberof": "src/battleship/utils.js~Utils",
+    "static": true,
+    "longname": "src/battleship/utils.js~Utils.isColumnValid",
+    "access": "public",
+    "description": "Returns true if column is on the board",
+    "lineNumber": 28,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "{number",
+        "description": "}column column number"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 170,
+    "kind": "member",
+    "name": "isValidShipPosition",
+    "memberof": "src/battleship/utils.js~Utils",
+    "static": true,
+    "longname": "src/battleship/utils.js~Utils.isValidShipPosition",
+    "access": "public",
+    "description": "Returns true if ship fits on the board at given position and orientation\nthe logic for checking if ships overlap is in board.addShip",
+    "lineNumber": 42,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "shipTypeId",
+        "description": "type of ship"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "orientation",
+        "description": "orientation of ship (horizontal | vertical)"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startRow",
+        "description": "row number at start of ship"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startColumn",
+        "description": "column number at start of ship"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 171,
+    "kind": "member",
+    "name": "getValidStartPosition",
+    "memberof": "src/battleship/utils.js~Utils",
+    "static": true,
+    "longname": "src/battleship/utils.js~Utils.getValidStartPosition",
+    "access": "public",
+    "description": "Calculate the last valid start position that a ship of a given shipType and\norientation can fit on the board.",
+    "lineNumber": 64,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{lastValidStartRow: number, lastValidStartColumn: number}}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "shipTypeId",
+        "description": "type of ship"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "orientation",
+        "description": "orientation of ship (horizontal | vertical)"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "{lastValidStartRow: number, lastValidStartColumn: number}"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 172,
+    "kind": "member",
+    "name": "getRandomShipPosition",
+    "memberof": "src/battleship/utils.js~Utils",
+    "static": true,
+    "longname": "src/battleship/utils.js~Utils.getRandomShipPosition",
+    "access": "public",
+    "description": "Return a random start position that a ship of a given shipType and\norientation can fit on the board.",
+    "lineNumber": 82,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{startRow: number, startColumn: number}}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "shipTypeId",
+        "description": "type of ship"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "orientation",
+        "description": "orientation of ship (horizontal | vertical)"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "{startRow: number, startColumn: number}"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "throws": [
+      {
+        "types": [
+          "*"
+        ],
+        "description": "if shipTypeId or orientation is invalid"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 173,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "/**\n * @type {Game}\n */\nconst Game = require('../src/battleship/game');\n/**\n * @type {number}\n */\nconst numGames = 1;\n/**\n * @type {boolean}\n */\nconst toConsole = true;\n\nfor (let i = 0; i < numGames; i++) {\n  console.log(`${Game.gameBanner(i + 1)}\\n`);\n  const game = new Game({toConsole});\n  game.play();\n}\n",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 174,
+    "kind": "variable",
+    "name": "Game",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~Game",
+    "access": "public",
+    "export": false,
+    "importPath": "battleship",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 4,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Game"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 175,
+    "kind": "variable",
+    "name": "numGames",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~numGames",
+    "access": "public",
+    "export": false,
+    "importPath": "battleship",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 176,
+    "kind": "variable",
+    "name": "toConsole",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~toConsole",
+    "access": "public",
+    "export": false,
+    "importPath": "battleship",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 12,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "kind": "index",
+    "content": "# Battleship\n\nThis software package is written in Node JavaScript, and represents the \nback-end system for playing the game Battleship.\n\nAccording to [Wikipedia](https://en.wikipedia.org/wiki/Battleship_%28game%29):\n\n> Battleship is a strategy type guessing game \n>for two players. It is played on ruled grids (paper or board) on which \n>each player's fleet of ships (including battleships) are marked. The \n>locations of the fleets are concealed from the other player. Players \n>alternate turns calling \"shots\" at the other player's ships, and the \n>objective of the game is to destroy the opposing player's fleet.\n\n**Paper version of Battleship**\n![](https://en.wikipedia.org/wiki/File:Battleships_Paper_Game.svg)\n![](docs/Battleships_Paper_Game.png)\n![](http://localhost:8081/Battleships_Paper_Game.png)\n\n## Installation\n\nNode version 8 or greater must be installed, as well as npm (Node Package\nManager). In a terminal window, install the required Node packages:\n\n```bash\ngit clone https://github.com/stefanzero/battleship.git\nnpm install\n```\n\n## ESDOCS\n\nThe [Esdoc](https://esdoc.org/) system is used to generate web pages \ndescribing the software components.  By adding special text comments \ncalled \"annotations\" within the code, the esdoc Node module reads \nthe source files and generates the output files.  The configuration for\nEsdoc is in the esdoc section of the package.json file.  The documents \nhave already been generated (in this zipfile of Battleship) and are \nlocated in the docs directory.\n\nHere is an screen shot of the ESDOCS:\n![](docs/images/Battleship-home.png)\n![](http://localhost:8081/images/Battleship-home.png)\n\n<br />\nThe documents can be generated again with a command in the scripts \nsection of package.json.  The \"Dev dependencies\" (esdoc and related\nesdoc plugins) in the package.json must be installed prior to generating \nthe docs.\n\n```bash\nnpm install --dev\nnpm run docs\n```\n\n## Demo Docs Server\n\nStatic HTML content (files) can be opened with a web browser, but dynamic \ncontent requires a web server to generate the content.  In the Esdocs, a \"Demo\"\nweb page has been created, that \"auto-plays\" a random arrangement of \nships.  Each time the demo page is reloaded, a new game is played and \ndisplayed. This new game is created by a Node program in the scripts \ndirectory (scripts/create-demo.js).\n\n<br />\nA Node program (scripts/serve-docs.js) has been included in this package that runs \na local HTTP server (on port 8081) that will serve these ESDOCS.  A command \nin the scripts section of package.json (\"serve\") will start this local server and \nautomatically open the default browser to the Home page of the documentation.\n**Please run the install command first, then the serve command NOW**\nso you can see the documentation for the sections to be described\nbelow.\n\n```bash\nnpm install\nnpm run serve\n```\n\nThis ReadMe page is duplicated by Esdocs and displayed on the **Home**\nlink in the navigation bar.\n\nIf for some reason Node cannot open a local HTTP server on port 8081, please\nopen the docs home page directly in your browser:\n\n```bash\nopen docs/index.html\n```\nIn this case, the Demo page is static and reloading it will just display \nthe same game simulation.\n\n## Object-oriented Design\n\nAll the objects are displayed in the left column of the Esdocs web\npage.  Please click on each item to display a detailed web page with \na description of all its members and methods.\n\n* Board\n* Tile\n* Ship\n* Moves\n* Game\n* Utils\n* parameters\n\n<br />\nThe Board is the main object that contains tiles and ships, \nand the methods to add ships, automatically set up the board, \nand conduct attacks.  The Board also has a Moves object, which \nkeeps track of the history of the game, including a string and \nHTML representation of the board after each move (attack).\n\n<br />\nThe parameters object contains all the constants for configuring \nthe game:\n* numRows\n* numColumns\n* shipTypes\n* orientations (this should not be changed)\n\n<br />\nThe shipTypes is an object containing the essential information for\na given ship type:\n* shipTypeId (number 1 - 5)\n* name (Aircraft Carrier, Battleship, Cruiser, Destroyer, Submarine)\n* length (5, 4, 3, 2, 1 for ships above)\n* number of each type on the board (1, 1, 1, 2, 2 for ships above)\n* color (for Board.toString)\n* backgroundColor (for Board.toHtml)\n\n<br />\nThe Game class implements a strategy for playing the game, and\nis used to create the Demo page of the Esdocs.  The Game constructor\ncreates a new board and then sets up the board with ships at \nrandom positions.  The Game has a **play** method that conducts \nrandom attacks until a hit is achieved.  Then the surrounding \ntiles of the hit are stored on a stack to be  attacked.  \n\n<br />\nWhen a second hit is achieved, the stack is filtered to positions that \nare in a line with the last hit.  When an attack results in a sunken \nship, the stack is emptied.  But if the stack is emptied without a\nsunken ship, the last stack is restored. This is done because if \ntwo ships are adjacent, the filtering strategy would remove positions \nthat should still be tried.  This relatively simple strategy greatly \nimproves the rate at which all ships are sunk.  \n\n<br />\nThe auto-play game strategy usually results in a ship being sunk if a \nfew moves after any one of its positions are hit.  Since a submarine\nhas a length of 1 (only 1 tile), it is the hardest ship to sink.\nMost often, the submarine is the last ship to be sunk in the auto-play \nsimulation.\n\n## Unit and Functional Tests\n\nThe Mocha testing utility and the Chai assertion library are used \nto write unit tests for every class and class method.  The tests \nare displayed in the **Test** link in the navigation bar.  \n\nThe **Demo** link in the navigation bar is an end-to-end functional \ntest of Battleship.  Each time the **Demo** page is reloaded (while the\n\"npm run server\" command is executing), a new \ninstance of the Game class is created, which creates a new instance of\nBoard which is set up with all required ships at random (valid) \npositions.  Then the play method of Game is called.  \n\nThe results of the Demo game are displayed as table with 3 columns:\n* Description: Move Number, Position Attacked, Attack Result\n* Game View: Display of the game with the ships (Enemy View)\n* Player View: Display of the game with positions attacked, hit or sunk\n\n<br />\nScrolling down the demo page shows the effectiveness of the auto-play \nstrategy.  After a random attack results in a hit, the positions surrounding \nthat hit are called and the ship is usually sunk in a few moves later.\n\n## Changing Game Parameters\n\nThe game parameters are in the file parameters.js.  The values for numRows \nand numColumns can be edited to change the size of the board.  The values \nin shipTypes can be edited to change the type of ships on the board, their \nlength, number of each type, and color displayed.\n\n## Playing the game\n\nA Node program is included in the package to allow a single player to attack a\nboard with a random arrangment of ships.  In a terminal window this command\nstarts the game:\n\n```bash\nnpm run play\n```\n\nThis starts the program scripts/play.js, which displays the board after each\nattack and a prompt to enter the next attack.\n![](docs/images/Move0.png)\n![](http://localhost:8081/images/Move0.png)\n\nLet's attack 2, 2.\nIt is a Miss, so the tile is shown with an \"x\" in a dark gray:\n![](docs/images/Move1.png)\n![](http://localhost:8081/images/Move1.png)\n\nLet's attack 6, 2.\nIt is a Hit, so the tile is shown with an \"x\" in orange:\n![](docs/images/Move2.png)\n![](http://localhost:8081/images/Move2.png)\n\nHere are a few  more attacks:\n![](docs/images/Move3.png)\n![](http://localhost:8081/images/Move3.png)\n\n![](docs/images/Move4.png)\n![](http://localhost:8081/images/Move4.png)\n\nNow we get a Hit on the last position of a ship, so it is \nsunk and marked with all x's in red.\n![](docs/images/Move5.png)\n![](http://localhost:8081/images/Move5.png)\n\nAfter many moves, we finally sink the last ship:\n![](docs/images/Move31.png)\n![](http://localhost:8081/images/Move31.png)\n\n## Future extensions\n\nFuture extensions to this package could be a hosted Express (Node) web site with\nAPI routes to start a new game, add ships, and accept moves (attacks) upon the \nenemy.  This could be accompanied by a front-end web site to allow players to \nuse these APIs and display both the \"Home View\"  (Game view for the player), and\n\"Player View\" for tracking the attacks upon the enemies.  These would correspond \nto the \"Game View\" and \"Player View\" columns of the **Demo** page.\n\n\n\n\n",
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"battleship\",\n  \"version\": \"0.0.1\",\n  \"description\": \"Battleship game in Node\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"test\": \"mocha\",\n    \"docs\": \"esdoc\",\n    \"preserve\": \"scripts/kill-serve-docs.sh\",\n    \"serve\": \"node scripts/serve-docs.js\",\n    \"play\": \"node scripts/play.js\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"private\"\n  },\n  \"keywords\": [\n    \"battleship\",\n    \"game\"\n  ],\n  \"author\": \"Stefan Musarra\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"chai\": \"^4.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-accessor-plugin\": \"^1.0.0\",\n    \"esdoc-commonjs-plugin\": \"^1.0.2\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"mocha\": \"^7.1.0\"\n  },\n  \"dependencies\": {\n    \"chalk\": \"^3.0.0\",\n    \"esdoc-importpath-plugin\": \"^1.0.2\",\n    \"open\": \"^7.0.2\"\n  },\n  \"esdoc\": {\n    \"source\": \"./src\",\n    \"destination\": \"./docs\",\n    \"plugins\": [\n      {\n        \"name\": \"esdoc-standard-plugin\",\n        \"option\": {\n          \"test\": {\n            \"source\": \"./test/\",\n            \"interfaces\": [\n              \"describe\",\n              \"it\",\n              \"context\",\n              \"suite\",\n              \"test\"\n            ],\n            \"includes\": [\n              \"(spec|Spec|test|Test)\\\\.js$\"\n            ],\n            \"excludes\": [\n              \"\\\\.config\\\\.js$\"\n            ]\n          }\n        }\n      },\n      {\n        \"name\": \"esdoc-accessor-plugin\",\n        \"option\": {\n          \"access\": [\n            \"public\",\n            \"protected\",\n            \"private\"\n          ],\n          \"autoPrivate\": false\n        }\n      },\n      {\n        \"name\": \"esdoc-ecmascript-proposal-plugin\",\n        \"option\": {\n          \"classProperties\": true,\n          \"objectRestSpread\": true,\n          \"doExpressions\": false,\n          \"functionBind\": false,\n          \"functionSent\": false,\n          \"asyncGenerators\": false,\n          \"decorators\": false,\n          \"exportExtensions\": false,\n          \"dynamicImport\": false\n        }\n      },\n      {\n        \"name\": \"esdoc-commonjs-plugin\"\n      },\n      {\n        \"name\": \"esdoc-importpath-plugin\",\n        \"option\": {\n          \"stripPackageName\": true,\n          \"replaces\": []\n        }\n      },\n      {\n        \"name\": \"esdoc-publish-html-plugin\",\n        \"option\": {\n          \"template\": \"templates/my-template\"\n        }\n      }\n    ]\n  }\n}\n",
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "__docId__": 177,
+    "kind": "testFile",
+    "name": "test/board.test.js",
+    "content": "const expect = require('chai').expect;\nconst Tile = require('../src/battleship/tile');\nconst Board = require('../src/battleship/board');\nconst Ship = require('../src/battleship/ship');\nconst Moves = require('../src/battleship/moves');\nconst parameters = require('../src/battleship/parameters');\n\nconst { numRows, numColumns, shipTypes, orientations, totalCount } = parameters;\n\n/**\n * @test {Board}\n */\ndescribe('Board constructor', function() {\n  const board = new Board();\n  it('should contain a matrix of tiles', function() {\n    // const board = new Board();\n    for (let i = 0; i < numRows; i++) {\n      for (let j = 0; j < numColumns; j++) {\n        const tile = board.tiles[i][j];\n        expect(tile).to.be.an.instanceof(Tile);\n      }\n    }\n  });\n  it('should be initialized with an empty array for ships', function() {\n    expect(Array.isArray(board.ships)).to.be.true;\n  });\n  it('should be initialized with isSetUp as false', function() {\n    expect(board.isSetUp).to.be.false;\n  })\n  it('should have an instance of Moves', function() {\n    expect(board.moves).to.be.an.instanceof(Moves);\n  })\n\n});\n\n/**\n * @test {Board}\n */\ndescribe('Board.setup', function() {\n  it('it should add ships at random positions if setup is called with no parameters',\n    function(){\n      const board = new Board();\n      board.setUp();\n      expect(board.isSetUp).to.be.true;\n      expect(board.ships.length).to.equal(totalCount);\n    }\n  );\n});\n\n/**\n * @test {Board}\n */\ndescribe('Board.addShip', function() {\n  it('should be able to add a ship to the board if the position is valid', function() {\n    for (let shipTypeId of Object.keys(shipTypes)) {\n      const { length } = shipTypes[shipTypeId];\n      for (let orientation of Object.keys(orientations)) {\n        const { rowFactor, columnFactor } = orientations[orientation];\n        for (let startRow = 0; startRow < numRows - rowFactor * length; startRow++) {\n          for (let startColumn = 0; startColumn < numColumns - columnFactor * length; startColumn++) {\n            const board = new Board();\n            const ship = new Ship({shipTypeId, orientation, startRow, startColumn});\n            expect(board.addShip(ship)).to.be.true;\n            expect(board.ships.includes(ship));\n          }\n        }\n      }\n    }\n  });\n\n  it('should mark the appropriate tiles after a ship is added', function() {\n    const board = new Board();\n    const aircraftCarrier = new Ship({\n      shipTypeId: 1,\n      orientation: 'horizontal',\n      startRow: 3,\n      startColumn : 3\n    });\n    board.addShip(aircraftCarrier);\n    const tiles = board.tiles[3].slice(3, 5);\n    tiles.forEach(tile => {\n      expect(tile.ship).to.equal(aircraftCarrier);\n    })\n  });\n\n  it('should return false if adding a ship will overlap an existing ship', function() {\n    const board = new Board();\n    const aircraftCarrier = new Ship({\n      shipTypeId: 1,\n      orientation: 'horizontal',\n      startRow: 3,\n      startColumn : 3\n    });\n    const battleship = new Ship({\n      shipTypeId: 2,\n      orientation: 'vertical',\n      startRow: 0,\n      startColumn: 5\n    });\n    board.addShip(aircraftCarrier);\n    expect(board.addShip(battleship)).to.be.false;\n  });\n\n  it('should increment the appropriate shipTypeCount', function() {\n    const ships = Board.getSampleShipArray();\n    const board = new Board();\n    board.setUp(ships);\n    expect(board.shipTypeCount).to.eql({\n      1: 1,\n      2: 1,\n      3: 1,\n      4: 2,\n      5: 2\n    })\n  });\n\n  it('should return false if the shipTypeCount is exceeded', function() {\n    const aircraftCarrier1 = new Ship({\n      shipTypeId: 1,\n      orientation: 'horizontal',\n      startRow: 3,\n      startColumn: 3\n    });\n    const aircraftCarrier2 = new Ship({\n      shipTypeId: 1,\n      orientation: 'vertical',\n      startRow: 1,\n      startColumn: 8\n    });\n    const board = new Board();\n    board.addShip(aircraftCarrier1);\n    expect(board.addShip(aircraftCarrier2)).to.be.false;\n  });\n\n  it('should have isSetUp set to true after all required ships are added', function() {\n    const ships = Board.getSampleShipArray();\n    const board = new Board();\n    ships.forEach(ship => {\n      board.addShip(ship);\n    });\n    expect(board.isSetUp).to.be.true;\n  });\n\n  it('should have the intial board saved to Moves after all required ships are added', function() {\n    const ships = Board.getSampleShipArray();\n    const board = new Board();\n    ships.forEach(ship => {\n      board.addShip(ship);\n    });\n    expect(board.moves.moves.length).to.equal(1);\n    expect(board.moves.boardHtml.length).to.equal(1);\n    expect(board.moves.boardString.length).to.equal(1);\n  });\n\n});\n\n/**\n * @test {Board}\n */\ndescribe('Board.attack', function() {\n  it('should correctly register a Hit', function() {\n    const aircraftCarrier = new Ship({\n      shipTypeId: 1,\n      orientation: 'horizontal',\n      startRow: 3,\n      startColumn: 3\n    });\n    const board = new Board();\n    board.addShip(aircraftCarrier);\n    board.setUp();\n    expect(board.attack({row: 3, column: 3})).to.equal('Hit');\n  });\n  it('should correctly register a Miss', function() {\n    const board = new Board();\n    const ships = Board.getSampleShipArray();\n    board.setUp(ships);\n    expect(board.attack({row: 0, column: 0})).to.equal('Miss');\n  });\n  it('should correctly register a Already Attacked', function() {\n    const board = new Board();\n    const ships = Board.getSampleShipArray();\n    board.setUp(ships);\n    expect(board.attack({row: 0, column: 0})).to.equal('Miss');\n    expect(board.attack({row: 0, column: 0})).to.equal('Already Attacked');\n  });\n  it('should correctly register a Sunk', function() {\n    const aircraftCarrier = new Ship({\n      shipTypeId: 1,\n      orientation: 'horizontal',\n      startRow: 3,\n      startColumn: 3\n    });\n    const board = new Board();\n    board.addShip(aircraftCarrier);\n    board.setUp();\n    expect(board.attack({row: 3, column: 3})).to.equal('Hit');\n    expect(board.attack({row: 3, column: 4})).to.equal('Hit');\n    expect(board.attack({row: 3, column: 5})).to.equal('Hit');\n    expect(board.attack({row: 3, column: 6})).to.equal('Hit');\n    expect(board.attack({row: 3, column: 7})).to.equal('Sunk');\n  });\n  it('should correctly register a Win', function() {\n    const board = new Board();\n    const ships = Board.getSampleShipArray();\n    board.setUp(ships);\n    // Aircraft Carrier\n    expect(board.attack({row: 1, column: 9})).to.equal('Hit');\n    expect(board.attack({row: 2, column: 9})).to.equal('Hit');\n    expect(board.attack({row: 3, column: 9})).to.equal('Hit');\n    expect(board.attack({row: 4, column: 9})).to.equal('Hit');\n    expect(board.attack({row: 5, column: 9})).to.equal('Sunk');\n    // Battleship\n    expect(board.attack({row: 4, column: 7})).to.equal('Hit');\n    expect(board.attack({row: 5, column: 7})).to.equal('Hit');\n    expect(board.attack({row: 6, column: 7})).to.equal('Hit');\n    expect(board.attack({row: 7, column: 7})).to.equal('Sunk');\n    // Cruiser\n    expect(board.attack({row: 6, column: 2})).to.equal('Hit');\n    expect(board.attack({row: 6, column: 3})).to.equal('Hit');\n    expect(board.attack({row: 6, column: 4})).to.equal('Sunk');\n    // Destroyer 1\n    expect(board.attack({row: 1, column: 1})).to.equal('Hit');\n    expect(board.attack({row: 2, column: 1})).to.equal('Sunk');\n    // Destroyer 2\n    expect(board.attack({row: 4, column: 3})).to.equal('Hit');\n    expect(board.attack({row: 4, column: 4})).to.equal('Sunk');\n    // Submarine 1\n    expect(board.attack({row: 2, column: 3})).to.equal('Sunk');\n    // Submarine 2\n    expect(board.attack({row: 8, column: 1})).to.equal('Win');\n  });\n});\n\n/**\n * @test {Board}\n */\ndescribe('Board.addMove', function() {\n  it('should be called from Board.attack', function() {\n    const board = new Board();\n    board.setUp();\n    board.attack({row: 0, column: 0});\n    expect(board.moves.moves.length).to.equal(2);\n  });\n  it('should be reset isRandom to false after it is called', function() {\n    const board = new Board();\n    board.setUp();\n    board.moves.setIsRandom(true);\n    board.attack({row: 0, column: 0});\n    expect(board.moves.isRandom).to.be.false;\n  });\n});\n\n/**\n * @test {Board}\n */\ndescribe('Board.isWon', function() {\n  it('should return true after all the ships are sunk', function() {\n    const board = new Board();\n    const ships = Board.getSampleShipArray();\n    board.setUp(ships);\n    // Aircraft Carrier\n    expect(board.attack({row: 1, column: 9})).to.equal('Hit');\n    expect(board.attack({row: 2, column: 9})).to.equal('Hit');\n    expect(board.attack({row: 3, column: 9})).to.equal('Hit');\n    expect(board.attack({row: 4, column: 9})).to.equal('Hit');\n    expect(board.attack({row: 5, column: 9})).to.equal('Sunk');\n    // Battleship\n    expect(board.attack({row: 4, column: 7})).to.equal('Hit');\n    expect(board.attack({row: 5, column: 7})).to.equal('Hit');\n    expect(board.attack({row: 6, column: 7})).to.equal('Hit');\n    expect(board.attack({row: 7, column: 7})).to.equal('Sunk');\n    // Cruiser\n    expect(board.attack({row: 6, column: 2})).to.equal('Hit');\n    expect(board.attack({row: 6, column: 3})).to.equal('Hit');\n    expect(board.attack({row: 6, column: 4})).to.equal('Sunk');\n    // Destroyer 1\n    expect(board.attack({row: 1, column: 1})).to.equal('Hit');\n    expect(board.attack({row: 2, column: 1})).to.equal('Sunk');\n    // Destroyer 2\n    expect(board.attack({row: 4, column: 3})).to.equal('Hit');\n    expect(board.attack({row: 4, column: 4})).to.equal('Sunk');\n    // Submarine 1\n    expect(board.attack({row: 2, column: 3})).to.equal('Sunk');\n    // Submarine 2\n    expect(board.attack({row: 8, column: 1})).to.equal('Win');\n    // isWon\n    expect(board.isWon()).to.be.true;\n  })\n});\n\n/**\n * @test {Board}\n */\ndescribe('Board.getSampleShipArray', function() {\n  it('should return an array of length = totalCount', function() {\n    const ships = Board.getSampleShipArray();\n    expect(ships.length).to.equal(totalCount);\n  });\n});\n\n",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/test/board.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 178,
+    "kind": "test",
+    "name": "describe0",
+    "testId": 0,
+    "memberof": "test/board.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/board.test.js~describe0",
+    "access": null,
+    "description": "Board constructor",
+    "lineNumber": 13,
+    "testTargets": [
+      "Board"
+    ]
+  },
+  {
+    "__docId__": 179,
+    "kind": "test",
+    "name": "it1",
+    "testId": 1,
+    "memberof": "test/board.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe0.it1",
+    "access": null,
+    "description": "should contain a matrix of tiles",
+    "lineNumber": 15
+  },
+  {
+    "__docId__": 180,
+    "kind": "test",
+    "name": "it2",
+    "testId": 2,
+    "memberof": "test/board.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe0.it2",
+    "access": null,
+    "description": "should be initialized with an empty array for ships",
+    "lineNumber": 24
+  },
+  {
+    "__docId__": 181,
+    "kind": "test",
+    "name": "it3",
+    "testId": 3,
+    "memberof": "test/board.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe0.it3",
+    "access": null,
+    "description": "should be initialized with isSetUp as false",
+    "lineNumber": 27
+  },
+  {
+    "__docId__": 182,
+    "kind": "test",
+    "name": "it4",
+    "testId": 4,
+    "memberof": "test/board.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe0.it4",
+    "access": null,
+    "description": "should have an instance of Moves",
+    "lineNumber": 30
+  },
+  {
+    "__docId__": 183,
+    "kind": "test",
+    "name": "describe5",
+    "testId": 5,
+    "memberof": "test/board.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/board.test.js~describe5",
+    "access": null,
+    "description": "Board.setup",
+    "lineNumber": 39,
+    "testTargets": [
+      "Board"
+    ]
+  },
+  {
+    "__docId__": 184,
+    "kind": "test",
+    "name": "it6",
+    "testId": 6,
+    "memberof": "test/board.test.js~describe5",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe5.it6",
+    "access": null,
+    "description": "it should add ships at random positions if setup is called with no parameters",
+    "lineNumber": 40
+  },
+  {
+    "__docId__": 185,
+    "kind": "test",
+    "name": "describe7",
+    "testId": 7,
+    "memberof": "test/board.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/board.test.js~describe7",
+    "access": null,
+    "description": "Board.addShip",
+    "lineNumber": 53,
+    "testTargets": [
+      "Board"
+    ]
+  },
+  {
+    "__docId__": 186,
+    "kind": "test",
+    "name": "it8",
+    "testId": 8,
+    "memberof": "test/board.test.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe7.it8",
+    "access": null,
+    "description": "should be able to add a ship to the board if the position is valid",
+    "lineNumber": 54
+  },
+  {
+    "__docId__": 187,
+    "kind": "test",
+    "name": "it9",
+    "testId": 9,
+    "memberof": "test/board.test.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe7.it9",
+    "access": null,
+    "description": "should mark the appropriate tiles after a ship is added",
+    "lineNumber": 71
+  },
+  {
+    "__docId__": 188,
+    "kind": "test",
+    "name": "it10",
+    "testId": 10,
+    "memberof": "test/board.test.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe7.it10",
+    "access": null,
+    "description": "should return false if adding a ship will overlap an existing ship",
+    "lineNumber": 86
+  },
+  {
+    "__docId__": 189,
+    "kind": "test",
+    "name": "it11",
+    "testId": 11,
+    "memberof": "test/board.test.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe7.it11",
+    "access": null,
+    "description": "should increment the appropriate shipTypeCount",
+    "lineNumber": 104
+  },
+  {
+    "__docId__": 190,
+    "kind": "test",
+    "name": "it12",
+    "testId": 12,
+    "memberof": "test/board.test.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe7.it12",
+    "access": null,
+    "description": "should return false if the shipTypeCount is exceeded",
+    "lineNumber": 117
+  },
+  {
+    "__docId__": 191,
+    "kind": "test",
+    "name": "it13",
+    "testId": 13,
+    "memberof": "test/board.test.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe7.it13",
+    "access": null,
+    "description": "should have isSetUp set to true after all required ships are added",
+    "lineNumber": 135
+  },
+  {
+    "__docId__": 192,
+    "kind": "test",
+    "name": "it14",
+    "testId": 14,
+    "memberof": "test/board.test.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe7.it14",
+    "access": null,
+    "description": "should have the intial board saved to Moves after all required ships are added",
+    "lineNumber": 144
+  },
+  {
+    "__docId__": 193,
+    "kind": "test",
+    "name": "describe15",
+    "testId": 15,
+    "memberof": "test/board.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/board.test.js~describe15",
+    "access": null,
+    "description": "Board.attack",
+    "lineNumber": 160,
+    "testTargets": [
+      "Board"
+    ]
+  },
+  {
+    "__docId__": 194,
+    "kind": "test",
+    "name": "it16",
+    "testId": 16,
+    "memberof": "test/board.test.js~describe15",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe15.it16",
+    "access": null,
+    "description": "should correctly register a Hit",
+    "lineNumber": 161
+  },
+  {
+    "__docId__": 195,
+    "kind": "test",
+    "name": "it17",
+    "testId": 17,
+    "memberof": "test/board.test.js~describe15",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe15.it17",
+    "access": null,
+    "description": "should correctly register a Miss",
+    "lineNumber": 173
+  },
+  {
+    "__docId__": 196,
+    "kind": "test",
+    "name": "it18",
+    "testId": 18,
+    "memberof": "test/board.test.js~describe15",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe15.it18",
+    "access": null,
+    "description": "should correctly register a Already Attacked",
+    "lineNumber": 179
+  },
+  {
+    "__docId__": 197,
+    "kind": "test",
+    "name": "it19",
+    "testId": 19,
+    "memberof": "test/board.test.js~describe15",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe15.it19",
+    "access": null,
+    "description": "should correctly register a Sunk",
+    "lineNumber": 186
+  },
+  {
+    "__docId__": 198,
+    "kind": "test",
+    "name": "it20",
+    "testId": 20,
+    "memberof": "test/board.test.js~describe15",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe15.it20",
+    "access": null,
+    "description": "should correctly register a Win",
+    "lineNumber": 202
+  },
+  {
+    "__docId__": 199,
+    "kind": "test",
+    "name": "describe21",
+    "testId": 21,
+    "memberof": "test/board.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/board.test.js~describe21",
+    "access": null,
+    "description": "Board.addMove",
+    "lineNumber": 237,
+    "testTargets": [
+      "Board"
+    ]
+  },
+  {
+    "__docId__": 200,
+    "kind": "test",
+    "name": "it22",
+    "testId": 22,
+    "memberof": "test/board.test.js~describe21",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe21.it22",
+    "access": null,
+    "description": "should be called from Board.attack",
+    "lineNumber": 238
+  },
+  {
+    "__docId__": 201,
+    "kind": "test",
+    "name": "it23",
+    "testId": 23,
+    "memberof": "test/board.test.js~describe21",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe21.it23",
+    "access": null,
+    "description": "should be reset isRandom to false after it is called",
+    "lineNumber": 244
+  },
+  {
+    "__docId__": 202,
+    "kind": "test",
+    "name": "describe24",
+    "testId": 24,
+    "memberof": "test/board.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/board.test.js~describe24",
+    "access": null,
+    "description": "Board.isWon",
+    "lineNumber": 256,
+    "testTargets": [
+      "Board"
+    ]
+  },
+  {
+    "__docId__": 203,
+    "kind": "test",
+    "name": "it25",
+    "testId": 25,
+    "memberof": "test/board.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe24.it25",
+    "access": null,
+    "description": "should return true after all the ships are sunk",
+    "lineNumber": 257
+  },
+  {
+    "__docId__": 204,
+    "kind": "test",
+    "name": "describe26",
+    "testId": 26,
+    "memberof": "test/board.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/board.test.js~describe26",
+    "access": null,
+    "description": "Board.getSampleShipArray",
+    "lineNumber": 294,
+    "testTargets": [
+      "Board"
+    ]
+  },
+  {
+    "__docId__": 205,
+    "kind": "test",
+    "name": "it27",
+    "testId": 27,
+    "memberof": "test/board.test.js~describe26",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/board.test.js~describe26.it27",
+    "access": null,
+    "description": "should return an array of length = totalCount",
+    "lineNumber": 295
+  },
+  {
+    "__docId__": 206,
+    "kind": "testFile",
+    "name": "test/game.test.js",
+    "content": "const expect = require('chai').expect;\nconst Game = require('../src/battleship/game');\nconst Board = require('../src/battleship/board');\nconst parameters = require('../src/battleship/parameters');\nconst {numRows, numColumns} = parameters;\n\n/**\n * @test {Game}\n */\ndescribe('Game constructor', function() {\n  it('should create a new board and set it up', function() {\n    const game = new Game();\n    expect(game.board.isSetUp).to.be.true;\n  })\n});\n\n/**\n * @test {Game}\n */\ndescribe('Game.randomAvailablePosition', function() {\n  it('should return a position that is not attacked', function() {\n    const ships = Board.getSampleShipArray();\n    const game = new Game({ships, toConsole: false});\n    // attack all positions except 1, 9\n    let row = 0;\n    for (let column = 0; column < numColumns; column++) {\n      game.board.attack({row, column});\n    }\n    row = 1;\n    for (let column = 0; column < numColumns - 1; column++) {\n      game.board.attack({row, column});\n    }\n    for (let row = 2; row < numRows; row++) {\n      for (let column = 0; column < numColumns; column++) {\n        game.board.attack({row, column});\n      }\n    }\n    let column;\n    ({row, column} = game.randomAvailablePosition());\n    expect(row).to.equal(1);\n    expect(column).to.equal(9);\n  })\n});\n\n/**\n * @test {Game}\n */\ndescribe('Game.availableNeighbors', function() {\n  it('should return neighboring positions that have not been attacked', function() {\n    const game = new Game();\n    game.board.attack({row: 0, column: 1});\n    const positions = game.availableNeighbors({row: 1, column: 1});\n    expect(positions.findIndex(p => {\n      return (p.row === 0 && p.column === 1)\n    })).to.equal(-1);\n    expect(positions.findIndex(p => {\n      return (p.row === 1 && p.column === 0)\n    })).to.not.equal(-1);\n    expect(positions.findIndex(p => {\n      return (p.row === 1 && p.column === 2)\n    })).to.not.equal(-1);\n    expect(positions.findIndex(p => {\n      return (p.row === 2 && p.column === 1)\n    })).to.not.equal(-1);\n  })\n});\n\n/**\n * @test {Game}\n */\ndescribe('Game.play', function() {\n  it('should end in the game being won', function() {\n    const game = new Game();\n    game.play();\n    expect(game.board.isWon()).to.be.true;\n  })\n});\n\n",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/test/game.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 207,
+    "kind": "test",
+    "name": "describe28",
+    "testId": 28,
+    "memberof": "test/game.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/game.test.js~describe28",
+    "access": null,
+    "description": "Game constructor",
+    "lineNumber": 10,
+    "testTargets": [
+      "Game"
+    ]
+  },
+  {
+    "__docId__": 208,
+    "kind": "test",
+    "name": "it29",
+    "testId": 29,
+    "memberof": "test/game.test.js~describe28",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/game.test.js~describe28.it29",
+    "access": null,
+    "description": "should create a new board and set it up",
+    "lineNumber": 11
+  },
+  {
+    "__docId__": 209,
+    "kind": "test",
+    "name": "describe30",
+    "testId": 30,
+    "memberof": "test/game.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/game.test.js~describe30",
+    "access": null,
+    "description": "Game.randomAvailablePosition",
+    "lineNumber": 20,
+    "testTargets": [
+      "Game"
+    ]
+  },
+  {
+    "__docId__": 210,
+    "kind": "test",
+    "name": "it31",
+    "testId": 31,
+    "memberof": "test/game.test.js~describe30",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/game.test.js~describe30.it31",
+    "access": null,
+    "description": "should return a position that is not attacked",
+    "lineNumber": 21
+  },
+  {
+    "__docId__": 211,
+    "kind": "test",
+    "name": "describe32",
+    "testId": 32,
+    "memberof": "test/game.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/game.test.js~describe32",
+    "access": null,
+    "description": "Game.availableNeighbors",
+    "lineNumber": 48,
+    "testTargets": [
+      "Game"
+    ]
+  },
+  {
+    "__docId__": 212,
+    "kind": "test",
+    "name": "it33",
+    "testId": 33,
+    "memberof": "test/game.test.js~describe32",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/game.test.js~describe32.it33",
+    "access": null,
+    "description": "should return neighboring positions that have not been attacked",
+    "lineNumber": 49
+  },
+  {
+    "__docId__": 213,
+    "kind": "test",
+    "name": "describe34",
+    "testId": 34,
+    "memberof": "test/game.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/game.test.js~describe34",
+    "access": null,
+    "description": "Game.play",
+    "lineNumber": 71,
+    "testTargets": [
+      "Game"
+    ]
+  },
+  {
+    "__docId__": 214,
+    "kind": "test",
+    "name": "it35",
+    "testId": 35,
+    "memberof": "test/game.test.js~describe34",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/game.test.js~describe34.it35",
+    "access": null,
+    "description": "should end in the game being won",
+    "lineNumber": 72
+  },
+  {
+    "__docId__": 215,
+    "kind": "testFile",
+    "name": "test/moves.test.js",
+    "content": "const expect = require('chai').expect;\nconst Board = require('../src/battleship/board');\nconst Moves = require('../src/battleship/moves');\n\n/**\n * @test {Moves}\n */\ndescribe('Moves constructor', function() {\n  it('should throw if {board} is not an instance of Board', function() {\n    expect(() => new Moves()).to.throw;\n  })\n});\n\n/**\n * @test {Moves}\n */\ndescribe('Moves.addMove', function() {\n  it('should add a value to the moves array', function() {\n    const board = new Board();\n    const moves = new Moves({board});\n    moves.addMove({row: 1, column: 1});\n    expect(moves.moves.findIndex(m => {\n      return ((m.row === 1) & (m.column === 1))\n    })).to.equal(0);\n  })\n});\n\n",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/test/moves.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 216,
+    "kind": "test",
+    "name": "describe36",
+    "testId": 36,
+    "memberof": "test/moves.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/moves.test.js~describe36",
+    "access": null,
+    "description": "Moves constructor",
+    "lineNumber": 8,
+    "testTargets": [
+      "Moves"
+    ]
+  },
+  {
+    "__docId__": 217,
+    "kind": "test",
+    "name": "it37",
+    "testId": 37,
+    "memberof": "test/moves.test.js~describe36",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/moves.test.js~describe36.it37",
+    "access": null,
+    "description": "should throw if {board} is not an instance of Board",
+    "lineNumber": 9
+  },
+  {
+    "__docId__": 218,
+    "kind": "test",
+    "name": "describe38",
+    "testId": 38,
+    "memberof": "test/moves.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/moves.test.js~describe38",
+    "access": null,
+    "description": "Moves.addMove",
+    "lineNumber": 17,
+    "testTargets": [
+      "Moves"
+    ]
+  },
+  {
+    "__docId__": 219,
+    "kind": "test",
+    "name": "it39",
+    "testId": 39,
+    "memberof": "test/moves.test.js~describe38",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/moves.test.js~describe38.it39",
+    "access": null,
+    "description": "should add a value to the moves array",
+    "lineNumber": 18
+  },
+  {
+    "__docId__": 220,
+    "kind": "testFile",
+    "name": "test/parameters.test.js",
+    "content": "const expect = require('chai').expect;\nconst parameters = require('../src/battleship/parameters');\n\nconst {shipTypes} = parameters;\n\n/**\n * @test {parameters}\n */\ndescribe('Parameters', function() {\n  it('should have a total ship count of 7', function() {\n    expect(parameters.totalCount).to.equal(7);\n  });\n  it('should have a total of 5 ship types', function() {\n    expect(Object.keys(shipTypes).length).to.equal(5);\n  })\n});\n",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/test/parameters.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 221,
+    "kind": "test",
+    "name": "describe40",
+    "testId": 40,
+    "memberof": "test/parameters.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/parameters.test.js~describe40",
+    "access": null,
+    "description": "Parameters",
+    "lineNumber": 9,
+    "testTargets": [
+      "parameters"
+    ]
+  },
+  {
+    "__docId__": 222,
+    "kind": "test",
+    "name": "it41",
+    "testId": 41,
+    "memberof": "test/parameters.test.js~describe40",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/parameters.test.js~describe40.it41",
+    "access": null,
+    "description": "should have a total ship count of 7",
+    "lineNumber": 10
+  },
+  {
+    "__docId__": 223,
+    "kind": "test",
+    "name": "it42",
+    "testId": 42,
+    "memberof": "test/parameters.test.js~describe40",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/parameters.test.js~describe40.it42",
+    "access": null,
+    "description": "should have a total of 5 ship types",
+    "lineNumber": 13
+  },
+  {
+    "__docId__": 224,
+    "kind": "testFile",
+    "name": "test/ship.test.js",
+    "content": "const expect = require('chai').expect;\nconst Ship = require('../src/battleship/ship');\nconst parameters = require('../src/battleship/parameters');\n\nconst { numRows, numColumns, shipTypes, orientations, totalCount } = parameters;\n\n/**\n * @test {Ship}\n */\ndescribe('Ship Constructor', function() {\n  it('should contain construct a ship if the position is valid', function() {\n    for (let shipTypeId of Object.keys(shipTypes)) {\n      const { length } = shipTypes[shipTypeId];\n      for (let orientation of Object.keys(orientations)) {\n        const { rowFactor, columnFactor } = orientations[orientation];\n        for (let startRow = 0; startRow < numRows - rowFactor * length; startRow++) {\n          for (let startColumn = 0; startColumn < numColumns - columnFactor * length; startColumn++) {\n            const ship = new Ship({shipTypeId, orientation, startRow, startColumn});\n            expect(ship.length).to.equal(length)\n          }\n        }\n      }\n    }\n  });\n  it('should contain the correct shipType', function() {\n    const ship = new Ship({\n      shipTypeId: 1,\n      orientation: 'horizontal',\n      startRow: 0,\n      startColumn: 0\n    });\n    expect(ship.shipType).to.eql(shipTypes[1]);\n  });\n  it('should contain a hit array of false values', function() {\n    const shipTypeId = 2;\n    const ship = new Ship({\n      shipTypeId,\n      orientation: 'horizontal',\n      startRow: 0,\n      startColumn: 0\n    });\n    const length = shipTypes[shipTypeId].length;\n    expect(ship.hits.length).to.equal(length);\n    for (let i = 0; i < length; i++){\n      expect(ship.hits[i]).to.be.false;\n    }\n  });\n  it('should throw an error if the shipTypeId is invalid', function() {\n    expect(() => {\n      new Ship({shipTypeId: 0, orientation: 'horizontal', startRow: 0, startColumn: 0});\n    }).to.throw;\n  });\n  it('should throw an error if the orientation is invalid', function() {\n    expect(() => {\n      new Ship({shipTypeId: 1, orientation: 'middle', startRow: 0, startColumn: 0});\n    }).to.throw;\n  });\n  it('should throw an error if the position is invalid', function() {\n    expect(() => {\n      new Ship({shipTypeId: 1, orientation: 'middle', startRow: numRows, startColumn: 0});\n    }).to.throw;\n    expect(() => {\n      new Ship({shipTypeId: 1, orientation: 'middle', startRow: 0, startColumn: numColumns});\n    }).to.throw;\n  });\n});\n\n/**\n * @test {Ship}\n */\ndescribe('Ship.hit', function() {\n  it('should set the proper hit index', function() {\n    const ship = new Ship({\n      shipTypeId: 3,\n      orientation: 'horizontal',\n      startRow: 0,\n      startColumn: 0\n    });\n    ship.hit({row: 0, column: 0});\n    expect(ship.hits[0]).to.be.true;\n    ship.hit({row: 0, column: 1});\n    expect(ship.hits[1]).to.be.true;\n    ship.hit({row: 0, column: 2});\n    expect(ship.hits[2]).to.be.true;\n  });\n});",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/test/ship.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 225,
+    "kind": "test",
+    "name": "describe43",
+    "testId": 43,
+    "memberof": "test/ship.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/ship.test.js~describe43",
+    "access": null,
+    "description": "Ship Constructor",
+    "lineNumber": 10,
+    "testTargets": [
+      "Ship"
+    ]
+  },
+  {
+    "__docId__": 226,
+    "kind": "test",
+    "name": "it44",
+    "testId": 44,
+    "memberof": "test/ship.test.js~describe43",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/ship.test.js~describe43.it44",
+    "access": null,
+    "description": "should contain construct a ship if the position is valid",
+    "lineNumber": 11
+  },
+  {
+    "__docId__": 227,
+    "kind": "test",
+    "name": "it45",
+    "testId": 45,
+    "memberof": "test/ship.test.js~describe43",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/ship.test.js~describe43.it45",
+    "access": null,
+    "description": "should contain the correct shipType",
+    "lineNumber": 25
+  },
+  {
+    "__docId__": 228,
+    "kind": "test",
+    "name": "it46",
+    "testId": 46,
+    "memberof": "test/ship.test.js~describe43",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/ship.test.js~describe43.it46",
+    "access": null,
+    "description": "should contain a hit array of false values",
+    "lineNumber": 34
+  },
+  {
+    "__docId__": 229,
+    "kind": "test",
+    "name": "it47",
+    "testId": 47,
+    "memberof": "test/ship.test.js~describe43",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/ship.test.js~describe43.it47",
+    "access": null,
+    "description": "should throw an error if the shipTypeId is invalid",
+    "lineNumber": 48
+  },
+  {
+    "__docId__": 230,
+    "kind": "test",
+    "name": "it48",
+    "testId": 48,
+    "memberof": "test/ship.test.js~describe43",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/ship.test.js~describe43.it48",
+    "access": null,
+    "description": "should throw an error if the orientation is invalid",
+    "lineNumber": 53
+  },
+  {
+    "__docId__": 231,
+    "kind": "test",
+    "name": "it49",
+    "testId": 49,
+    "memberof": "test/ship.test.js~describe43",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/ship.test.js~describe43.it49",
+    "access": null,
+    "description": "should throw an error if the position is invalid",
+    "lineNumber": 58
+  },
+  {
+    "__docId__": 232,
+    "kind": "test",
+    "name": "describe50",
+    "testId": 50,
+    "memberof": "test/ship.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/ship.test.js~describe50",
+    "access": null,
+    "description": "Ship.hit",
+    "lineNumber": 71,
+    "testTargets": [
+      "Ship"
+    ]
+  },
+  {
+    "__docId__": 233,
+    "kind": "test",
+    "name": "it51",
+    "testId": 51,
+    "memberof": "test/ship.test.js~describe50",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/ship.test.js~describe50.it51",
+    "access": null,
+    "description": "should set the proper hit index",
+    "lineNumber": 72
+  },
+  {
+    "__docId__": 234,
+    "kind": "testFile",
+    "name": "test/tile.test.js",
+    "content": "const expect = require('chai').expect;\nconst Tile = require('../src/battleship/tile');\nconst Board = require('../src/battleship/board');\n\n/**\n * @test {Tile}\n */\ndescribe('Tile Constructor', function() {\n  it('should create valid tiles when rows and columns are in range', function() {\n    for (let i = 0; i < Board.numRows; i++) {\n      for (let j = 0; j < Board.numColumns; j++) {\n        const tile = new Tile(i, j)\n        expect(tile.row).to.equal(i);\n        expect(tile.column).to.equal(j);\n      }\n    }\n  });\n\n  it('should throw if the row or column is out of range', function() {\n    expect(() => {\n      new Tile(-1, 1)\n    }).to.throw;\n    expect(() => {\n      new Tile(1, -1)\n    }).to.throw;\n    expect(() => {\n      new Tile(1, Board.numRows)\n    }).to.throw;\n    expect(() => {\n      new Tile(-1, Board.numColumns)\n    }).to.throw;\n  });\n});\n\n/**\n * @test {Tile}\n */\ndescribe('Tile.toString', function() {\n  it('should return an \"o\" if the tile is not attacked', function() {\n    const tile = new Tile(0, 0);\n    expect(/ o /.test(tile.toString())).to.be.true;\n  });\n  it('should return an \"x\" if the tile is attacked', function() {\n    const tile = new Tile(0, 0);\n    tile.attacked = true;\n    expect(/ x /.test(tile.toString())).to.be.true;\n  });\n});\n\n/**\n * @test {Tile}\n */\ndescribe('Tile.toHtml', function() {\n  it('should return a span with an \"o\" if the tile is not attacked', function() {\n    const tile = new Tile(0, 0);\n    expect(/<span .*?>o<\\/span>/.test(tile.toHtml())).to.be.true;\n  });\n  it('should return a span with an \"x\" if the tile is attacked', function() {\n    const tile = new Tile(0, 0);\n    tile.attacked = true;\n    expect(/<span .*?>x<\\/span>/.test(tile.toHtml())).to.be.true;\n  });\n});\n\n",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/test/tile.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 235,
+    "kind": "test",
+    "name": "describe52",
+    "testId": 52,
+    "memberof": "test/tile.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/tile.test.js~describe52",
+    "access": null,
+    "description": "Tile Constructor",
+    "lineNumber": 8,
+    "testTargets": [
+      "Tile"
+    ]
+  },
+  {
+    "__docId__": 236,
+    "kind": "test",
+    "name": "it53",
+    "testId": 53,
+    "memberof": "test/tile.test.js~describe52",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/tile.test.js~describe52.it53",
+    "access": null,
+    "description": "should create valid tiles when rows and columns are in range",
+    "lineNumber": 9
+  },
+  {
+    "__docId__": 237,
+    "kind": "test",
+    "name": "it54",
+    "testId": 54,
+    "memberof": "test/tile.test.js~describe52",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/tile.test.js~describe52.it54",
+    "access": null,
+    "description": "should throw if the row or column is out of range",
+    "lineNumber": 19
+  },
+  {
+    "__docId__": 238,
+    "kind": "test",
+    "name": "describe55",
+    "testId": 55,
+    "memberof": "test/tile.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/tile.test.js~describe55",
+    "access": null,
+    "description": "Tile.toString",
+    "lineNumber": 38,
+    "testTargets": [
+      "Tile"
+    ]
+  },
+  {
+    "__docId__": 239,
+    "kind": "test",
+    "name": "it56",
+    "testId": 56,
+    "memberof": "test/tile.test.js~describe55",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/tile.test.js~describe55.it56",
+    "access": null,
+    "description": "should return an \"o\" if the tile is not attacked",
+    "lineNumber": 39
+  },
+  {
+    "__docId__": 240,
+    "kind": "test",
+    "name": "it57",
+    "testId": 57,
+    "memberof": "test/tile.test.js~describe55",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/tile.test.js~describe55.it57",
+    "access": null,
+    "description": "should return an \"x\" if the tile is attacked",
+    "lineNumber": 43
+  },
+  {
+    "__docId__": 241,
+    "kind": "test",
+    "name": "describe58",
+    "testId": 58,
+    "memberof": "test/tile.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/tile.test.js~describe58",
+    "access": null,
+    "description": "Tile.toHtml",
+    "lineNumber": 53,
+    "testTargets": [
+      "Tile"
+    ]
+  },
+  {
+    "__docId__": 242,
+    "kind": "test",
+    "name": "it59",
+    "testId": 59,
+    "memberof": "test/tile.test.js~describe58",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/tile.test.js~describe58.it59",
+    "access": null,
+    "description": "should return a span with an \"o\" if the tile is not attacked",
+    "lineNumber": 54
+  },
+  {
+    "__docId__": 243,
+    "kind": "test",
+    "name": "it60",
+    "testId": 60,
+    "memberof": "test/tile.test.js~describe58",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/tile.test.js~describe58.it60",
+    "access": null,
+    "description": "should return a span with an \"x\" if the tile is attacked",
+    "lineNumber": 58
+  },
+  {
+    "__docId__": 244,
+    "kind": "testFile",
+    "name": "test/utils.test.js",
+    "content": "const expect = require('chai').expect;\nconst utils = require('../src/battleship/utils');\nconst parameters = require('../src/battleship/parameters');\n\nconst {numRows, numColumns, totalCount} = parameters;\n\nconst {\n  isRowValid,\n  isColumnValid,\n  isValidShipPosition,\n  getValidStartPosition,\n  getRandomShipPosition\n} = utils;\n\n/**\n * @test {Utils}\n */\ndescribe('Utils', function () {\n  it('isRowValid should return true for valid rows', function () {\n    expect(isRowValid(0)).to.be.true;\n    expect(isRowValid(numRows - 1)).to.be.true;\n  });\n  it('isRowValid should return false for invalid rows', function () {\n    expect(isRowValid(-1)).to.be.false;\n    expect(isRowValid(numRows)).to.be.false;\n  });\n  it('isValidShipPosition should return true for valid ship positions', function() {\n    expect(isValidShipPosition({\n      shipTypeId: 1,\n      orientation: 'horizontal',\n      startRow: 0,\n      startColumn: 0\n    })).to.be.true;\n    expect(isValidShipPosition({\n      shipTypeId: 1,\n      orientation: 'horizontal',\n      startRow: 0,\n      startColumn: 0\n    })).to.be.true;\n  });\n});\n",
+    "static": true,
+    "longname": "/www/outco/interviews/earnest-battleship-zip/battleship/test/utils.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 245,
+    "kind": "test",
+    "name": "describe61",
+    "testId": 61,
+    "memberof": "test/utils.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/utils.test.js~describe61",
+    "access": null,
+    "description": "Utils",
+    "lineNumber": 18,
+    "testTargets": [
+      "Utils"
+    ]
+  },
+  {
+    "__docId__": 246,
+    "kind": "test",
+    "name": "it62",
+    "testId": 62,
+    "memberof": "test/utils.test.js~describe61",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/utils.test.js~describe61.it62",
+    "access": null,
+    "description": "isRowValid should return true for valid rows",
+    "lineNumber": 19
+  },
+  {
+    "__docId__": 247,
+    "kind": "test",
+    "name": "it63",
+    "testId": 63,
+    "memberof": "test/utils.test.js~describe61",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/utils.test.js~describe61.it63",
+    "access": null,
+    "description": "isRowValid should return false for invalid rows",
+    "lineNumber": 23
+  },
+  {
+    "__docId__": 248,
+    "kind": "test",
+    "name": "it64",
+    "testId": 64,
+    "memberof": "test/utils.test.js~describe61",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/utils.test.js~describe61.it64",
+    "access": null,
+    "description": "isValidShipPosition should return true for valid ship positions",
+    "lineNumber": 27
+  }
+]

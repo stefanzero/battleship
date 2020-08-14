@@ -1,5 +1,4 @@
 const expect = require('chai').expect;
-const should = require('chai').should();
 const Tile = require('../src/battleship/tile');
 const Board = require('../src/battleship/board');
 const Ship = require('../src/battleship/ship');

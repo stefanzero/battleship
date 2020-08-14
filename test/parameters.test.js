@@ -11,6 +11,6 @@ describe('Parameters', function() {
     expect(parameters.totalCount).to.equal(7);
   });
   it('should have a total of 5 ship types', function() {
-    expected(Object.keys(shipTypes).length).to.equal(5);
+    expect(Object.keys(shipTypes).length).to.equal(5);
   })
 });

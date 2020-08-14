@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/battleship/board.js | battleship</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+  <style>
+    .bold {
+      font-weight: 900;
+    }
+  </style>
+<meta name="description" content="Battleship game in Node"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="battleship"><meta property="twitter:description" content="Battleship game in Node"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a id="nav-index" href="./index.html">Home</a>
+  
+  <a id="nav-identifiers" href="identifiers.html">Reference</a>
+  <a id="nav-source" href="source.html">Source</a>
+  <a id="nav-demo" href="demo.html">Demo</a>
+  <a id="nav-test" href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#battleship">battleship</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/board.js~Board.html">Board</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/moves.js~Moves.html">Moves</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/ship.js~Ship.html">Ship</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/utils.js~Utils.html">Utils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientation">orientation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientations">orientations</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipType">shipType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipTypes">shipTypes</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/battleship/board.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @type {parameters}
+ */
+const parameters = require(&apos;./parameters&apos;);
+/**
+ * @type {Tile}
+ */
+const Tile = require(&apos;./tile&apos;);
+/**
+ *
+ * @type {Ship}
+ */
+const Ship = require(&apos;./ship&apos;);
+/**
+ *
+ * @type {Moves}
+ */
+const Moves = require(&apos;./moves&apos;);
+/**
+ * @type {Utils}
+ */
+const utils = require(&apos;./utils&apos;);
+
+/**
+ * @type {Object}
+ */
+const { numRows, numColumns, shipTypes, totalCount } = parameters;
+/**
+ * @type {Object}
+ */
+const { isRowValid, isColumnValid, getRandomShipPosition } = utils;
+
+/**
+ * Main class that controls basic operations of battleship.
+ * * Key properties:
+ *   * array of ships
+ *   * matrix of tiles
+ * * Key methods:
+ *   * setUp
+ *   * addShip
+ *   * attack
+ */
+class Board {
+  /**
+   * @param {?boolean} toConsole controls if attacks are output to the console
+   * @param {?boolean} playerView if true display player view
+   */
+  constructor(toConsole = false, playerView = false) {
+    /**
+     * @type {[Ship]}
+     * @desc array of ships on the board
+     */
+    this.ships = [];
+    /**
+     * @type {Object}
+     * @desc key = shipTypeId, value = number of ships of that type
+     */
+    this.shipTypeCount = {};
+    /**
+     * @type {Tile[][]}
+     * @desc matrix of tiles
+     */
+    this.tiles = new Array(numRows)
+      .fill(null)
+      .map((r, i) =&gt; {
+        return new Array(numColumns)
+          .fill(null)
+          .map((c, j) =&gt; {
+            return new Tile(i, j)
+          })
+    });
+    /**
+     * @type {boolean}
+     * @desc true if all required ships have been added to the board
+     */
+    this.isSetUp = false;
+    /**
+     * @type {boolean}
+     * @desc true if all required ships have been sunk
+     */
+    this.gameOver = false;
+    /**
+     * @type {Moves}
+     * @desc Game attack history is stored in the moves.
+     */
+    this.moves = new Moves({board: this, toConsole, playerView});
+  }
+
+  /**
+   * Add ships to the board.  If not all required ships are supplied, missing ships are
+   * added to the board at random positions until board is set up.
+   *
+   * @param {?Ship[]} ships optional array of ships
+   */
+  setUp(ships = []) {
+    if (this.isSetUp) {
+      Board.log &amp;&amp; console.log(&apos;Board.setUp: board is already set up&apos;);
+      return;
+    }
+    ships.forEach(ship =&gt; this.addShip(ship));
+    /*
+     * if more ships are needed, add ships at random positions
+     */
+    if (this.ships.length &lt; totalCount) {
+      const shipTypesToAdd = Object.values(shipTypes)
+        .reduce((acc, next) =&gt; {
+          const existingShips = this.shipTypeCount[next.shipTypeId] ?
+            this.shipTypeCount[next.shipTypeId] : 0;
+          return acc.concat(new Array(next.count - existingShips)
+            .fill(next.shipTypeId));
+        }, []);
+      while (shipTypesToAdd.length) {
+        /*
+         * start from largest ships (beginning of array) because these will
+         * most likely overlap with previous ships
+         */
+        const shipTypeId = shipTypesToAdd[0];
+        const orientation = Math.random() &lt; 0.5 ? &apos;horizontal&apos; : &apos;vertical&apos;;
+        const {startRow, startColumn} = getRandomShipPosition(
+          {shipTypeId, orientation}
+        );
+        const ship = new Ship({
+          shipTypeId, orientation, startRow, startColumn
+        });
+        /*
+         * addShip will return false if the ship overlaps
+         */
+        if (this.addShip(ship)) {
+          /*
+           * if successful, remove from shipTypesToAdd
+           */
+          shipTypesToAdd.shift();
+        }
+      }
+    }
+  }
+
+  /**
+   * Add a ship to the board.  Return true if successful or the board is already full.
+   * Return false if the ship would overlap an existing ship or if enough ships of
+   * that type are already on the board.
+   *
+   * @param {Ship} ship
+   * @returns {boolean}
+   */
+  addShip(ship) {
+    if (this.isSetUp) {
+      Board.log &amp;&amp; console.log(&apos;board already has correct number of ships&apos;);
+      return true;
+    }
+    /*
+     * check that this ship does not overlap an existing ship
+     */
+    for (let position of Object.values(ship.positions)) {
+      const [ row, column ] = position;
+      if (this.tiles[row][column].ship) {
+        Board.log &amp;&amp; console.log(&apos;board.addShip ship overlaps existing ship&apos;);
+        return false;
+      }
+    }
+    /*
+     * check that this ship type can still be added to the board
+     */
+    const { shipTypeId } = ship;
+    const nextShipCount = this.shipTypeCount[shipTypeId] ?
+      this.shipTypeCount[shipTypeId] + 1 : 1;
+    if (nextShipCount &gt; shipTypes[shipTypeId].count) {
+      Board.log &amp;&amp; console.log(`board.addShip exceeded count for ${shipTypes[shipTypeId].name}`);
+      return false;
+    }
+    this.shipTypeCount[shipTypeId] = nextShipCount;
+    this.ships.push(ship);
+    /*
+     * mark the appropriate tiles for this ship
+     */
+    for (let index of Object.values(ship.positions)) {
+      const [ row, column ] = index;
+      this.tiles[row][column].ship = ship;
+    }
+    this.isSetUp = this.ships.length === totalCount;
+    if (this.isSetUp) {
+      /*
+       * Save the initial board
+       */
+      this.moves.addMove({row: null, column: null, result: &apos;Initial Board&apos;});
+    }
+    return true;
+  }
+
+  /**
+   * Attack a given position on the board.  Return a string describing the result:
+   *  * &quot;Miss&quot; if there is no ship at that position
+   *  * &quot;Already Attacked&quot; if there that tile was already attacked
+   *  * &quot;Win&quot; if that attack sinks the final ship
+   *  * &quot;Sunk&quot; if that attack hits the last un-hit position on a ship
+   *  * &quot;Hit&quot; if that attack hits a ship
+   *
+   * @param {Object} obj
+   * @param {number} obj.row
+   * @param {number} obj.column
+   * @returns {string}
+   */
+  attack({row, column}) {
+    if (!this.isSetUp) {
+      throw new Error(&apos;Cannot attack until board is set up&apos;);
+    }
+    if (!isRowValid(row) || !isColumnValid(column)) {
+      throw new Error(&apos;Board.attack invalid position: [${row}, ${column}]&apos;);
+    }
+    if (this.gameOver) {
+      console.error(&apos;Cannot attack because the game is over&apos;);
+    }
+    let result;
+    const tile = this.tiles[row][column];
+    const { attacked, ship } = tile;
+    if (attacked) {
+      result = &apos;Already Attacked&apos;
+    } else {
+      tile.attacked = true;
+      if (!ship) {
+        result = &apos;Miss&apos;;
+      } else {
+        ship.hit({row, column});
+        if (this.isWon()) {
+          result = &apos;Win&apos;;
+        } else if (ship.sunk) {
+          result = &apos;Sunk&apos;;
+        } else {
+          result = &apos;Hit&apos;;
+        }
+      }
+    }
+    this.moves.addMove({row, column, result});
+    return result;
+  }
+
+  /**
+   * Return true if all ships on the board are sunk
+   * @returns {boolean}
+   */
+  isWon() {
+    this.gameOver = (
+      this.isSetUp &amp;&amp;
+      this.ships.filter(s =&gt; s.sunk).length === totalCount
+    );
+    return this.gameOver;
+  }
+
+  /**
+   * Return true if the tile was attacked.
+   *
+   * @param {Object} obj
+   * @param {number} obj.row
+   * @param {number} obj.column
+   * @returns {boolean}
+   */
+  isAttacked({row, column}) {
+    return this.tiles[row][column].attacked;
+  }
+
+  /**
+   * Return string representation of the board.
+   *
+   * @param {boolean} playerView true if the ships should not be displayed
+   * @returns {string}
+   */
+  toString(playerView) {
+    return this.tiles.map(
+      row =&gt; {
+        return row.map(
+          tile =&gt; {
+            return tile.toString(playerView)
+          }
+        ).join(&apos;&apos;).concat(&apos;\n&apos;)
+      }
+    ).join(&apos;&apos;);
+  }
+
+  /**
+   * Return html representation of the board.
+   *
+   * @param {boolean} playerView true if the ships should not be displayed
+   * @returns {string}
+   */
+  toHtml(playerView) {
+    const tilesHtml = this.tiles.map(
+      row =&gt; {
+        return row.map(
+          tile =&gt; {
+            return tile.toHtml(playerView)
+          }
+        ).join(&apos;&apos;).concat(&apos;&lt;br /&gt;&apos;)
+      }
+    ).join(&apos;&apos;);
+    return `&lt;div class=&quot;tiles&quot;&gt;${tilesHtml}&lt;/div&gt;`;
+  }
+}
+
+// Board.log = false;
+
+/**
+ * Return array of ships shown on wikipedia for a sample game setup.
+ * @returns {Ship[]}
+ */
+Board.getSampleShipArray = () =&gt; {
+  const aircraftCarrier = new Ship({
+    shipTypeId: 1,
+    orientation: &apos;vertical&apos;,
+    startRow: 1,
+    startColumn: 9
+  });
+  const battleShip = new Ship({
+    shipTypeId: 2,
+    orientation: &apos;vertical&apos;,
+    startRow: 4,
+    startColumn: 7
+  });
+  const cruiser = new Ship({
+    shipTypeId: 3,
+    orientation: &apos;horizontal&apos;,
+    startRow: 6,
+    startColumn: 2
+  });
+  const destroyer1 = new Ship({
+    shipTypeId: 4,
+    orientation: &apos;vertical&apos;,
+    startRow: 1,
+    startColumn: 1
+  });
+  const destroyer2 = new Ship({
+    shipTypeId: 4,
+    orientation: &apos;horizontal&apos;,
+    startRow: 4,
+    startColumn: 3
+  });
+  const submarine1 = new Ship({
+    shipTypeId: 5,
+    orientation: &apos;horizontal&apos;,
+    startRow: 2,
+    startColumn: 3
+  });
+  const submarine2 = new Ship({
+    shipTypeId: 5,
+    orientation: &apos;horizontal&apos;,
+    startRow: 8,
+    startColumn: 1
+  });
+  return [
+    aircraftCarrier,
+    battleShip,
+    cruiser,
+    destroyer1,
+    destroyer2,
+    submarine1,
+    submarine2
+  ]
+};
+
+module.exports = Board;</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+<script>
+  var path = location.pathname.match(/([\w]*)\./)[1];
+  var id = "nav-" + path;
+  var element = document.getElementById(id);
+  if (element) {
+    element.classList.add('bold')
+  }
+</script>
+</body>
+</html>

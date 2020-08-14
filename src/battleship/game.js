@@ -91,7 +91,7 @@ class Game {
    *
    * @param {Object} obj
    * @param {?[Ship]} obj.ships optional array of ships
-   * @param {boolean} obj.toConsole print game to console
+   * @param {?boolean} obj.toConsole print game to console
    */
   constructor({ships = [], toConsole = false} = {}) {
     /**

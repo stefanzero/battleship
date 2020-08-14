@@ -1,5 +1,4 @@
 const expect = require('chai').expect;
-const should = require('chai').should();
 const Ship = require('../src/battleship/ship');
 const parameters = require('../src/battleship/parameters');
 

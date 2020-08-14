@@ -1,0 +1,47 @@
+{
+  "coverage": "100%",
+  "expectCount": 111,
+  "actualCount": 111,
+  "files": {
+    "src/battleship/board.js": {
+      "expectCount": 22,
+      "actualCount": 22,
+      "undocumentLines": []
+    },
+    "src/battleship/game.js": {
+      "expectCount": 28,
+      "actualCount": 28,
+      "undocumentLines": []
+    },
+    "src/battleship/moves.js": {
+      "expectCount": 15,
+      "actualCount": 15,
+      "undocumentLines": []
+    },
+    "src/battleship/parameters.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/battleship/ship.js": {
+      "expectCount": 16,
+      "actualCount": 16,
+      "undocumentLines": []
+    },
+    "src/battleship/tile.js": {
+      "expectCount": 14,
+      "actualCount": 14,
+      "undocumentLines": []
+    },
+    "src/battleship/utils.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "src/index.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    }
+  }
+}

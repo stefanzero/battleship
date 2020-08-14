@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">test/game.test.js | battleship</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+  <style>
+    .bold {
+      font-weight: 900;
+    }
+  </style>
+<meta name="description" content="Battleship game in Node"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="battleship"><meta property="twitter:description" content="Battleship game in Node"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a id="nav-index" href="./index.html">Home</a>
+  
+  <a id="nav-identifiers" href="identifiers.html">Reference</a>
+  <a id="nav-source" href="source.html">Source</a>
+  <a id="nav-demo" href="demo.html">Demo</a>
+  <a id="nav-test" href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#battleship">battleship</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/board.js~Board.html">Board</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/moves.js~Moves.html">Moves</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/ship.js~Ship.html">Ship</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/battleship/utils.js~Utils.html">Utils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientation">orientation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-orientations">orientations</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-parameters">parameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipType">shipType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-shipTypes">shipTypes</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">test/game.test.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const expect = require(&apos;chai&apos;).expect;
+const Game = require(&apos;../src/battleship/game&apos;);
+const Board = require(&apos;../src/battleship/board&apos;);
+const parameters = require(&apos;../src/battleship/parameters&apos;);
+const {numRows, numColumns} = parameters;
+
+/**
+ * @test {Game}
+ */
+describe(&apos;Game constructor&apos;, function() {
+  it(&apos;should create a new board and set it up&apos;, function() {
+    const game = new Game();
+    expect(game.board.isSetUp).to.be.true;
+  })
+});
+
+/**
+ * @test {Game}
+ */
+describe(&apos;Game.randomAvailablePosition&apos;, function() {
+  it(&apos;should return a position that is not attacked&apos;, function() {
+    const ships = Board.getSampleShipArray();
+    const game = new Game({ships, toConsole: false});
+    // attack all positions except 1, 9
+    let row = 0;
+    for (let column = 0; column &lt; numColumns; column++) {
+      game.board.attack({row, column});
+    }
+    row = 1;
+    for (let column = 0; column &lt; numColumns - 1; column++) {
+      game.board.attack({row, column});
+    }
+    for (let row = 2; row &lt; numRows; row++) {
+      for (let column = 0; column &lt; numColumns; column++) {
+        game.board.attack({row, column});
+      }
+    }
+    let column;
+    ({row, column} = game.randomAvailablePosition());
+    expect(row).to.equal(1);
+    expect(column).to.equal(9);
+  })
+});
+
+/**
+ * @test {Game}
+ */
+describe(&apos;Game.availableNeighbors&apos;, function() {
+  it(&apos;should return neighboring positions that have not been attacked&apos;, function() {
+    const game = new Game();
+    game.board.attack({row: 0, column: 1});
+    const positions = game.availableNeighbors({row: 1, column: 1});
+    expect(positions.findIndex(p =&gt; {
+      return (p.row === 0 &amp;&amp; p.column === 1)
+    })).to.equal(-1);
+    expect(positions.findIndex(p =&gt; {
+      return (p.row === 1 &amp;&amp; p.column === 0)
+    })).to.not.equal(-1);
+    expect(positions.findIndex(p =&gt; {
+      return (p.row === 1 &amp;&amp; p.column === 2)
+    })).to.not.equal(-1);
+    expect(positions.findIndex(p =&gt; {
+      return (p.row === 2 &amp;&amp; p.column === 1)
+    })).to.not.equal(-1);
+  })
+});
+
+/**
+ * @test {Game}
+ */
+describe(&apos;Game.play&apos;, function() {
+  it(&apos;should end in the game being won&apos;, function() {
+    const game = new Game();
+    game.play();
+    expect(game.board.isWon()).to.be.true;
+  })
+});
+
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+<script>
+  var path = location.pathname.match(/([\w]*)\./)[1];
+  var id = "nav-" + path;
+  var element = document.getElementById(id);
+  if (element) {
+    element.classList.add('bold')
+  }
+</script>
+</body>
+</html>
